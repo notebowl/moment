@@ -1,6 +1,7 @@
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -13,8 +14,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -32,8 +33,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -356,7 +357,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -369,8 +371,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -388,8 +390,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -710,7 +712,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -723,8 +726,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -742,8 +745,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -1069,7 +1072,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -1082,8 +1086,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -1101,8 +1105,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -1511,7 +1515,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -1524,8 +1529,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -1543,8 +1548,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -1896,7 +1901,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -1909,8 +1915,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -1928,8 +1934,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -2262,7 +2268,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -2275,8 +2282,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -2294,8 +2301,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -2673,7 +2680,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -2686,8 +2694,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -2705,8 +2713,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -3044,7 +3052,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -3057,8 +3066,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -3076,8 +3085,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -3190,7 +3199,7 @@
     });
 
     test('format week', function (assert) {
-        var expected = 'রবিবার রবি রব_সোমবার সোম সম_মঙ্গলবার মঙ্গল মঙ্গ_বুধবার বুধ বু_বৃহস্পত্তিবার বৃহস্পত্তি ব্রিহ_শুক্রুবার শুক্রু শু_শনিবার শনি শনি'.split('_'), i;
+        var expected = 'রবিবার রবি রব_সোমবার সোম সম_মঙ্গলবার মঙ্গল মঙ্গ_বুধবার বুধ বু_বৃহস্পত্তিবার বৃহস্পত্তি ব্রিহ_শুক্রবার শুক্র শু_শনিবার শনি শনি'.split('_'), i;
         for (i = 0; i < expected.length; i++) {
             assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
         }
@@ -3198,7 +3207,7 @@
 
     test('from', function (assert) {
         var start = moment([2007, 1, 28]);
-        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'কএক সেকেন্ড', '44 seconds = a few seconds');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'কয়েক সেকেন্ড', '44 seconds = a few seconds');
         assert.equal(start.from(moment([2007, 1, 28]).add({s: 45}), true),  'এক মিনিট',      '45 seconds = a minute');
         assert.equal(start.from(moment([2007, 1, 28]).add({s: 89}), true),  'এক মিনিট',      '89 seconds = a minute');
         assert.equal(start.from(moment([2007, 1, 28]).add({s: 90}), true),  '২ মিনিট',     '90 seconds = 2 minutes');
@@ -3228,16 +3237,16 @@
     });
 
     test('suffix', function (assert) {
-        assert.equal(moment(30000).from(0), 'কএক সেকেন্ড পরে',  'prefix');
-        assert.equal(moment(0).from(30000), 'কএক সেকেন্ড আগে', 'suffix');
+        assert.equal(moment(30000).from(0), 'কয়েক সেকেন্ড পরে',  'prefix');
+        assert.equal(moment(0).from(30000), 'কয়েক সেকেন্ড আগে', 'suffix');
     });
 
     test('now from now', function (assert) {
-        assert.equal(moment().fromNow(), 'কএক সেকেন্ড আগে',  'now from now should display as in the past');
+        assert.equal(moment().fromNow(), 'কয়েক সেকেন্ড আগে',  'now from now should display as in the past');
     });
 
     test('fromNow', function (assert) {
-        assert.equal(moment().add({s: 30}).fromNow(), 'কএক সেকেন্ড পরে', 'কএক সেকেন্ড পরে');
+        assert.equal(moment().add({s: 30}).fromNow(), 'কয়েক সেকেন্ড পরে', 'কয়েক সেকেন্ড পরে');
         assert.equal(moment().add({d: 5}).fromNow(), '৫ দিন পরে', '৫ দিন পরে');
     });
 
@@ -3295,15 +3304,15 @@
         assert.equal(moment([2011, 2, 23,  2, 30]).format('a'), 'রাত', 'before dawn');
         assert.equal(moment([2011, 2, 23,  9, 30]).format('a'), 'সকাল', 'morning');
         assert.equal(moment([2011, 2, 23, 14, 30]).format('a'), 'দুপুর', 'during day');
-        assert.equal(moment([2011, 2, 23, 17, 30]).format('a'), 'বিকেল', 'evening');
-        assert.equal(moment([2011, 2, 23, 19, 30]).format('a'), 'বিকেল', 'late evening');
+        assert.equal(moment([2011, 2, 23, 17, 30]).format('a'), 'বিকাল', 'evening');
+        assert.equal(moment([2011, 2, 23, 19, 30]).format('a'), 'বিকাল', 'late evening');
         assert.equal(moment([2011, 2, 23, 21, 20]).format('a'), 'রাত', 'night');
 
         assert.equal(moment([2011, 2, 23,  2, 30]).format('A'), 'রাত', 'before dawn');
         assert.equal(moment([2011, 2, 23,  9, 30]).format('A'), 'সকাল', 'morning');
         assert.equal(moment([2011, 2, 23, 14, 30]).format('A'), 'দুপুর', ' during day');
-        assert.equal(moment([2011, 2, 23, 17, 30]).format('A'), 'বিকেল', 'evening');
-        assert.equal(moment([2011, 2, 23, 19, 30]).format('A'), 'বিকেল', 'late evening');
+        assert.equal(moment([2011, 2, 23, 17, 30]).format('A'), 'বিকাল', 'evening');
+        assert.equal(moment([2011, 2, 23, 19, 30]).format('A'), 'বিকাল', 'late evening');
         assert.equal(moment([2011, 2, 23, 21, 20]).format('A'), 'রাত', 'night');
     });
 
@@ -3415,7 +3424,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -3428,8 +3438,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -3447,8 +3457,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -3787,7 +3797,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -3800,8 +3811,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -3819,8 +3830,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -4099,7 +4110,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -4112,8 +4124,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -4131,8 +4143,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -4487,7 +4499,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -4500,8 +4513,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -4519,8 +4532,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -4843,7 +4856,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -4856,8 +4870,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -4875,8 +4889,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -4896,7 +4910,10 @@
     test('parse', function (assert) {
         var tests = 'leden led_únor úno_březen bře_duben dub_květen kvě_červen čvn_červenec čvc_srpen srp_září zář_říjen říj_listopad lis_prosinec pro'.split('_'), i;
         function equalTest(input, mmm, monthIndex) {
-            assert.equal(moment(input, mmm).month(), monthIndex, input + ' should be month ' + (monthIndex + 1));
+            assert.equal(moment(input, mmm).month(), monthIndex, input + ' ' + mmm + ' should be month ' + (monthIndex + 1));
+        }
+        function equalTestStrict(input, mmm, monthIndex) {
+            assert.equal(moment(input, mmm, true).month(), monthIndex, input + ' ' + mmm + ' should be strict month ' + (monthIndex + 1));
         }
         for (i = 0; i < 12; i++) {
             tests[i] = tests[i].split(' ');
@@ -4908,6 +4925,13 @@
             equalTest(tests[i][1].toLocaleLowerCase(), 'MMMM', i);
             equalTest(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
             equalTest(tests[i][1].toLocaleUpperCase(), 'MMMM', i);
+
+            equalTestStrict(tests[i][1], 'MMM', i);
+            equalTestStrict(tests[i][0], 'MMMM', i);
+            equalTestStrict(tests[i][1].toLocaleLowerCase(), 'MMM', i);
+            equalTestStrict(tests[i][1].toLocaleUpperCase(), 'MMM', i);
+            equalTestStrict(tests[i][0].toLocaleLowerCase(), 'MMMM', i);
+            equalTestStrict(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
         }
     });
 
@@ -5286,7 +5310,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -5299,8 +5324,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -5318,8 +5343,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -5647,7 +5672,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -5660,8 +5686,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -5679,8 +5705,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -6001,7 +6027,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -6014,8 +6041,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -6033,8 +6060,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -6307,7 +6334,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -6320,8 +6348,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -6339,8 +6367,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -6505,12 +6533,12 @@
     test('calendar day', function (assert) {
         var a = moment().hours(2).minutes(0).seconds(0);
 
-        assert.equal(moment(a).calendar(), 'Heute um 02:00 Uhr', 'today at the same time');
-        assert.equal(moment(a).add({m: 25}).calendar(), 'Heute um 02:25 Uhr', 'Now plus 25 min');
-        assert.equal(moment(a).add({h: 1}).calendar(), 'Heute um 03:00 Uhr', 'Now plus 1 hour');
-        assert.equal(moment(a).add({d: 1}).calendar(), 'Morgen um 02:00 Uhr', 'tomorrow at the same time');
-        assert.equal(moment(a).subtract({h: 1}).calendar(), 'Heute um 01:00 Uhr', 'Now minus 1 hour');
-        assert.equal(moment(a).subtract({d: 1}).calendar(), 'Gestern um 02:00 Uhr', 'yesterday at the same time');
+        assert.equal(moment(a).calendar(), 'heute um 02:00 Uhr', 'today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(), 'heute um 02:25 Uhr', 'Now plus 25 min');
+        assert.equal(moment(a).add({h: 1}).calendar(), 'heute um 03:00 Uhr', 'Now plus 1 hour');
+        assert.equal(moment(a).add({d: 1}).calendar(), 'morgen um 02:00 Uhr', 'tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(), 'heute um 01:00 Uhr', 'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(), 'gestern um 02:00 Uhr', 'yesterday at the same time');
     });
 
     test('calendar next week', function (assert) {
@@ -6659,7 +6687,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -6672,8 +6701,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -6691,8 +6720,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -6856,12 +6885,12 @@
     test('calendar day', function (assert) {
         var a = moment().hours(2).minutes(0).seconds(0);
 
-        assert.equal(moment(a).calendar(),                     'Heute um 02:00 Uhr',   'today at the same time');
-        assert.equal(moment(a).add({m: 25}).calendar(),      'Heute um 02:25 Uhr',   'Now plus 25 min');
-        assert.equal(moment(a).add({h: 1}).calendar(),       'Heute um 03:00 Uhr',   'Now plus 1 hour');
-        assert.equal(moment(a).add({d: 1}).calendar(),       'Morgen um 02:00 Uhr',  'tomorrow at the same time');
-        assert.equal(moment(a).subtract({h: 1}).calendar(),  'Heute um 01:00 Uhr',   'Now minus 1 hour');
-        assert.equal(moment(a).subtract({d: 1}).calendar(),  'Gestern um 02:00 Uhr', 'yesterday at the same time');
+        assert.equal(moment(a).calendar(),                     'heute um 02:00 Uhr',   'today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(),      'heute um 02:25 Uhr',   'Now plus 25 min');
+        assert.equal(moment(a).add({h: 1}).calendar(),       'heute um 03:00 Uhr',   'Now plus 1 hour');
+        assert.equal(moment(a).add({d: 1}).calendar(),       'morgen um 02:00 Uhr',  'tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(),  'heute um 01:00 Uhr',   'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(),  'gestern um 02:00 Uhr', 'yesterday at the same time');
     });
 
     test('calendar next week', function (assert) {
@@ -7010,7 +7039,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -7023,8 +7053,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -7042,8 +7072,163 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    localeModule('dv');
+
+    test('parse', function (assert) {
+        var i,
+            tests = [
+                'ޖެނުއަރީ',
+                'ފެބްރުއަރީ',
+                'މާރިޗު',
+                'އޭޕްރީލު',
+                'މޭ',
+                'ޖޫން',
+                'ޖުލައި',
+                'އޯގަސްޓު',
+                'ސެޕްޓެމްބަރު',
+                'އޮކްޓޯބަރު',
+                'ނޮވެމްބަރު',
+                'ޑިސެމްބަރު'
+            ];
+
+        function equalTest(input, mmm, i) {
+            assert.equal(moment(input, mmm).month(), i, input + ' should be month ' + (i + 1));
+        }
+
+        for (i = 0; i < 12; i++) {
+            equalTest(tests[i], 'MMM', i);
+            equalTest(tests[i], 'MMMM', i);
+            equalTest(tests[i].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i].toLocaleUpperCase(), 'MMMM', i);
+        }
+    });
+
+    test('format', function (assert) {
+        var a = [
+                ['dddd, MMMM Do YYYY, h:mm:ss a',      'އާދިއްތަ، ފެބްރުއަރީ 14 2010، 3:25:50 މފ'],
+                ['ddd, hA',                            'އާދިއްތަ، 3މފ'],
+                ['M Mo MM MMMM MMM',                   '2 2 02 ފެބްރުއަރީ ފެބްރުއަރީ'],
+                ['YYYY YY',                            '2010 10'],
+                ['D Do DD',                            '14 14 14'],
+                ['d do dddd ddd dd',                   '0 0 އާދިއްތަ އާދިއްތަ އާދި'],
+                ['DDD DDDo DDDD',                      '45 45 045'],
+                ['w wo ww',                            '8 8 08'],
+                ['h hh',                               '3 03'],
+                ['H HH',                               '15 15'],
+                ['m mm',                               '25 25'],
+                ['s ss',                               '50 50'],
+                ['a A',                                'މފ މފ'],
+                ['LTS',                                '15:25:50'],
+                ['L',                                  '14/2/2010'],
+                ['LL',                                 '14 ފެބްރުއަރީ 2010'],
+                ['LLL',                                '14 ފެބްރުއަރީ 2010 15:25'],
+                ['LLLL',                               'އާދިއްތަ 14 ފެބްރުއަރީ 2010 15:25'],
+                ['l',                                  '14/2/2010'],
+                ['ll',                                 '14 ފެބްރުއަރީ 2010'],
+                ['lll',                                '14 ފެބްރުއަރީ 2010 15:25'],
+                ['llll',                               'އާދިއްތަ 14 ފެބްރުއަރީ 2010 15:25']
+            ],
+            b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
+            i;
+
+        for (i = 0; i < a.length; i++) {
+            assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+        }
+    });
+
+    test('format month', function (assert) {
+        var i,
+            expected = [
+                'ޖެނުއަރީ',
+                'ފެބްރުއަރީ',
+                'މާރިޗު',
+                'އޭޕްރީލު',
+                'މޭ',
+                'ޖޫން',
+                'ޖުލައި',
+                'އޯގަސްޓު',
+                'ސެޕްޓެމްބަރު',
+                'އޮކްޓޯބަރު',
+                'ނޮވެމްބަރު',
+                'ޑިސެމްބަރު'
+            ];
+
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, i, 1]).format('MMMM'), expected[i]);
+        }
+    });
+
+    test('format week', function (assert) {
+        var i,
+            expected = [
+                'އާދިއްތަ',
+                'ހޯމަ',
+                'އަންގާރަ',
+                'ބުދަ',
+                'ބުރާސްފަތި',
+                'ހުކުރު',
+                'ހޮނިހިރު'
+            ];
+
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, 0, 2 + i]).format('dddd'), expected[i]);
+        }
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -7100,7 +7285,8 @@
                 ['10 Μ',    22, true],
                 ['10 am',   10, false],
                 ['10 pm',   10, false]
-            ];
+            ],
+            parsed;
 
         // test that a formatted moment including meridiem string can be parsed back to the same moment
         assert.ok(b.isSame(moment(b.format('h:mm:ss a'), 'h:mm:ss a', 'el', true), 'seconds'), b.format('h:mm:ss a') + ' should be equal to ' + moment(b.format('h:mm:ss a'), 'h:mm:ss a', 'el', true).format('h:mm:ss a'));
@@ -7109,8 +7295,11 @@
         assert.ok(moment(b.format('h:mm:ss a'), 'h:mm:ss a', 'el', true).isValid(), b.format('h:mm:ss a') + ' should be parsed as valid');
 
         for (i = 0; i < meridiemTests.length; i++) {
-            assert.equal(moment(meridiemTests[i][0], 'h a', 'el', true).hours(), meridiemTests[i][1], moment(meridiemTests[i][0], 'h a', 'el', true).hours() + ' should be ' + meridiemTests[i][1]);
-            assert.ok(moment(meridiemTests[i][0], 'h a', 'el', true).isValid() === meridiemTests[i][2], meridiemTests[i][0] + ' ----> ' + meridiemTests[i][2]);
+            parsed = moment(meridiemTests[i][0], 'h a', 'el', true);
+            assert.equal(parsed.isValid(), meridiemTests[i][2], 'validity for ' + meridiemTests[i][0]);
+            if (parsed.isValid()) {
+                assert.equal(parsed.hours(), meridiemTests[i][1], 'hours for ' + meridiemTests[i][0]);
+            }
         }
     });
 
@@ -7414,7 +7603,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -7427,8 +7617,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -7446,8 +7636,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -7761,7 +7951,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -7774,8 +7965,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -7793,8 +7984,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -8126,7 +8317,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -8139,8 +8331,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -8158,8 +8350,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -8482,7 +8674,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -8495,8 +8688,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -8514,8 +8707,356 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    localeModule('en-nz');
+
+    test('parse', function (assert) {
+        var tests = 'January Jan_February Feb_March Mar_April Apr_May May_June Jun_July Jul_August Aug_September Sep_October Oct_November Nov_December Dec'.split('_'), i;
+        function equalTest(input, mmm, i) {
+            assert.equal(moment(input, mmm).month(), i, input + ' should be month ' + (i + 1));
+        }
+        for (i = 0; i < 12; i++) {
+            tests[i] = tests[i].split(' ');
+            equalTest(tests[i][0], 'MMM', i);
+            equalTest(tests[i][1], 'MMM', i);
+            equalTest(tests[i][0], 'MMMM', i);
+            equalTest(tests[i][1], 'MMMM', i);
+            equalTest(tests[i][0].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleUpperCase(), 'MMMM', i);
+        }
+    });
+
+    test('format', function (assert) {
+        var a = [
+                ['dddd, MMMM Do YYYY, h:mm:ss a',      'Sunday, February 14th 2010, 3:25:50 pm'],
+                ['ddd, hA',                            'Sun, 3PM'],
+                ['M Mo MM MMMM MMM',                   '2 2nd 02 February Feb'],
+                ['YYYY YY',                            '2010 10'],
+                ['D Do DD',                            '14 14th 14'],
+                ['d do dddd ddd dd',                   '0 0th Sunday Sun Su'],
+                ['DDD DDDo DDDD',                      '45 45th 045'],
+                ['w wo ww',                            '6 6th 06'],
+                ['h hh',                               '3 03'],
+                ['H HH',                               '15 15'],
+                ['m mm',                               '25 25'],
+                ['s ss',                               '50 50'],
+                ['a A',                                'pm PM'],
+                ['[the] DDDo [day of the year]',       'the 45th day of the year'],
+                ['LTS',                                '3:25:50 PM'],
+                ['L',                                  '14/02/2010'],
+                ['LL',                                 '14 February 2010'],
+                ['LLL',                                '14 February 2010 3:25 PM'],
+                ['LLLL',                               'Sunday, 14 February 2010 3:25 PM'],
+                ['l',                                  '14/2/2010'],
+                ['ll',                                 '14 Feb 2010'],
+                ['lll',                                '14 Feb 2010 3:25 PM'],
+                ['llll',                               'Sun, 14 Feb 2010 3:25 PM']
+            ],
+            b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
+            i;
+        for (i = 0; i < a.length; i++) {
+            assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+        }
+    });
+
+    test('format ordinal', function (assert) {
+        assert.equal(moment([2011, 0, 1]).format('DDDo'), '1st', '1st');
+        assert.equal(moment([2011, 0, 2]).format('DDDo'), '2nd', '2nd');
+        assert.equal(moment([2011, 0, 3]).format('DDDo'), '3rd', '3rd');
+        assert.equal(moment([2011, 0, 4]).format('DDDo'), '4th', '4th');
+        assert.equal(moment([2011, 0, 5]).format('DDDo'), '5th', '5th');
+        assert.equal(moment([2011, 0, 6]).format('DDDo'), '6th', '6th');
+        assert.equal(moment([2011, 0, 7]).format('DDDo'), '7th', '7th');
+        assert.equal(moment([2011, 0, 8]).format('DDDo'), '8th', '8th');
+        assert.equal(moment([2011, 0, 9]).format('DDDo'), '9th', '9th');
+        assert.equal(moment([2011, 0, 10]).format('DDDo'), '10th', '10th');
+
+        assert.equal(moment([2011, 0, 11]).format('DDDo'), '11th', '11th');
+        assert.equal(moment([2011, 0, 12]).format('DDDo'), '12th', '12th');
+        assert.equal(moment([2011, 0, 13]).format('DDDo'), '13th', '13th');
+        assert.equal(moment([2011, 0, 14]).format('DDDo'), '14th', '14th');
+        assert.equal(moment([2011, 0, 15]).format('DDDo'), '15th', '15th');
+        assert.equal(moment([2011, 0, 16]).format('DDDo'), '16th', '16th');
+        assert.equal(moment([2011, 0, 17]).format('DDDo'), '17th', '17th');
+        assert.equal(moment([2011, 0, 18]).format('DDDo'), '18th', '18th');
+        assert.equal(moment([2011, 0, 19]).format('DDDo'), '19th', '19th');
+        assert.equal(moment([2011, 0, 20]).format('DDDo'), '20th', '20th');
+
+        assert.equal(moment([2011, 0, 21]).format('DDDo'), '21st', '21st');
+        assert.equal(moment([2011, 0, 22]).format('DDDo'), '22nd', '22nd');
+        assert.equal(moment([2011, 0, 23]).format('DDDo'), '23rd', '23rd');
+        assert.equal(moment([2011, 0, 24]).format('DDDo'), '24th', '24th');
+        assert.equal(moment([2011, 0, 25]).format('DDDo'), '25th', '25th');
+        assert.equal(moment([2011, 0, 26]).format('DDDo'), '26th', '26th');
+        assert.equal(moment([2011, 0, 27]).format('DDDo'), '27th', '27th');
+        assert.equal(moment([2011, 0, 28]).format('DDDo'), '28th', '28th');
+        assert.equal(moment([2011, 0, 29]).format('DDDo'), '29th', '29th');
+        assert.equal(moment([2011, 0, 30]).format('DDDo'), '30th', '30th');
+
+        assert.equal(moment([2011, 0, 31]).format('DDDo'), '31st', '31st');
+    });
+
+    test('format month', function (assert) {
+        var expected = 'January Jan_February Feb_March Mar_April Apr_May May_June Jun_July Jul_August Aug_September Sep_October Oct_November Nov_December Dec'.split('_'), i;
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, i, 1]).format('MMMM MMM'), expected[i], expected[i]);
+        }
+    });
+
+    test('format week', function (assert) {
+        var expected = 'Sunday Sun Su_Monday Mon Mo_Tuesday Tue Tu_Wednesday Wed We_Thursday Thu Th_Friday Fri Fr_Saturday Sat Sa'.split('_'), i;
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
+        }
+    });
+
+    test('from', function (assert) {
+        var start = moment([2007, 1, 28]);
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'a few seconds', '44 seconds = a few seconds');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 45}), true),  'a minute',      '45 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 89}), true),  'a minute',      '89 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 90}), true),  '2 minutes',     '90 seconds = 2 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 44}), true),  '44 minutes',    '44 minutes = 44 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 45}), true),  'an hour',       '45 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 89}), true),  'an hour',       '89 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 90}), true),  '2 hours',       '90 minutes = 2 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 5}), true),   '5 hours',       '5 hours = 5 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 21}), true),  '21 hours',      '21 hours = 21 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 22}), true),  'a day',         '22 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 35}), true),  'a day',         '35 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 36}), true),  '2 days',        '36 hours = 2 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 1}), true),   'a day',         '1 day = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 5}), true),   '5 days',        '5 days = 5 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 25}), true),  '25 days',       '25 days = 25 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 26}), true),  'a month',       '26 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 30}), true),  'a month',       '30 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 43}), true),  'a month',       '43 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 46}), true),  '2 months',      '46 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 74}), true),  '2 months',      '75 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 76}), true),  '3 months',      '76 days = 3 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 1}), true),   'a month',       '1 month = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 5}), true),   '5 months',      '5 months = 5 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 345}), true), 'a year',        '345 days = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 548}), true), '2 years',       '548 days = 2 years');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 1}), true),   'a year',        '1 year = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 5}), true),   '5 years',       '5 years = 5 years');
+    });
+
+    test('suffix', function (assert) {
+        assert.equal(moment(30000).from(0), 'in a few seconds',  'prefix');
+        assert.equal(moment(0).from(30000), 'a few seconds ago', 'suffix');
+    });
+
+    test('now from now', function (assert) {
+        assert.equal(moment().fromNow(), 'a few seconds ago',  'now from now should display as in the past');
+    });
+
+    test('fromNow', function (assert) {
+        assert.equal(moment().add({s: 30}).fromNow(), 'in a few seconds', 'in a few seconds');
+        assert.equal(moment().add({d: 5}).fromNow(), 'in 5 days', 'in 5 days');
+    });
+
+    test('calendar day', function (assert) {
+        var a = moment().hours(2).minutes(0).seconds(0);
+
+        assert.equal(moment(a).calendar(),                     'Today at 2:00 AM',      'today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(),      'Today at 2:25 AM',      'Now plus 25 min');
+        assert.equal(moment(a).add({h: 1}).calendar(),       'Today at 3:00 AM',      'Now plus 1 hour');
+        assert.equal(moment(a).add({d: 1}).calendar(),       'Tomorrow at 2:00 AM',   'tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(),  'Today at 1:00 AM',      'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(),  'Yesterday at 2:00 AM',  'yesterday at the same time');
+    });
+
+    test('calendar next week', function (assert) {
+        var i, m;
+        for (i = 2; i < 7; i++) {
+            m = moment().add({d: i});
+            assert.equal(m.calendar(),       m.format('dddd [at] LT'),  'Today + ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('dddd [at] LT'),  'Today + ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('dddd [at] LT'),  'Today + ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar last week', function (assert) {
+        var i, m;
+
+        for (i = 2; i < 7; i++) {
+            m = moment().subtract({d: i});
+            assert.equal(m.calendar(),       m.format('[Last] dddd [at] LT'),  'Today - ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('[Last] dddd [at] LT'),  'Today - ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('[Last] dddd [at] LT'),  'Today - ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar all else', function (assert) {
+        var weeksAgo = moment().subtract({w: 1}),
+            weeksFromNow = moment().add({w: 1});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '1 week ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 1 week');
+
+        weeksAgo = moment().subtract({w: 2});
+        weeksFromNow = moment().add({w: 2});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '2 weeks ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 2 weeks');
+    });
+
+    test('weeks year starting sunday', function (assert) {
+        assert.equal(moment([2012, 0, 1]).week(), 52, 'Jan  1 2012 should be week 52');
+        assert.equal(moment([2012, 0, 2]).week(),  1, 'Jan  2 2012 should be week 1');
+        assert.equal(moment([2012, 0, 8]).week(),  1, 'Jan  8 2012 should be week 1');
+        assert.equal(moment([2012, 0, 9]).week(),  2, 'Jan  9 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).week(), 2, 'Jan 15 2012 should be week 2');
+    });
+
+    test('weeks year starting monday', function (assert) {
+        assert.equal(moment([2007, 0, 1]).week(),  1, 'Jan  1 2007 should be week 1');
+        assert.equal(moment([2007, 0, 7]).week(),  1, 'Jan  7 2007 should be week 1');
+        assert.equal(moment([2007, 0, 8]).week(),  2, 'Jan  8 2007 should be week 2');
+        assert.equal(moment([2007, 0, 14]).week(), 2, 'Jan 14 2007 should be week 2');
+        assert.equal(moment([2007, 0, 15]).week(), 3, 'Jan 15 2007 should be week 3');
+    });
+
+    test('weeks year starting tuesday', function (assert) {
+        assert.equal(moment([2007, 11, 31]).week(), 1, 'Dec 31 2007 should be week 1');
+        assert.equal(moment([2008,  0,  1]).week(), 1, 'Jan  1 2008 should be week 1');
+        assert.equal(moment([2008,  0,  6]).week(), 1, 'Jan  6 2008 should be week 1');
+        assert.equal(moment([2008,  0,  7]).week(), 2, 'Jan  7 2008 should be week 2');
+        assert.equal(moment([2008,  0, 13]).week(), 2, 'Jan 13 2008 should be week 2');
+        assert.equal(moment([2008,  0, 14]).week(), 3, 'Jan 14 2008 should be week 3');
+    });
+
+    test('weeks year starting wednesday', function (assert) {
+        assert.equal(moment([2002, 11, 30]).week(), 1, 'Dec 30 2002 should be week 1');
+        assert.equal(moment([2003,  0,  1]).week(), 1, 'Jan  1 2003 should be week 1');
+        assert.equal(moment([2003,  0,  5]).week(), 1, 'Jan  5 2003 should be week 1');
+        assert.equal(moment([2003,  0,  6]).week(), 2, 'Jan  6 2003 should be week 2');
+        assert.equal(moment([2003,  0, 12]).week(), 2, 'Jan 12 2003 should be week 2');
+        assert.equal(moment([2003,  0, 13]).week(), 3, 'Jan 13 2003 should be week 3');
+    });
+
+    test('weeks year starting thursday', function (assert) {
+        assert.equal(moment([2008, 11, 29]).week(), 1, 'Dec 29 2008 should be week 1');
+        assert.equal(moment([2009,  0,  1]).week(), 1, 'Jan  1 2009 should be week 1');
+        assert.equal(moment([2009,  0,  4]).week(), 1, 'Jan  4 2009 should be week 1');
+        assert.equal(moment([2009,  0,  5]).week(), 2, 'Jan  5 2009 should be week 2');
+        assert.equal(moment([2009,  0, 11]).week(), 2, 'Jan 11 2009 should be week 2');
+        assert.equal(moment([2009,  0, 13]).week(), 3, 'Jan 12 2009 should be week 3');
+    });
+
+    test('weeks year starting friday', function (assert) {
+        assert.equal(moment([2009, 11, 28]).week(), 53, 'Dec 28 2009 should be week 53');
+        assert.equal(moment([2010,  0,  1]).week(), 53, 'Jan  1 2010 should be week 53');
+        assert.equal(moment([2010,  0,  3]).week(), 53, 'Jan  3 2010 should be week 53');
+        assert.equal(moment([2010,  0,  4]).week(),  1, 'Jan  4 2010 should be week 1');
+        assert.equal(moment([2010,  0, 10]).week(),  1, 'Jan 10 2010 should be week 1');
+        assert.equal(moment([2010,  0, 11]).week(),  2, 'Jan 11 2010 should be week 2');
+    });
+
+    test('weeks year starting saturday', function (assert) {
+        assert.equal(moment([2010, 11, 27]).week(), 52, 'Dec 27 2010 should be week 52');
+        assert.equal(moment([2011,  0,  1]).week(), 52, 'Jan  1 2011 should be week 52');
+        assert.equal(moment([2011,  0,  2]).week(), 52, 'Jan  2 2011 should be week 52');
+        assert.equal(moment([2011,  0,  3]).week(),  1, 'Jan  3 2011 should be week 1');
+        assert.equal(moment([2011,  0,  9]).week(),  1, 'Jan  9 2011 should be week 1');
+        assert.equal(moment([2011,  0, 10]).week(),  2, 'Jan 10 2011 should be week 2');
+    });
+
+    test('weeks year starting sunday formatted', function (assert) {
+        assert.equal(moment([2012, 0,  1]).format('w ww wo'), '52 52 52nd', 'Jan  1 2012 should be week 52');
+        assert.equal(moment([2012, 0,  2]).format('w ww wo'),   '1 01 1st', 'Jan  2 2012 should be week 1');
+        assert.equal(moment([2012, 0,  8]).format('w ww wo'),   '1 01 1st', 'Jan  8 2012 should be week 1');
+        assert.equal(moment([2012, 0,  9]).format('w ww wo'),   '2 02 2nd', 'Jan  9 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).format('w ww wo'),   '2 02 2nd', 'Jan 15 2012 should be week 2');
+    });
+
+    test('lenient ordinal parsing', function (assert) {
+        var i, ordinalStr, testStr;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testStr = moment(ordinalStr, 'YYYY MM Do').format('YYYY MM D');
+            assert.equal(testStr, '2014 01 ' + i, 'lenient ordinal parsing ' + i);
+        }
+    });
+
+    test('lenient ordinal parsing of number', function (assert) {
+        var i, testStr;
+        for (i = 1; i <= 31; ++i) {
+            testStr = moment('2014 01 ' + i, 'YYYY MM Do').format('YYYY MM D');
+            assert.equal(testStr, '2014 01 ' + i,
+                    'lenient ordinal parsing of number ' + i);
+        }
+    });
+
+    test('strict ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MMM Do');
+            testMoment = moment(ordinalStr, 'YYYY MMM Do', true);
+            assert.ok(testMoment.isValid(), 'strict ordinal parsing ' + i);
+        }
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -8823,6 +9364,21 @@
         }
     });
 
+    test('weekdays strict parsing', function (assert) {
+        var m = moment('2015-01-01T12', moment.ISO_8601, true),
+            enLocale = moment.localeData('en');
+
+        for (var i = 0; i < 7; ++i) {
+            assert.equal(moment(enLocale.weekdays(m.day(i), ''), 'dddd', true).isValid(), true, 'parse weekday ' + i);
+            assert.equal(moment(enLocale.weekdaysShort(m.day(i), ''), 'ddd', true).isValid(), true, 'parse short weekday ' + i);
+            assert.equal(moment(enLocale.weekdaysMin(m.day(i), ''), 'dd', true).isValid(), true, 'parse min weekday ' + i);
+
+            // negative tests
+            assert.equal(moment(enLocale.weekdaysMin(m.day(i), ''), 'ddd', true).isValid(), false, 'parse short weekday ' + i);
+            assert.equal(moment(enLocale.weekdaysShort(m.day(i), ''), 'dd', true).isValid(), false, 'parse min weekday ' + i);
+        }
+    });
+
     test('lenient ordinal parsing of number', function (assert) {
         var i, testMoment;
         for (i = 1; i <= 31; ++i) {
@@ -8848,7 +9404,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -8861,8 +9418,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -8880,8 +9437,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -9205,7 +9762,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -9218,8 +9776,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -9237,8 +9795,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -9275,15 +9833,15 @@
 
     test('format', function (assert) {
         var a = [
-                ['dddd, MMMM Do YYYY, h:mm:ss a',      'Domingo, Febrero 14º 2010, 3:25:50 pm'],
-                ['ddd, hA',                            'Dom., 3PM'],
-                ['M Mo MM MMMM MMM',                   '2 2º 02 Febrero Feb.'],
+                ['dddd, MMMM Do YYYY, h:mm:ss a',      'domingo, febrero 14º 2010, 3:25:50 pm'],
+                ['ddd, hA',                            'dom., 3PM'],
+                ['M Mo MM MMMM MMM',                   '2 2º 02 febrero feb.'],
                 ['YYYY YY',                            '2010 10'],
                 ['D Do DD',                            '14 14º 14'],
-                ['d do dddd ddd dd',                   '0 0º Domingo Dom. Do'],
+                ['d do dddd ddd dd',                   '0 0º domingo dom. Do'],
                 ['DDD DDDo DDDD',                      '45 45º 045'],
                 ['w wo ww',                            '6 6º 06'],
-                ['YYYY-MMM-DD',                        '2010-Feb-14'],
+                ['YYYY-MMM-DD',                        '2010-feb-14'],
                 ['h hh',                               '3 03'],
                 ['H HH',                               '15 15'],
                 ['m mm',                               '25 25'],
@@ -9292,13 +9850,13 @@
                 ['[the] DDDo [day of the year]',       'the 45º day of the year'],
                 ['LTS',                                '15:25:50'],
                 ['L',                                  '14/02/2010'],
-                ['LL',                                 '14 de Febrero de 2010'],
-                ['LLL',                                '14 de Febrero de 2010 15:25'],
-                ['LLLL',                               'Domingo, 14 de Febrero de 2010 15:25'],
+                ['LL',                                 '14 de febrero de 2010'],
+                ['LLL',                                '14 de febrero de 2010 15:25'],
+                ['LLLL',                               'domingo, 14 de febrero de 2010 15:25'],
                 ['l',                                  '14/2/2010'],
-                ['ll',                                 '14 de Feb. de 2010'],
-                ['lll',                                '14 de Feb. de 2010 15:25'],
-                ['llll',                               'Dom., 14 de Feb. de 2010 15:25']
+                ['ll',                                 '14 de feb. de 2010'],
+                ['lll',                                '14 de feb. de 2010 15:25'],
+                ['llll',                               'dom., 14 de feb. de 2010 15:25']
             ],
             b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
             i;
@@ -9345,14 +9903,14 @@
     });
 
     test('format month', function (assert) {
-        var expected = 'Enero Ene._Febrero Feb._Marzo Mar._Abril Abr._Mayo May._Junio Jun._Julio Jul._Agosto Ago._Septiembre Sep._Octubre Oct._Noviembre Nov._Diciembre Dic.'.split('_'), i;
+        var expected = 'enero ene._febrero feb._marzo mar._abril abr._mayo may._junio jun._julio jul._agosto ago._septiembre sep._octubre oct._noviembre nov._diciembre dic.'.split('_'), i;
         for (i = 0; i < expected.length; i++) {
             assert.equal(moment([2011, i, 1]).format('MMMM MMM'), expected[i], expected[i]);
         }
     });
 
     test('format week', function (assert) {
-        var expected = 'Domingo Dom. Do_Lunes Lun. Lu_Martes Mar. Ma_Miércoles Mié. Mi_Jueves Jue. Ju_Viernes Vie. Vi_Sábado Sáb. Sá'.split('_'), i;
+        var expected = 'domingo dom. Do_lunes lun. Lu_martes mar. Ma_miércoles mié. Mi_jueves jue. Ju_viernes vie. Vi_sábado sáb. Sá'.split('_'), i;
         for (i = 0; i < expected.length; i++) {
             assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
         }
@@ -9564,7 +10122,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -9577,8 +10136,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -9596,8 +10155,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -9943,7 +10502,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -9956,8 +10516,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -9975,8 +10535,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -10298,7 +10858,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -10311,8 +10872,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -10330,8 +10891,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -10644,7 +11205,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -10657,8 +11219,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -10676,8 +11238,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -11000,7 +11562,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -11013,8 +11576,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -11032,8 +11595,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -11306,7 +11869,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -11319,8 +11883,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -11338,8 +11902,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -11668,7 +12232,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -11681,8 +12246,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -11700,8 +12265,371 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    localeModule('fr-ch');
+
+    test('parse', function (assert) {
+        var i,
+            tests = 'janvier janv._février févr._mars mars_avril avr._mai mai_juin juin_juillet juil._août août_septembre sept._octobre oct._novembre nov._décembre déc.'.split('_');
+
+        function equalTest(input, mmm, i) {
+            assert.equal(moment(input, mmm).month(), i, input + ' should be month ' + (i + 1));
+        }
+
+        for (i = 0; i < 12; i++) {
+            tests[i] = tests[i].split(' ');
+            equalTest(tests[i][0], 'MMM', i);
+            equalTest(tests[i][1], 'MMM', i);
+            equalTest(tests[i][0], 'MMMM', i);
+            equalTest(tests[i][1], 'MMMM', i);
+            equalTest(tests[i][0].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleUpperCase(), 'MMMM', i);
+        }
+    });
+
+    test('format', function (assert) {
+        var a = [
+                ['dddd, MMMM Do YYYY, h:mm:ss a',      'dimanche, février 14e 2010, 3:25:50 pm'],
+                ['ddd, hA',                            'dim., 3PM'],
+                ['M Mo MM MMMM MMM',                   '2 2e 02 février févr.'],
+                ['YYYY YY',                            '2010 10'],
+                ['D Do DD',                            '14 14e 14'],
+                ['d do dddd ddd dd',                   '0 0e dimanche dim. Di'],
+                ['DDD DDDo DDDD',                      '45 45e 045'],
+                ['w wo ww',                            '6 6e 06'],
+                ['h hh',                               '3 03'],
+                ['H HH',                               '15 15'],
+                ['m mm',                               '25 25'],
+                ['s ss',                               '50 50'],
+                ['a A',                                'pm PM'],
+                ['[the] DDDo [day of the year]',       'the 45e day of the year'],
+                ['LTS',                                '15:25:50'],
+                ['L',                                  '14.02.2010'],
+                ['LL',                                 '14 février 2010'],
+                ['LLL',                                '14 février 2010 15:25'],
+                ['LLLL',                               'dimanche 14 février 2010 15:25'],
+                ['l',                                  '14.2.2010'],
+                ['ll',                                 '14 févr. 2010'],
+                ['lll',                                '14 févr. 2010 15:25'],
+                ['llll',                               'dim. 14 févr. 2010 15:25']
+            ],
+            b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
+            i;
+
+        for (i = 0; i < a.length; i++) {
+            assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+        }
+    });
+
+    test('format ordinal', function (assert) {
+        assert.equal(moment([2011, 0, 1]).format('DDDo'), '1er', '1er');
+        assert.equal(moment([2011, 0, 2]).format('DDDo'), '2e', '2e');
+        assert.equal(moment([2011, 0, 3]).format('DDDo'), '3e', '3e');
+        assert.equal(moment([2011, 0, 4]).format('DDDo'), '4e', '4e');
+        assert.equal(moment([2011, 0, 5]).format('DDDo'), '5e', '5e');
+        assert.equal(moment([2011, 0, 6]).format('DDDo'), '6e', '6e');
+        assert.equal(moment([2011, 0, 7]).format('DDDo'), '7e', '7e');
+        assert.equal(moment([2011, 0, 8]).format('DDDo'), '8e', '8e');
+        assert.equal(moment([2011, 0, 9]).format('DDDo'), '9e', '9e');
+        assert.equal(moment([2011, 0, 10]).format('DDDo'), '10e', '10e');
+
+        assert.equal(moment([2011, 0, 11]).format('DDDo'), '11e', '11e');
+        assert.equal(moment([2011, 0, 12]).format('DDDo'), '12e', '12e');
+        assert.equal(moment([2011, 0, 13]).format('DDDo'), '13e', '13e');
+        assert.equal(moment([2011, 0, 14]).format('DDDo'), '14e', '14e');
+        assert.equal(moment([2011, 0, 15]).format('DDDo'), '15e', '15e');
+        assert.equal(moment([2011, 0, 16]).format('DDDo'), '16e', '16e');
+        assert.equal(moment([2011, 0, 17]).format('DDDo'), '17e', '17e');
+        assert.equal(moment([2011, 0, 18]).format('DDDo'), '18e', '18e');
+        assert.equal(moment([2011, 0, 19]).format('DDDo'), '19e', '19e');
+        assert.equal(moment([2011, 0, 20]).format('DDDo'), '20e', '20e');
+
+        assert.equal(moment([2011, 0, 21]).format('DDDo'), '21e', '21e');
+        assert.equal(moment([2011, 0, 22]).format('DDDo'), '22e', '22e');
+        assert.equal(moment([2011, 0, 23]).format('DDDo'), '23e', '23e');
+        assert.equal(moment([2011, 0, 24]).format('DDDo'), '24e', '24e');
+        assert.equal(moment([2011, 0, 25]).format('DDDo'), '25e', '25e');
+        assert.equal(moment([2011, 0, 26]).format('DDDo'), '26e', '26e');
+        assert.equal(moment([2011, 0, 27]).format('DDDo'), '27e', '27e');
+        assert.equal(moment([2011, 0, 28]).format('DDDo'), '28e', '28e');
+        assert.equal(moment([2011, 0, 29]).format('DDDo'), '29e', '29e');
+        assert.equal(moment([2011, 0, 30]).format('DDDo'), '30e', '30e');
+
+        assert.equal(moment([2011, 0, 31]).format('DDDo'), '31e', '31e');
+    });
+
+    test('format month', function (assert) {
+        var i,
+            expected = 'janvier janv._février févr._mars mars_avril avr._mai mai_juin juin_juillet juil._août août_septembre sept._octobre oct._novembre nov._décembre déc.'.split('_');
+
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, i, 1]).format('MMMM MMM'), expected[i], expected[i]);
+        }
+    });
+
+    test('format week', function (assert) {
+        var i,
+            expected = 'dimanche dim. Di_lundi lun. Lu_mardi mar. Ma_mercredi mer. Me_jeudi jeu. Je_vendredi ven. Ve_samedi sam. Sa'.split('_');
+
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
+        }
+    });
+
+    test('from', function (assert) {
+        var start = moment([2007, 1, 28]);
+
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'quelques secondes', '44 seconds = a few seconds');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 45}), true),  'une minute',   '45 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 89}), true),  'une minute',   '89 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 90}), true),  '2 minutes',  '90 seconds = 2 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 44}), true),  '44 minutes', '44 minutes = 44 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 45}), true),  'une heure',    '45 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 89}), true),  'une heure',    '89 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 90}), true),  '2 heures',    '90 minutes = 2 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 5}), true),   '5 heures',    '5 hours = 5 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 21}), true),  '21 heures',   '21 hours = 21 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 22}), true),  'un jour',      '22 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 35}), true),  'un jour',      '35 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 36}), true),  '2 jours',     '36 hours = 2 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 1}), true),   'un jour',      '1 day = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 5}), true),   '5 jours',     '5 days = 5 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 25}), true),  '25 jours',    '25 days = 25 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 26}), true),  'un mois',    '26 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 30}), true),  'un mois',    '30 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 43}), true),  'un mois',    '43 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 46}), true),  '2 mois',   '46 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 74}), true),  '2 mois',   '75 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 76}), true),  '3 mois',   '76 days = 3 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 1}), true),   'un mois',    '1 month = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 5}), true),   '5 mois',   '5 months = 5 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 345}), true), 'un an',     '345 days = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 548}), true), '2 ans',    '548 days = 2 years');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 1}), true),   'un an',     '1 year = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 5}), true),   '5 ans',    '5 years = 5 years');
+    });
+
+    test('suffix', function (assert) {
+        assert.equal(moment(30000).from(0), 'dans quelques secondes', 'prefix');
+        assert.equal(moment(0).from(30000), 'il y a quelques secondes', 'suffix');
+    });
+
+    test('fromNow', function (assert) {
+        assert.equal(moment().add({s: 30}).fromNow(), 'dans quelques secondes', 'in a few seconds');
+        assert.equal(moment().add({d: 5}).fromNow(), 'dans 5 jours', 'in 5 days');
+    });
+
+    test('same day', function (assert) {
+        var a = moment().hours(2).minutes(0).seconds(0);
+
+        assert.equal(moment(a).calendar(),                     'Aujourd\'hui à 02:00',    'today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(),      'Aujourd\'hui à 02:25',    'Now plus 25 min');
+        assert.equal(moment(a).add({h: 1}).calendar(),       'Aujourd\'hui à 03:00',    'Now plus 1 hour');
+        assert.equal(moment(a).add({d: 1}).calendar(),       'Demain à 02:00',         'tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(),  'Aujourd\'hui à 01:00',    'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(),  'Hier à 02:00',           'yesterday at the same time');
+    });
+
+    test('same next week', function (assert) {
+        var i, m;
+
+        for (i = 2; i < 7; i++) {
+            m = moment().add({d: i});
+            assert.equal(m.calendar(),       m.format('dddd [à] LT'),  'Today + ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('dddd [à] LT'),  'Today + ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('dddd [à] LT'),  'Today + ' + i + ' days end of day');
+        }
+    });
+
+    test('same last week', function (assert) {
+        var i, m;
+
+        for (i = 2; i < 7; i++) {
+            m = moment().subtract({d: i});
+            assert.equal(m.calendar(),       m.format('dddd [dernier à] LT'),  'Today - ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('dddd [dernier à] LT'),  'Today - ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('dddd [dernier à] LT'),  'Today - ' + i + ' days end of day');
+        }
+    });
+
+    test('same all else', function (assert) {
+        var weeksAgo = moment().subtract({w: 1}),
+            weeksFromNow = moment().add({w: 1});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '1 week ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 1 week');
+
+        weeksAgo = moment().subtract({w: 2});
+        weeksFromNow = moment().add({w: 2});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '2 weeks ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 2 weeks');
+    });
+
+    test('weeks year starting sunday', function (assert) {
+        assert.equal(moment([2012, 0, 1]).week(), 52, 'Jan  1 2012 should be week 52');
+        assert.equal(moment([2012, 0, 2]).week(),  1, 'Jan  2 2012 should be week 1');
+        assert.equal(moment([2012, 0, 8]).week(),  1, 'Jan  8 2012 should be week 1');
+        assert.equal(moment([2012, 0, 9]).week(),  2, 'Jan  9 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).week(), 2, 'Jan 15 2012 should be week 2');
+    });
+
+    test('weeks year starting monday', function (assert) {
+        assert.equal(moment([2007, 0, 1]).week(),  1, 'Jan  1 2007 should be week 1');
+        assert.equal(moment([2007, 0, 7]).week(),  1, 'Jan  7 2007 should be week 1');
+        assert.equal(moment([2007, 0, 8]).week(),  2, 'Jan  8 2007 should be week 2');
+        assert.equal(moment([2007, 0, 14]).week(), 2, 'Jan 14 2007 should be week 2');
+        assert.equal(moment([2007, 0, 15]).week(), 3, 'Jan 15 2007 should be week 3');
+    });
+
+    test('weeks year starting tuesday', function (assert) {
+        assert.equal(moment([2007, 11, 31]).week(), 1, 'Dec 31 2007 should be week 1');
+        assert.equal(moment([2008,  0,  1]).week(), 1, 'Jan  1 2008 should be week 1');
+        assert.equal(moment([2008,  0,  6]).week(), 1, 'Jan  6 2008 should be week 1');
+        assert.equal(moment([2008,  0,  7]).week(), 2, 'Jan  7 2008 should be week 2');
+        assert.equal(moment([2008,  0, 13]).week(), 2, 'Jan 13 2008 should be week 2');
+        assert.equal(moment([2008,  0, 14]).week(), 3, 'Jan 14 2008 should be week 3');
+    });
+
+    test('weeks year starting wednesday', function (assert) {
+        assert.equal(moment([2002, 11, 30]).week(), 1, 'Dec 30 2002 should be week 1');
+        assert.equal(moment([2003,  0,  1]).week(), 1, 'Jan  1 2003 should be week 1');
+        assert.equal(moment([2003,  0,  5]).week(), 1, 'Jan  5 2003 should be week 1');
+        assert.equal(moment([2003,  0,  6]).week(), 2, 'Jan  6 2003 should be week 2');
+        assert.equal(moment([2003,  0, 12]).week(), 2, 'Jan 12 2003 should be week 2');
+        assert.equal(moment([2003,  0, 13]).week(), 3, 'Jan 13 2003 should be week 3');
+    });
+
+    test('weeks year starting thursday', function (assert) {
+        assert.equal(moment([2008, 11, 29]).week(), 1, 'Dec 29 2008 should be week 1');
+        assert.equal(moment([2009,  0,  1]).week(), 1, 'Jan  1 2009 should be week 1');
+        assert.equal(moment([2009,  0,  4]).week(), 1, 'Jan  4 2009 should be week 1');
+        assert.equal(moment([2009,  0,  5]).week(), 2, 'Jan  5 2009 should be week 2');
+        assert.equal(moment([2009,  0, 11]).week(), 2, 'Jan 11 2009 should be week 2');
+        assert.equal(moment([2009,  0, 13]).week(), 3, 'Jan 12 2009 should be week 3');
+    });
+
+    test('weeks year starting friday', function (assert) {
+        assert.equal(moment([2009, 11, 28]).week(), 53, 'Dec 28 2009 should be week 53');
+        assert.equal(moment([2010,  0,  1]).week(), 53, 'Jan  1 2010 should be week 53');
+        assert.equal(moment([2010,  0,  3]).week(), 53, 'Jan  3 2010 should be week 53');
+        assert.equal(moment([2010,  0,  4]).week(),  1, 'Jan  4 2010 should be week 1');
+        assert.equal(moment([2010,  0, 10]).week(),  1, 'Jan 10 2010 should be week 1');
+        assert.equal(moment([2010,  0, 11]).week(),  2, 'Jan 11 2010 should be week 2');
+    });
+
+    test('weeks year starting saturday', function (assert) {
+        assert.equal(moment([2010, 11, 27]).week(), 52, 'Dec 27 2010 should be week 52');
+        assert.equal(moment([2011,  0,  1]).week(), 52, 'Jan  1 2011 should be week 52');
+        assert.equal(moment([2011,  0,  2]).week(), 52, 'Jan  2 2011 should be week 52');
+        assert.equal(moment([2011,  0,  3]).week(),  1, 'Jan  3 2011 should be week 1');
+        assert.equal(moment([2011,  0,  9]).week(),  1, 'Jan  9 2011 should be week 1');
+        assert.equal(moment([2011,  0, 10]).week(),  2, 'Jan 10 2011 should be week 2');
+    });
+
+    test('weeks year starting sunday formatted', function (assert) {
+        assert.equal(moment([2012, 0,  1]).format('w ww wo'), '52 52 52e', 'Jan  1 2012 should be week 52');
+        assert.equal(moment([2012, 0,  2]).format('w ww wo'), '1 01 1er', 'Jan  2 2012 should be week 1');
+        assert.equal(moment([2012, 0,  8]).format('w ww wo'), '1 01 1er', 'Jan  8 2012 should be week 1');
+        assert.equal(moment([2012, 0,  9]).format('w ww wo'),   '2 02 2e', 'Jan  9 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).format('w ww wo'),   '2 02 2e', 'Jan 15 2012 should be week 2');
+    });
+
+    test('lenient ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing ' + i + ' date check');
+        }
+    });
+
+    test('lenient ordinal parsing of number', function (assert) {
+        var i, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            testMoment = moment('2014 01 ' + i, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing of number ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing of number ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing of number ' + i + ' date check');
+        }
+    });
+
+    test('strict ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do', true);
+            assert.ok(testMoment.isValid(), 'strict ordinal parsing ' + i);
+        }
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -12022,7 +12950,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -12035,8 +12964,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -12054,8 +12983,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -12382,7 +13311,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -12395,8 +13325,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -12414,8 +13344,377 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    localeModule('gd');
+
+    var months = [
+        'Am Faoilleach,Faoi',
+        'An Gearran,Gear',
+        'Am Màrt,Màrt',
+        'An Giblean,Gibl',
+        'An Cèitean,Cèit',
+        'An t-Ògmhios,Ògmh',
+        'An t-Iuchar,Iuch',
+        'An Lùnastal,Lùn',
+        'An t-Sultain,Sult',
+        'An Dàmhair,Dàmh',
+        'An t-Samhain,Samh',
+        'An Dùbhlachd,Dùbh'
+    ];
+
+    test('parse', function (assert) {
+        function equalTest(monthName, monthFormat, monthNum) {
+            assert.equal(moment(monthName, monthFormat).month(), monthNum, monthName + ' should be month ' + monthNum + 1);
+        }
+
+        for (var i = 0; i < 12; i++) {
+            var testMonth = months[i].split(',');
+            equalTest(testMonth[0], 'MMM', i);
+            equalTest(testMonth[1], 'MMM', i);
+            equalTest(testMonth[0], 'MMMM', i);
+            equalTest(testMonth[1], 'MMMM', i);
+            equalTest(testMonth[0].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(testMonth[1].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(testMonth[0].toLocaleUpperCase(), 'MMMM', i);
+            equalTest(testMonth[1].toLocaleUpperCase(), 'MMMM', i);
+        }
+    });
+
+    test('format', function (assert) {
+        var a = [
+            ['dddd, MMMM Do YYYY, h:mm:ss a', 'Didòmhnaich, An Gearran 14mh 2010, 3:25:50 pm'],
+            ['ddd, hA', 'Did, 3PM'],
+            ['M Mo MM MMMM MMM', '2 2na 02 An Gearran Gear'],
+            ['YYYY YY', '2010 10'],
+            ['D Do DD', '14 14mh 14'],
+            ['d do dddd ddd dd', '0 0mh Didòmhnaich Did Dò'],
+            ['DDD DDDo DDDD', '45 45mh 045'],
+            ['w wo ww', '6 6mh 06'],
+            ['h hh', '3 03'],
+            ['H HH', '15 15'],
+            ['m mm', '25 25'],
+            ['s ss', '50 50'],
+            ['a A', 'pm PM'],
+            ['[an] DDDo [latha den bhliadhna]', 'an 45mh latha den bhliadhna'],
+            ['LTS', '15:25:50'],
+            ['L', '14/02/2010'],
+            ['LL', '14 An Gearran 2010'],
+            ['LLL', '14 An Gearran 2010 15:25'],
+            ['LLLL', 'Didòmhnaich, 14 An Gearran 2010 15:25'],
+            ['l', '14/2/2010'],
+            ['ll', '14 Gear 2010'],
+            ['lll', '14 Gear 2010 15:25'],
+            ['llll', 'Did, 14 Gear 2010 15:25']
+        ],
+        b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
+        i;
+        for (i = 0; i < a.length; i++) {
+            assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+        }
+    });
+
+    test('format ordinal', function (assert) {
+        assert.equal(moment([2011, 0, 1]).format('DDDo'), '1d', '1d');
+        assert.equal(moment([2011, 0, 2]).format('DDDo'), '2na', '2na');
+        assert.equal(moment([2011, 0, 3]).format('DDDo'), '3mh', '3mh');
+        assert.equal(moment([2011, 0, 4]).format('DDDo'), '4mh', '4mh');
+        assert.equal(moment([2011, 0, 5]).format('DDDo'), '5mh', '5mh');
+        assert.equal(moment([2011, 0, 6]).format('DDDo'), '6mh', '6mh');
+        assert.equal(moment([2011, 0, 7]).format('DDDo'), '7mh', '7mh');
+        assert.equal(moment([2011, 0, 8]).format('DDDo'), '8mh', '8mh');
+        assert.equal(moment([2011, 0, 9]).format('DDDo'), '9mh', '9mh');
+        assert.equal(moment([2011, 0, 10]).format('DDDo'), '10mh', '10mh');
+        assert.equal(moment([2011, 0, 11]).format('DDDo'), '11mh', '11mh');
+        assert.equal(moment([2011, 0, 12]).format('DDDo'), '12na', '12na');
+        assert.equal(moment([2011, 0, 13]).format('DDDo'), '13mh', '13mh');
+        assert.equal(moment([2011, 0, 14]).format('DDDo'), '14mh', '14mh');
+        assert.equal(moment([2011, 0, 15]).format('DDDo'), '15mh', '15mh');
+        assert.equal(moment([2011, 0, 16]).format('DDDo'), '16mh', '16mh');
+        assert.equal(moment([2011, 0, 17]).format('DDDo'), '17mh', '17mh');
+        assert.equal(moment([2011, 0, 18]).format('DDDo'), '18mh', '18mh');
+        assert.equal(moment([2011, 0, 19]).format('DDDo'), '19mh', '19mh');
+        assert.equal(moment([2011, 0, 20]).format('DDDo'), '20mh', '20mh');
+        assert.equal(moment([2011, 0, 21]).format('DDDo'), '21mh', '21mh');
+        assert.equal(moment([2011, 0, 22]).format('DDDo'), '22na', '22na');
+        assert.equal(moment([2011, 0, 23]).format('DDDo'), '23mh', '23mh');
+        assert.equal(moment([2011, 0, 24]).format('DDDo'), '24mh', '24mh');
+        assert.equal(moment([2011, 0, 25]).format('DDDo'), '25mh', '25mh');
+        assert.equal(moment([2011, 0, 26]).format('DDDo'), '26mh', '26mh');
+        assert.equal(moment([2011, 0, 27]).format('DDDo'), '27mh', '27mh');
+        assert.equal(moment([2011, 0, 28]).format('DDDo'), '28mh', '28mh');
+        assert.equal(moment([2011, 0, 29]).format('DDDo'), '29mh', '29mh');
+        assert.equal(moment([2011, 0, 30]).format('DDDo'), '30mh', '30mh');
+        assert.equal(moment([2011, 0, 31]).format('DDDo'), '31mh', '31mh');
+    });
+
+    test('format month', function (assert) {
+        var expected = months;
+        for (var i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, i, 1]).format('MMMM,MMM'), expected[i], expected[i]);
+        }
+    });
+
+    test('format week', function (assert) {
+        var expected = ['Didòmhnaich Did Dò', 'Diluain Dil Lu', 'Dimàirt Dim Mà', 'Diciadain Dic Ci', 'Diardaoin Dia Ar', 'Dihaoine Dih Ha', 'Disathairne Dis Sa'];
+        for (var i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
+        }
+    });
+
+    test('from', function (assert) {
+        var start = moment([2007, 1, 28]);
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true), 'beagan diogan', '44 seconds = a few seconds');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 45}), true), 'mionaid', '45 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 89}), true), 'mionaid', '89 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 90}), true), '2 mionaidean', '90 seconds = 2 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 44}), true), '44 mionaidean', '44 minutes = 44 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 45}), true), 'uair', '45 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 89}), true), 'uair', '89 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 90}), true), '2 uairean', '90 minutes = 2 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 5}), true), '5 uairean', '5 hours = 5 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 21}), true), '21 uairean', '21 hours = 21 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 22}), true), 'latha', '22 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 35}), true), 'latha', '35 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 36}), true), '2 latha', '36 hours = 2 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 1}), true), 'latha', '1 day = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 5}), true), '5 latha', '5 days = 5 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 25}), true), '25 latha', '25 days = 25 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 26}), true), 'mìos', '26 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 30}), true), 'mìos', '30 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 43}), true), 'mìos', '43 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 46}), true), '2 mìosan', '46 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 74}), true), '2 mìosan', '75 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 76}), true), '3 mìosan', '76 days = 3 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 1}), true), 'mìos', '1 month = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 5}), true), '5 mìosan', '5 months = 5 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 345}), true), 'bliadhna', '345 days = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 548}), true), '2 bliadhna', '548 days = 2 years');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 1}), true), 'bliadhna', '1 year = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 5}), true), '5 bliadhna', '5 years = 5 years');
+    });
+
+    test('suffix', function (assert) {
+        assert.equal(moment(30000).from(0), 'ann an beagan diogan', 'prefix');
+        assert.equal(moment(0).from(30000), 'bho chionn beagan diogan', 'suffix');
+    });
+
+    test('now from now', function (assert) {
+        assert.equal(moment().fromNow(), 'bho chionn beagan diogan', 'now from now should display as in the past');
+    });
+
+    test('fromNow', function (assert) {
+        assert.equal(moment().add({s: 30}).fromNow(), 'ann an beagan diogan', 'in a few seconds');
+        assert.equal(moment().add({d: 5}).fromNow(), 'ann an 5 latha', 'in 5 days');
+    });
+
+    test('calendar day', function (assert) {
+        var a = moment().hours(2).minutes(0).seconds(0);
+
+        assert.equal(moment(a).calendar(), 'An-diugh aig 02:00', 'today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(), 'An-diugh aig 02:25', 'Now plus 25 min');
+        assert.equal(moment(a).add({h: 1}).calendar(), 'An-diugh aig 03:00', 'Now plus 1 hour');
+        assert.equal(moment(a).add({d: 1}).calendar(), 'A-màireach aig 02:00', 'tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(), 'An-diugh aig 01:00', 'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(), 'An-dè aig 02:00', 'yesterday at the same time');
+    });
+
+    test('calendar next week', function (assert) {
+        var i, m;
+        for (i = 2; i < 7; i++) {
+            m = moment().add({d: i});
+            assert.equal(m.calendar(), m.format('dddd [aig] LT'), 'Today + ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(), m.format('dddd [aig] LT'), 'Today + ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(), m.format('dddd [aig] LT'), 'Today + ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar last week', function (assert) {
+        var i, m;
+
+        for (i = 2; i < 7; i++) {
+            m = moment().subtract({d: i});
+            assert.equal(m.calendar(), m.format('dddd [seo chaidh] [aig] LT'), 'Today - ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(), m.format('dddd [seo chaidh] [aig] LT'), 'Today - ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(), m.format('dddd [seo chaidh] [aig] LT'), 'Today - ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar all else', function (assert) {
+        var weeksAgo = moment().subtract({w: 1}),
+           weeksFromNow = moment().add({w: 1});
+
+        assert.equal(weeksAgo.calendar(), weeksAgo.format('L'), '1 week ago');
+        assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 1 week');
+
+        weeksAgo = moment().subtract({w: 2});
+        weeksFromNow = moment().add({w: 2});
+
+        assert.equal(weeksAgo.calendar(), weeksAgo.format('L'), '2 weeks ago');
+        assert.equal(weeksFromNow.calendar(), weeksFromNow.format('L'), 'in 2 weeks');
+    });
+
+    test('weeks year starting sunday', function (assert) {
+        assert.equal(moment([2012, 0, 1]).week(), 52, 'Faoi  1 2012 should be week 52');
+        assert.equal(moment([2012, 0, 2]).week(), 1, 'Faoi  2 2012 should be week 1');
+        assert.equal(moment([2012, 0, 8]).week(), 1, 'Faoi  8 2012 should be week 1');
+        assert.equal(moment([2012, 0, 9]).week(), 2, 'Faoi  9 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).week(), 2, 'Faoi 15 2012 should be week 2');
+    });
+
+    test('weeks year starting monday', function (assert) {
+        assert.equal(moment([2007, 0, 1]).week(), 1, 'Faoi  1 2007 should be week 1');
+        assert.equal(moment([2007, 0, 7]).week(), 1, 'Faoi  7 2007 should be week 1');
+        assert.equal(moment([2007, 0, 8]).week(), 2, 'Faoi  8 2007 should be week 2');
+        assert.equal(moment([2007, 0, 14]).week(), 2, 'Faoi 14 2007 should be week 2');
+        assert.equal(moment([2007, 0, 15]).week(), 3, 'Faoi 15 2007 should be week 3');
+    });
+
+    test('weeks year starting tuesday', function (assert) {
+        assert.equal(moment([2007, 11, 31]).week(), 1, 'Dùbh 31 2007 should be week 1');
+        assert.equal(moment([2008, 0, 1]).week(), 1, 'Faoi  1 2008 should be week 1');
+        assert.equal(moment([2008, 0, 6]).week(), 1, 'Faoi  6 2008 should be week 1');
+        assert.equal(moment([2008, 0, 7]).week(), 2, 'Faoi  7 2008 should be week 2');
+        assert.equal(moment([2008, 0, 13]).week(), 2, 'Faoi 13 2008 should be week 2');
+        assert.equal(moment([2008, 0, 14]).week(), 3, 'Faoi 14 2008 should be week 3');
+    });
+
+    test('weeks year starting wednesday', function (assert) {
+        assert.equal(moment([2002, 11, 30]).week(), 1, 'Dùbh 30 2002 should be week 1');
+        assert.equal(moment([2003, 0, 1]).week(), 1, 'Faoi  1 2003 should be week 1');
+        assert.equal(moment([2003, 0, 5]).week(), 1, 'Faoi  5 2003 should be week 1');
+        assert.equal(moment([2003, 0, 6]).week(), 2, 'Faoi  6 2003 should be week 2');
+        assert.equal(moment([2003, 0, 12]).week(), 2, 'Faoi 12 2003 should be week 2');
+        assert.equal(moment([2003, 0, 13]).week(), 3, 'Faoi 13 2003 should be week 3');
+    });
+
+    test('weeks year starting thursday', function (assert) {
+        assert.equal(moment([2008, 11, 29]).week(), 1, 'Dùbh 29 2008 should be week 1');
+        assert.equal(moment([2009, 0, 1]).week(), 1, 'Faoi  1 2009 should be week 1');
+        assert.equal(moment([2009, 0, 4]).week(), 1, 'Faoi  4 2009 should be week 1');
+        assert.equal(moment([2009, 0, 5]).week(), 2, 'Faoi  5 2009 should be week 2');
+        assert.equal(moment([2009, 0, 11]).week(), 2, 'Faoi 11 2009 should be week 2');
+        assert.equal(moment([2009, 0, 13]).week(), 3, 'Faoi 12 2009 should be week 3');
+    });
+
+    test('weeks year starting friday', function (assert) {
+        assert.equal(moment([2009, 11, 28]).week(), 53, 'Dùbh 28 2009 should be week 53');
+        assert.equal(moment([2010, 0, 1]).week(), 53, 'Faoi  1 2010 should be week 53');
+        assert.equal(moment([2010, 0, 3]).week(), 53, 'Faoi  3 2010 should be week 53');
+        assert.equal(moment([2010, 0, 4]).week(), 1, 'Faoi  4 2010 should be week 1');
+        assert.equal(moment([2010, 0, 10]).week(), 1, 'Faoi 10 2010 should be week 1');
+        assert.equal(moment([2010, 0, 11]).week(), 2, 'Faoi 11 2010 should be week 2');
+    });
+
+    test('weeks year starting saturday', function (assert) {
+        assert.equal(moment([2010, 11, 27]).week(), 52, 'Dùbh 27 2010 should be week 52');
+        assert.equal(moment([2011, 0, 1]).week(), 52, 'Faoi  1 2011 should be week 52');
+        assert.equal(moment([2011, 0, 2]).week(), 52, 'Faoi  2 2011 should be week 52');
+        assert.equal(moment([2011, 0, 3]).week(), 1, 'Faoi  3 2011 should be week 1');
+        assert.equal(moment([2011, 0, 9]).week(), 1, 'Faoi  9 2011 should be week 1');
+        assert.equal(moment([2011, 0, 10]).week(), 2, 'Faoi 10 2011 should be week 2');
+    });
+
+    test('weeks year starting sunday formatted', function (assert) {
+        assert.equal(moment([2012, 0, 1]).format('w ww wo'), '52 52 52na', 'Faoi  1 2012 should be week 52');
+        assert.equal(moment([2012, 0, 2]).format('w ww wo'), '1 01 1d', 'Faoi  2 2012 should be week 1');
+        assert.equal(moment([2012, 0, 8]).format('w ww wo'), '1 01 1d', 'Faoi  8 2012 should be week 1');
+        assert.equal(moment([2012, 0, 9]).format('w ww wo'), '2 02 2na', 'Faoi  9 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).format('w ww wo'), '2 02 2na', 'Faoi 15 2012 should be week 2');
+    });
+
+    test('lenient ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                'lenient ordinal parsing ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                'lenient ordinal parsing ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                'lenient ordinal parsing ' + i + ' date check');
+        }
+    });
+
+    test('lenient ordinal parsing of number', function (assert) {
+        var i, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            testMoment = moment('2014 01 ' + i, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                'lenient ordinal parsing of number ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                'lenient ordinal parsing of number ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                'lenient ordinal parsing of number ' + i + ' date check');
+        }
+    });
+
+    test('strict ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do', true);
+            assert.ok(testMoment.isValid(), 'strict ordinal parsing ' + i);
+        }
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -12746,7 +14045,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -12759,8 +14059,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -12778,8 +14078,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -13066,7 +14366,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -13079,8 +14380,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -13098,8 +14399,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -13449,7 +14750,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -13462,8 +14764,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -13481,8 +14783,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -13837,7 +15139,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -13850,8 +15153,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -13869,8 +15172,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -14206,7 +15509,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -14219,8 +15523,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -14238,8 +15542,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -14631,7 +15935,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -14644,8 +15949,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -14663,8 +15968,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -14961,7 +16266,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -14974,8 +16280,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -14993,8 +16299,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -15323,7 +16629,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -15336,8 +16643,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -15355,8 +16662,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -15398,7 +16705,7 @@
                 ['M Mo MM MMMM MMM',                   '2 2º 02 febbraio feb'],
                 ['YYYY YY',                            '2010 10'],
                 ['D Do DD',                            '14 14º 14'],
-                ['d do dddd ddd dd',                   '0 0º Domenica Dom D'],
+                ['d do dddd ddd dd',                   '0 0º Domenica Dom Do'],
                 ['DDD DDDo DDDD',                      '45 45º 045'],
                 ['w wo ww',                            '6 6º 06'],
                 ['h hh',                               '3 03'],
@@ -15469,7 +16776,7 @@
     });
 
     test('format week', function (assert) {
-        var expected = 'Domenica Dom D_Lunedì Lun L_Martedì Mar Ma_Mercoledì Mer Me_Giovedì Gio G_Venerdì Ven V_Sabato Sab S'.split('_'), i;
+        var expected = 'Domenica Dom Do_Lunedì Lun Lu_Martedì Mar Ma_Mercoledì Mer Me_Giovedì Gio Gi_Venerdì Ven Ve_Sabato Sab Sa'.split('_'), i;
         for (i = 0; i < expected.length; i++) {
             assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
         }
@@ -15677,7 +16984,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -15690,8 +16998,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -15709,8 +17017,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -15995,7 +17303,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -16008,8 +17317,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -16027,8 +17336,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -16329,7 +17638,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -16342,8 +17652,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -16361,8 +17671,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -16697,7 +18007,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -16710,8 +18021,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -16729,8 +18040,365 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    localeModule('kk');
+
+    test('parse', function (assert) {
+        var tests = 'Қаңтар Қаң_Ақпан Ақп_Наурыз Нау_Сәуір Сәу_Мамыр Мам_Маусым Мау_Шілде Шіл_Тамыз Там_Қыркүйек Қыр_Қазан Қаз_Қараша Қар_Желтоқсан Жел'.split('_'), i;
+        function equalTest(input, mmm, i) {
+            assert.equal(moment(input, mmm).month(), i, input + ' should be month ' + (i + 1));
+        }
+        for (i = 0; i < 12; i++) {
+            tests[i] = tests[i].split(' ');
+            equalTest(tests[i][0], 'MMM', i);
+            equalTest(tests[i][1], 'MMM', i);
+            equalTest(tests[i][0], 'MMMM', i);
+            equalTest(tests[i][1], 'MMMM', i);
+            equalTest(tests[i][0].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleUpperCase(), 'MMMM', i);
+        }
+    });
+
+    test('format', function (assert) {
+        var a = [
+                ['dddd, Do MMMM YYYY, HH:mm:ss',       'Жексенбі, 14-ші Ақпан 2010, 15:25:50'],
+                ['ddd, hA',                            'Жек, 3PM'],
+                ['M Mo MM MMMM MMM',                   '2 2-ші 02 Ақпан Ақп'],
+                ['YYYY YY',                            '2010 10'],
+                ['D Do DD',                            '14 14-ші 14'],
+                ['d do dddd ddd dd',                   '0 0-ші Жексенбі Жек Жк'],
+                ['DDD DDDo DDDD',                      '45 45-ші 045'],
+                ['w wo ww',                            '7 7-ші 07'],
+                ['h hh',                               '3 03'],
+                ['H HH',                               '15 15'],
+                ['m mm',                               '25 25'],
+                ['s ss',                               '50 50'],
+                ['a A',                                'pm PM'],
+                ['[жылдың] DDDo [күні]',               'жылдың 45-ші күні'],
+                ['LTS',                                '15:25:50'],
+                ['L',                                  '14.02.2010'],
+                ['LL',                                 '14 Ақпан 2010'],
+                ['LLL',                                '14 Ақпан 2010 15:25'],
+                ['LLLL',                               'Жексенбі, 14 Ақпан 2010 15:25'],
+                ['l',                                  '14.2.2010'],
+                ['ll',                                 '14 Ақп 2010'],
+                ['lll',                                '14 Ақп 2010 15:25'],
+                ['llll',                               'Жек, 14 Ақп 2010 15:25']
+            ],
+            b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
+            i;
+        for (i = 0; i < a.length; i++) {
+            assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+        }
+    });
+
+    test('format ordinal', function (assert) {
+        assert.equal(moment([2011, 0, 1]).format('DDDo'), '1-ші', '1st');
+        assert.equal(moment([2011, 0, 2]).format('DDDo'), '2-ші', '2nd');
+        assert.equal(moment([2011, 0, 3]).format('DDDo'), '3-ші', '3rd');
+        assert.equal(moment([2011, 0, 4]).format('DDDo'), '4-ші', '4th');
+        assert.equal(moment([2011, 0, 5]).format('DDDo'), '5-ші', '5th');
+        assert.equal(moment([2011, 0, 6]).format('DDDo'), '6-шы', '6th');
+        assert.equal(moment([2011, 0, 7]).format('DDDo'), '7-ші', '7th');
+        assert.equal(moment([2011, 0, 8]).format('DDDo'), '8-ші', '8th');
+        assert.equal(moment([2011, 0, 9]).format('DDDo'), '9-шы', '9th');
+        assert.equal(moment([2011, 0, 10]).format('DDDo'), '10-шы', '10th');
+
+        assert.equal(moment([2011, 0, 11]).format('DDDo'), '11-ші', '11th');
+        assert.equal(moment([2011, 0, 12]).format('DDDo'), '12-ші', '12th');
+        assert.equal(moment([2011, 0, 13]).format('DDDo'), '13-ші', '13th');
+        assert.equal(moment([2011, 0, 14]).format('DDDo'), '14-ші', '14th');
+        assert.equal(moment([2011, 0, 15]).format('DDDo'), '15-ші', '15th');
+        assert.equal(moment([2011, 0, 16]).format('DDDo'), '16-шы', '16th');
+        assert.equal(moment([2011, 0, 17]).format('DDDo'), '17-ші', '17th');
+        assert.equal(moment([2011, 0, 18]).format('DDDo'), '18-ші', '18th');
+        assert.equal(moment([2011, 0, 19]).format('DDDo'), '19-шы', '19th');
+        assert.equal(moment([2011, 0, 20]).format('DDDo'), '20-шы', '20th');
+
+        assert.equal(moment([2011, 0, 21]).format('DDDo'), '21-ші', '21st');
+        assert.equal(moment([2011, 0, 22]).format('DDDo'), '22-ші', '22nd');
+        assert.equal(moment([2011, 0, 23]).format('DDDo'), '23-ші', '23rd');
+        assert.equal(moment([2011, 0, 24]).format('DDDo'), '24-ші', '24th');
+        assert.equal(moment([2011, 0, 25]).format('DDDo'), '25-ші', '25th');
+        assert.equal(moment([2011, 0, 26]).format('DDDo'), '26-шы', '26th');
+        assert.equal(moment([2011, 0, 27]).format('DDDo'), '27-ші', '27th');
+        assert.equal(moment([2011, 0, 28]).format('DDDo'), '28-ші', '28th');
+        assert.equal(moment([2011, 0, 29]).format('DDDo'), '29-шы', '29th');
+        assert.equal(moment([2011, 0, 30]).format('DDDo'), '30-шы', '30th');
+
+        assert.equal(moment([2011, 0, 31]).format('DDDo'), '31-ші', '31st');
+    });
+
+    test('format month', function (assert) {
+        var expected = 'Қаңтар Қаң_Ақпан Ақп_Наурыз Нау_Сәуір Сәу_Мамыр Мам_Маусым Мау_Шілде Шіл_Тамыз Там_Қыркүйек Қыр_Қазан Қаз_Қараша Қар_Желтоқсан Жел'.split('_'), i;
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, i, 1]).format('MMMM MMM'), expected[i], expected[i]);
+        }
+    });
+
+    test('format week', function (assert) {
+        var expected = 'Жексенбі Жек Жк_Дүйсенбі Дүй Дй_Сейсенбі Сей Сй_Сәрсенбі Сәр Ср_Бейсенбі Бей Бй_Жұма Жұм Жм_Сенбі Сен Сн'.split('_'), i;
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
+        }
+    });
+
+    test('from', function (assert) {
+        var start = moment([2007, 1, 28]);
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'бірнеше секунд', '44 seconds = a few seconds');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 45}), true),  'бір минут',      '45 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 89}), true),  'бір минут',      '89 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 90}), true),  '2 минут',     '90 seconds = 2 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 44}), true),  '44 минут',    '44 minutes = 44 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 45}), true),  'бір сағат',       '45 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 89}), true),  'бір сағат',       '89 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 90}), true),  '2 сағат',       '90 minutes = 2 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 5}), true),   '5 сағат',       '5 hours = 5 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 21}), true),  '21 сағат',      '21 hours = 21 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 22}), true),  'бір күн',         '22 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 35}), true),  'бір күн',         '35 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 36}), true),  '2 күн',        '36 hours = 2 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 1}), true),   'бір күн',         '1 day = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 5}), true),   '5 күн',        '5 days = 5 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 25}), true),  '25 күн',       '25 days = 25 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 26}), true),  'бір ай',       '26 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 30}), true),  'бір ай',       '30 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 43}), true),  'бір ай',       '43 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 46}), true),  '2 ай',      '46 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 74}), true),  '2 ай',      '75 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 76}), true),  '3 ай',      '76 days = 3 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 1}), true),   'бір ай',       '1 month = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 5}), true),   '5 ай',      '5 months = 5 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 345}), true), 'бір жыл',        '345 days = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 548}), true), '2 жыл',       '548 days = 2 years');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 1}), true),   'бір жыл',        '1 year = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 5}), true),   '5 жыл',       '5 years = 5 years');
+    });
+
+    test('suffix', function (assert) {
+        assert.equal(moment(30000).from(0), 'бірнеше секунд ішінде',  'prefix');
+        assert.equal(moment(0).from(30000), 'бірнеше секунд бұрын', 'suffix');
+    });
+
+    test('now from now', function (assert) {
+        assert.equal(moment().fromNow(), 'бірнеше секунд бұрын',  'now from now should display as in the past');
+    });
+
+    test('fromNow', function (assert) {
+        assert.equal(moment().add({s: 30}).fromNow(), 'бірнеше секунд ішінде', 'in a few seconds');
+        assert.equal(moment().add({d: 5}).fromNow(), '5 күн ішінде', 'in 5 days');
+    });
+
+    test('calendar day', function (assert) {
+        var a = moment().hours(2).minutes(0).seconds(0);
+
+        assert.equal(moment(a).calendar(),                     'Бүгін сағат 02:00',      'today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(),      'Бүгін сағат 02:25',      'Now plus 25 min');
+        assert.equal(moment(a).add({h: 1}).calendar(),       'Бүгін сағат 03:00',      'Now plus 1 hour');
+        assert.equal(moment(a).add({d: 1}).calendar(),       'Ертең сағат 02:00',   'tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(),  'Бүгін сағат 01:00',      'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(),  'Кеше сағат 02:00',  'yesterday at the same time');
+    });
+
+    test('calendar next week', function (assert) {
+        var i, m;
+        for (i = 2; i < 7; i++) {
+            m = moment().add({d: i});
+            assert.equal(m.calendar(),       m.format('dddd [сағат] LT'),  'Today + ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('dddd [сағат] LT'),  'Today + ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('dddd [сағат] LT'),  'Today + ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar last week', function (assert) {
+        var i, m;
+
+        for (i = 2; i < 7; i++) {
+            m = moment().subtract({d: i});
+            assert.equal(m.calendar(),       m.format('[Өткен аптаның] dddd [сағат] LT'),  'Today - ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('[Өткен аптаның] dddd [сағат] LT'),  'Today - ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('[Өткен аптаның] dddd [сағат] LT'),  'Today - ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar all else', function (assert) {
+        var weeksAgo = moment().subtract({w: 1}),
+            weeksFromNow = moment().add({w: 1});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '1 week ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 1 week');
+
+        weeksAgo = moment().subtract({w: 2});
+        weeksFromNow = moment().add({w: 2});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '2 weeks ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 2 weeks');
+    });
+
+    test('weeks year starting sunday', function (assert) {
+        assert.equal(moment([2011, 11, 25]).week(), 52, 'Dec 25 2011 should be week 52');
+        assert.equal(moment([2012, 0, 2]).week(), 2, 'Jan  2 2012 should be week 2');
+        assert.equal(moment([2012, 0, 8]).week(), 2, 'Jan  8 2012 should be week 2');
+        assert.equal(moment([2012, 0, 9]).week(), 3, 'Jan  9 2012 should be week 3');
+        assert.equal(moment([2012, 0, 15]).week(), 3, 'Jan 15 2012 should be week 3');
+    });
+
+    test('weeks year starting monday', function (assert) {
+        assert.equal(moment([2007, 0, 1]).week(),  1, 'Jan  1 2007 should be week 1');
+        assert.equal(moment([2007, 0, 7]).week(),  1, 'Jan  7 2007 should be week 1');
+        assert.equal(moment([2007, 0, 8]).week(),  2, 'Jan  8 2007 should be week 2');
+        assert.equal(moment([2007, 0, 14]).week(), 2, 'Jan 14 2007 should be week 2');
+        assert.equal(moment([2007, 0, 15]).week(), 3, 'Jan 15 2007 should be week 3');
+    });
+
+    test('weeks year starting tuesday', function (assert) {
+        assert.equal(moment([2007, 11, 31]).week(), 1, 'Dec 31 2007 should be week 1');
+        assert.equal(moment([2008,  0,  1]).week(), 1, 'Jan  1 2008 should be week 1');
+        assert.equal(moment([2008,  0,  6]).week(), 1, 'Jan  6 2008 should be week 1');
+        assert.equal(moment([2008,  0,  7]).week(), 2, 'Jan  7 2008 should be week 2');
+        assert.equal(moment([2008,  0, 13]).week(), 2, 'Jan 13 2008 should be week 2');
+        assert.equal(moment([2008,  0, 14]).week(), 3, 'Jan 14 2008 should be week 3');
+    });
+
+    test('weeks year starting wednesday', function (assert) {
+        assert.equal(moment([2002, 11, 30]).week(), 1, 'Dec 30 2002 should be week 1');
+        assert.equal(moment([2003,  0,  1]).week(), 1, 'Jan  1 2003 should be week 1');
+        assert.equal(moment([2003,  0,  5]).week(), 1, 'Jan  5 2003 should be week 1');
+        assert.equal(moment([2003,  0,  6]).week(), 2, 'Jan  6 2003 should be week 2');
+        assert.equal(moment([2003,  0, 12]).week(), 2, 'Jan 12 2003 should be week 2');
+        assert.equal(moment([2003,  0, 13]).week(), 3, 'Jan 13 2003 should be week 3');
+    });
+
+    test('weeks year starting thursday', function (assert) {
+        assert.equal(moment([2008, 11, 29]).week(), 1, 'Dec 29 2008 should be week 1');
+        assert.equal(moment([2009,  0,  1]).week(), 1, 'Jan  1 2009 should be week 1');
+        assert.equal(moment([2009,  0,  4]).week(), 1, 'Jan  4 2009 should be week 1');
+        assert.equal(moment([2009,  0,  5]).week(), 2, 'Jan  5 2009 should be week 2');
+        assert.equal(moment([2009,  0, 11]).week(), 2, 'Jan 11 2009 should be week 2');
+        assert.equal(moment([2009,  0, 13]).week(), 3, 'Jan 12 2009 should be week 3');
+    });
+
+    test('weeks year starting friday', function (assert) {
+        assert.equal(moment([2009, 11, 28]).week(), 1, 'Dec 28 2009 should be week 1');
+        assert.equal(moment([2010,  0,  1]).week(), 1, 'Jan  1 2010 should be week 1');
+        assert.equal(moment([2010,  0,  3]).week(), 1, 'Jan  3 2010 should be week 1');
+        assert.equal(moment([2010,  0,  4]).week(), 2, 'Jan  4 2010 should be week 2');
+        assert.equal(moment([2010,  0, 10]).week(), 2, 'Jan 10 2010 should be week 2');
+        assert.equal(moment([2010,  0, 11]).week(), 3, 'Jan 11 2010 should be week 3');
+    });
+
+    test('weeks year starting saturday', function (assert) {
+        assert.equal(moment([2010, 11, 27]).week(), 1, 'Dec 27 2010 should be week 1');
+        assert.equal(moment([2011,  0,  1]).week(), 1, 'Jan  1 2011 should be week 1');
+        assert.equal(moment([2011,  0,  2]).week(), 1, 'Jan  2 2011 should be week 1');
+        assert.equal(moment([2011,  0,  3]).week(), 2, 'Jan  3 2011 should be week 2');
+        assert.equal(moment([2011,  0,  9]).week(), 2, 'Jan  9 2011 should be week 2');
+        assert.equal(moment([2011,  0, 10]).week(), 3, 'Jan 10 2011 should be week 3');
+    });
+
+    test('weeks year starting sunday formatted', function (assert) {
+        assert.equal(moment([2012, 0,  1]).format('w ww wo'),   '1 01 1-ші', 'Jan  1 2012 should be week 1');
+        assert.equal(moment([2012, 0,  2]).format('w ww wo'),   '2 02 2-ші', 'Jan  2 2012 should be week 2');
+        assert.equal(moment([2012, 0,  8]).format('w ww wo'),   '2 02 2-ші', 'Jan  8 2012 should be week 2');
+        assert.equal(moment([2012, 0,  9]).format('w ww wo'),   '3 03 3-ші', 'Jan  9 2012 should be week 3');
+        assert.equal(moment([2012, 0, 15]).format('w ww wo'),   '3 03 3-ші', 'Jan 15 2012 should be week 3');
+    });
+
+    test('lenient ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing ' + i + ' date check');
+        }
+    });
+
+    test('lenient ordinal parsing of number', function (assert) {
+        var i, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            testMoment = moment('2014 01 ' + i, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing of number ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing of number ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing of number ' + i + ' date check');
+        }
+    });
+
+    test('strict ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do', true);
+            assert.ok(testMoment.isValid(), 'strict ordinal parsing ' + i);
+        }
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -16906,19 +18574,19 @@
     test('calendar day', function (assert) {
         var a = moment().hours(2).minutes(0).seconds(0);
 
-        assert.equal(moment(a).calendar(), 'ថ្ងៃនៈ ម៉ោង 02:00', 'today at the same time');
+        assert.equal(moment(a).calendar(), 'ថ្ងៃនេះ ម៉ោង 02:00', 'today at the same time');
         assert.equal(moment(a).add({
             m: 25
-        }).calendar(), 'ថ្ងៃនៈ ម៉ោង 02:25', 'Now plus 25 min');
+        }).calendar(), 'ថ្ងៃនេះ ម៉ោង 02:25', 'Now plus 25 min');
         assert.equal(moment(a).add({
             h: 1
-        }).calendar(), 'ថ្ងៃនៈ ម៉ោង 03:00', 'Now plus 1 hour');
+        }).calendar(), 'ថ្ងៃនេះ ម៉ោង 03:00', 'Now plus 1 hour');
         assert.equal(moment(a).add({
             d: 1
         }).calendar(), 'ស្អែក ម៉ោង 02:00', 'tomorrow at the same time');
         assert.equal(moment(a).subtract({
             h: 1
-        }).calendar(), 'ថ្ងៃនៈ ម៉ោង 01:00', 'Now minus 1 hour');
+        }).calendar(), 'ថ្ងៃនេះ ម៉ោង 01:00', 'Now minus 1 hour');
         assert.equal(moment(a).subtract({
             d: 1
         }).calendar(), 'ម្សិលមិញ ម៉ោង 02:00', 'yesterday at the same time');
@@ -17083,7 +18751,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -17096,8 +18765,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -17115,8 +18784,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -17474,7 +19143,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -17487,8 +19157,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -17506,8 +19176,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -17700,7 +19370,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -17713,8 +19384,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -17732,8 +19403,365 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    localeModule('lo');
+
+    test('parse', function (assert) {
+        var tests = 'ມັງກອນ ມັງກອນ_ກຸມພາ ກຸມພາ_ມີນາ ມີນາ_ເມສາ ເມສາ_ພຶດສະພາ ພຶດສະພາ_ມິຖຸນາ ມິຖຸນາ_ກໍລະກົດ ກໍລະກົດ_ສິງຫາ ສິງຫາ_ກັນຍາ ກັນຍາ_ຕຸລາ ຕຸລາ_ພະຈິກ ພະຈິກ_ທັນວາ ທັນວາ'.split('_'), i;
+        function equalTest(input, mmm, i) {
+            assert.equal(moment(input, mmm).month(), i, input + ' should be month ' + (i + 1));
+        }
+        for (i = 0; i < 12; i++) {
+            tests[i] = tests[i].split(' ');
+            equalTest(tests[i][0], 'MMM', i);
+            equalTest(tests[i][1], 'MMM', i);
+            equalTest(tests[i][0], 'MMMM', i);
+            equalTest(tests[i][1], 'MMMM', i);
+            equalTest(tests[i][0].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleUpperCase(), 'MMMM', i);
+        }
+    });
+
+    test('format', function (assert) {
+        var a = [
+                ['dddd, MMMM Do YYYY, h:mm:ss a',      'ອາທິດ, ກຸມພາ ທີ່14 2010, 3:25:50 ຕອນແລງ'],
+                ['ddd, hA',                            'ທິດ, 3ຕອນແລງ'],
+                ['M Mo MM MMMM MMM',                   '2 ທີ່2 02 ກຸມພາ ກຸມພາ'],
+                ['YYYY YY',                            '2010 10'],
+                ['D Do DD',                            '14 ທີ່14 14'],
+                ['d do dddd ddd dd',                   '0 ທີ່0 ອາທິດ ທິດ ທ'],
+                ['DDD DDDo DDDD',                      '45 ທີ່45 045'],
+                ['w wo ww',                            '8 ທີ່8 08'],
+                ['h hh',                               '3 03'],
+                ['H HH',                               '15 15'],
+                ['m mm',                               '25 25'],
+                ['s ss',                               '50 50'],
+                ['a A',                                'ຕອນແລງ ຕອນແລງ'],
+                ['[ວັນ]DDDo [ຂອງປີ]',                   'ວັນທີ່45 ຂອງປີ'],
+                ['LTS',                                '15:25:50'],
+                ['L',                                  '14/02/2010'],
+                ['LL',                                 '14 ກຸມພາ 2010'],
+                ['LLL',                                '14 ກຸມພາ 2010 15:25'],
+                ['LLLL',                               'ວັນອາທິດ 14 ກຸມພາ 2010 15:25'],
+                ['l',                                  '14/2/2010'],
+                ['ll',                                 '14 ກຸມພາ 2010'],
+                ['lll',                                '14 ກຸມພາ 2010 15:25'],
+                ['llll',                               'ວັນທິດ 14 ກຸມພາ 2010 15:25']
+            ],
+            b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
+            i;
+        for (i = 0; i < a.length; i++) {
+            assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+        }
+    });
+
+    test('format ordinal', function (assert) {
+        assert.equal(moment([2011, 0, 1]).format('DDDo'), 'ທີ່1', 'ທີ່1');
+        assert.equal(moment([2011, 0, 2]).format('DDDo'), 'ທີ່2', 'ທີ່2');
+        assert.equal(moment([2011, 0, 3]).format('DDDo'), 'ທີ່3', 'ທີ່3');
+        assert.equal(moment([2011, 0, 4]).format('DDDo'), 'ທີ່4', 'ທີ່4');
+        assert.equal(moment([2011, 0, 5]).format('DDDo'), 'ທີ່5', 'ທີ່5');
+        assert.equal(moment([2011, 0, 6]).format('DDDo'), 'ທີ່6', 'ທີ່6');
+        assert.equal(moment([2011, 0, 7]).format('DDDo'), 'ທີ່7', 'ທີ່7');
+        assert.equal(moment([2011, 0, 8]).format('DDDo'), 'ທີ່8', 'ທີ່8');
+        assert.equal(moment([2011, 0, 9]).format('DDDo'), 'ທີ່9', 'ທີ່9');
+        assert.equal(moment([2011, 0, 10]).format('DDDo'), 'ທີ່10', 'ທີ່10');
+
+        assert.equal(moment([2011, 0, 11]).format('DDDo'), 'ທີ່11', 'ທີ່11');
+        assert.equal(moment([2011, 0, 12]).format('DDDo'), 'ທີ່12', 'ທີ່12');
+        assert.equal(moment([2011, 0, 13]).format('DDDo'), 'ທີ່13', 'ທີ່13');
+        assert.equal(moment([2011, 0, 14]).format('DDDo'), 'ທີ່14', 'ທີ່14');
+        assert.equal(moment([2011, 0, 15]).format('DDDo'), 'ທີ່15', 'ທີ່15');
+        assert.equal(moment([2011, 0, 16]).format('DDDo'), 'ທີ່16', 'ທີ່16');
+        assert.equal(moment([2011, 0, 17]).format('DDDo'), 'ທີ່17', 'ທີ່17');
+        assert.equal(moment([2011, 0, 18]).format('DDDo'), 'ທີ່18', 'ທີ່18');
+        assert.equal(moment([2011, 0, 19]).format('DDDo'), 'ທີ່19', 'ທີ່19');
+        assert.equal(moment([2011, 0, 20]).format('DDDo'), 'ທີ່20', 'ທີ່20');
+
+        assert.equal(moment([2011, 0, 21]).format('DDDo'), 'ທີ່21', 'ທີ່21');
+        assert.equal(moment([2011, 0, 22]).format('DDDo'), 'ທີ່22', 'ທີ່22');
+        assert.equal(moment([2011, 0, 23]).format('DDDo'), 'ທີ່23', 'ທີ່23');
+        assert.equal(moment([2011, 0, 24]).format('DDDo'), 'ທີ່24', 'ທີ່24');
+        assert.equal(moment([2011, 0, 25]).format('DDDo'), 'ທີ່25', 'ທີ່25');
+        assert.equal(moment([2011, 0, 26]).format('DDDo'), 'ທີ່26', 'ທີ່26');
+        assert.equal(moment([2011, 0, 27]).format('DDDo'), 'ທີ່27', 'ທີ່27');
+        assert.equal(moment([2011, 0, 28]).format('DDDo'), 'ທີ່28', 'ທີ່28');
+        assert.equal(moment([2011, 0, 29]).format('DDDo'), 'ທີ່29', 'ທີ່29');
+        assert.equal(moment([2011, 0, 30]).format('DDDo'), 'ທີ່30', 'ທີ່30');
+
+        assert.equal(moment([2011, 0, 31]).format('DDDo'), 'ທີ່31', 'ທີ່31');
+    });
+
+    test('format month', function (assert) {
+        var expected = 'ມັງກອນ ມັງກອນ_ກຸມພາ ກຸມພາ_ມີນາ ມີນາ_ເມສາ ເມສາ_ພຶດສະພາ ພຶດສະພາ_ມິຖຸນາ ມິຖຸນາ_ກໍລະກົດ ກໍລະກົດ_ສິງຫາ ສິງຫາ_ກັນຍາ ກັນຍາ_ຕຸລາ ຕຸລາ_ພະຈິກ ພະຈິກ_ທັນວາ ທັນວາ'.split('_'), i;
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, i, 1]).format('MMMM MMM'), expected[i], expected[i]);
+        }
+    });
+
+    test('format week', function (assert) {
+        var expected = 'ອາທິດ ທິດ ທ_ຈັນ ຈັນ ຈ_ອັງຄານ ອັງຄານ ອຄ_ພຸດ ພຸດ ພ_ພະຫັດ ພະຫັດ ພຫ_ສຸກ ສຸກ ສກ_ເສົາ ເສົາ ສ'.split('_'), i;
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
+        }
+    });
+
+    test('from', function (assert) {
+        var start = moment([2007, 1, 28]);
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'ບໍ່ເທົ່າໃດວິນາທີ', '44 seconds = a few seconds');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 45}), true),  '1 ນາທີ',      '45 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 89}), true),  '1 ນາທີ',      '89 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 90}), true),  '2 ນາທີ',     '90 seconds = 2 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 44}), true),  '44 ນາທີ',    '44 minutes = 44 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 45}), true),  '1 ຊົ່ວໂມງ',       '45 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 89}), true),  '1 ຊົ່ວໂມງ',       '89 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 90}), true),  '2 ຊົ່ວໂມງ',       '90 minutes = 2 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 5}), true),   '5 ຊົ່ວໂມງ',       '5 hours = 5 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 21}), true),  '21 ຊົ່ວໂມງ',      '21 hours = 21 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 22}), true),  '1 ມື້',         '22 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 35}), true),  '1 ມື້',         '35 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 36}), true),  '2 ມື້',        '36 hours = 2 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 1}), true),   '1 ມື້',         '1 day = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 5}), true),   '5 ມື້',        '5 days = 5 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 25}), true),  '25 ມື້',       '25 days = 25 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 26}), true),  '1 ເດືອນ',       '26 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 30}), true),  '1 ເດືອນ',       '30 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 43}), true),  '1 ເດືອນ',       '43 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 46}), true),  '2 ເດືອນ',      '46 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 74}), true),  '2 ເດືອນ',      '75 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 76}), true),  '3 ເດືອນ',      '76 days = 3 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 1}), true),   '1 ເດືອນ',       '1 month = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 5}), true),   '5 ເດືອນ',      '5 months = 5 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 345}), true), '1 ປີ',        '345 days = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 548}), true), '2 ປີ',       '548 days = 2 years');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 1}), true),   '1 ປີ',        '1 year = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 5}), true),   '5 ປີ',       '5 years = 5 years');
+    });
+
+    test('suffix', function (assert) {
+        assert.equal(moment(30000).from(0), 'ອີກ ບໍ່ເທົ່າໃດວິນາທີ',  'prefix');
+        assert.equal(moment(0).from(30000), 'ບໍ່ເທົ່າໃດວິນາທີຜ່ານມາ', 'suffix');
+    });
+
+    test('now from now', function (assert) {
+        assert.equal(moment().fromNow(), 'ບໍ່ເທົ່າໃດວິນາທີຜ່ານມາ',  'now from now should display as in the past');
+    });
+
+    test('fromNow', function (assert) {
+        assert.equal(moment().add({s: 30}).fromNow(), 'ອີກ ບໍ່ເທົ່າໃດວິນາທີ', 'in a few seconds');
+        assert.equal(moment().add({d: 5}).fromNow(), 'ອີກ 5 ມື້', 'in 5 days');
+    });
+
+    test('calendar day', function (assert) {
+        var a = moment().hours(2).minutes(0).seconds(0);
+
+        assert.equal(moment(a).calendar(),                   'ມື້ນີ້ເວລາ 02:00',      'today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(),      'ມື້ນີ້ເວລາ 02:25',      'Now plus 25 min');
+        assert.equal(moment(a).add({h: 1}).calendar(),       'ມື້ນີ້ເວລາ 03:00',      'Now plus 1 hour');
+        assert.equal(moment(a).add({d: 1}).calendar(),       'ມື້ອື່ນເວລາ 02:00',   'tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(),  'ມື້ນີ້ເວລາ 01:00',      'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(),  'ມື້ວານນີ້ເວລາ 02:00',  'yesterday at the same time');
+    });
+
+    test('calendar next week', function (assert) {
+        var i, m;
+        for (i = 2; i < 7; i++) {
+            m = moment().add({d: i});
+            assert.equal(m.calendar(),       m.format('[ວັນ]dddd[ໜ້າເວລາ] LT'),  'Today + ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('[ວັນ]dddd[ໜ້າເວລາ] LT'),  'Today + ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('[ວັນ]dddd[ໜ້າເວລາ] LT'),  'Today + ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar last week', function (assert) {
+        var i, m;
+
+        for (i = 2; i < 7; i++) {
+            m = moment().subtract({d: i});
+            assert.equal(m.calendar(),       m.format('[ວັນ]dddd[ແລ້ວນີ້ເວລາ] LT'),  'Today - ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('[ວັນ]dddd[ແລ້ວນີ້ເວລາ] LT'),  'Today - ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('[ວັນ]dddd[ແລ້ວນີ້ເວລາ] LT'),  'Today - ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar all else', function (assert) {
+        var weeksAgo = moment().subtract({w: 1}),
+            weeksFromNow = moment().add({w: 1});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '1 week ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 1 week');
+
+        weeksAgo = moment().subtract({w: 2});
+        weeksFromNow = moment().add({w: 2});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '2 weeks ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 2 weeks');
+    });
+
+    test('weeks year starting sunday', function (assert) {
+        assert.equal(moment([2012, 0,  1]).week(), 1, 'Jan  1 2012 should be week 1');
+        assert.equal(moment([2012, 0,  7]).week(), 1, 'Jan  7 2012 should be week 1');
+        assert.equal(moment([2012, 0,  8]).week(), 2, 'Jan  8 2012 should be week 2');
+        assert.equal(moment([2012, 0, 14]).week(), 2, 'Jan 14 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).week(), 3, 'Jan 15 2012 should be week 3');
+    });
+
+    test('weeks year starting monday', function (assert) {
+        assert.equal(moment([2006, 11, 31]).week(), 1, 'Dec 31 2006 should be week 1');
+        assert.equal(moment([2007,  0,  1]).week(), 1, 'Jan  1 2007 should be week 1');
+        assert.equal(moment([2007,  0,  6]).week(), 1, 'Jan  6 2007 should be week 1');
+        assert.equal(moment([2007,  0,  7]).week(), 2, 'Jan  7 2007 should be week 2');
+        assert.equal(moment([2007,  0, 13]).week(), 2, 'Jan 13 2007 should be week 2');
+        assert.equal(moment([2007,  0, 14]).week(), 3, 'Jan 14 2007 should be week 3');
+    });
+
+    test('weeks year starting tuesday', function (assert) {
+        assert.equal(moment([2007, 11, 29]).week(), 52, 'Dec 29 2007 should be week 52');
+        assert.equal(moment([2008,  0,  1]).week(), 1, 'Jan  1 2008 should be week 1');
+        assert.equal(moment([2008,  0,  5]).week(), 1, 'Jan  5 2008 should be week 1');
+        assert.equal(moment([2008,  0,  6]).week(), 2, 'Jan  6 2008 should be week 2');
+        assert.equal(moment([2008,  0, 12]).week(), 2, 'Jan 12 2008 should be week 2');
+        assert.equal(moment([2008,  0, 13]).week(), 3, 'Jan 13 2008 should be week 3');
+    });
+
+    test('weeks year starting wednesday', function (assert) {
+        assert.equal(moment([2002, 11, 29]).week(), 1, 'Dec 29 2002 should be week 1');
+        assert.equal(moment([2003,  0,  1]).week(), 1, 'Jan  1 2003 should be week 1');
+        assert.equal(moment([2003,  0,  4]).week(), 1, 'Jan  4 2003 should be week 1');
+        assert.equal(moment([2003,  0,  5]).week(), 2, 'Jan  5 2003 should be week 2');
+        assert.equal(moment([2003,  0, 11]).week(), 2, 'Jan 11 2003 should be week 2');
+        assert.equal(moment([2003,  0, 12]).week(), 3, 'Jan 12 2003 should be week 3');
+    });
+
+    test('weeks year starting thursday', function (assert) {
+        assert.equal(moment([2008, 11, 28]).week(), 1, 'Dec 28 2008 should be week 1');
+        assert.equal(moment([2009,  0,  1]).week(), 1, 'Jan  1 2009 should be week 1');
+        assert.equal(moment([2009,  0,  3]).week(), 1, 'Jan  3 2009 should be week 1');
+        assert.equal(moment([2009,  0,  4]).week(), 2, 'Jan  4 2009 should be week 2');
+        assert.equal(moment([2009,  0, 10]).week(), 2, 'Jan 10 2009 should be week 2');
+        assert.equal(moment([2009,  0, 11]).week(), 3, 'Jan 11 2009 should be week 3');
+    });
+
+    test('weeks year starting friday', function (assert) {
+        assert.equal(moment([2009, 11, 27]).week(), 1, 'Dec 27 2009 should be week 1');
+        assert.equal(moment([2010,  0,  1]).week(), 1, 'Jan  1 2010 should be week 1');
+        assert.equal(moment([2010,  0,  2]).week(), 1, 'Jan  2 2010 should be week 1');
+        assert.equal(moment([2010,  0,  3]).week(), 2, 'Jan  3 2010 should be week 2');
+        assert.equal(moment([2010,  0,  9]).week(), 2, 'Jan  9 2010 should be week 2');
+        assert.equal(moment([2010,  0, 10]).week(), 3, 'Jan 10 2010 should be week 3');
+    });
+
+    test('weeks year starting saturday', function (assert) {
+        assert.equal(moment([2010, 11, 26]).week(), 1, 'Dec 26 2010 should be week 1');
+        assert.equal(moment([2011,  0,  1]).week(), 1, 'Jan  1 2011 should be week 1');
+        assert.equal(moment([2011,  0,  2]).week(), 2, 'Jan  2 2011 should be week 2');
+        assert.equal(moment([2011,  0,  8]).week(), 2, 'Jan  8 2011 should be week 2');
+        assert.equal(moment([2011,  0,  9]).week(), 3, 'Jan  9 2011 should be week 3');
+    });
+
+    test('weeks year starting sunday format', function (assert) {
+        assert.equal(moment([2012, 0,  1]).format('w ww wo'), '1 01 ທີ່1', 'Jan  1 2012 should be week 1');
+        assert.equal(moment([2012, 0,  7]).format('w ww wo'), '1 01 ທີ່1', 'Jan  7 2012 should be week 1');
+        assert.equal(moment([2012, 0,  8]).format('w ww wo'), '2 02 ທີ່2', 'Jan  8 2012 should be week 2');
+        assert.equal(moment([2012, 0, 14]).format('w ww wo'), '2 02 ທີ່2', 'Jan 14 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).format('w ww wo'), '3 03 ທີ່3', 'Jan 15 2012 should be week 3');
+    });
+
+    test('lenient ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing ' + i + ' date check');
+        }
+    });
+
+    test('lenient ordinal parsing of number', function (assert) {
+        var i, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            testMoment = moment('2014 01 ' + i, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing of number ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing of number ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing of number ' + i + ' date check');
+        }
+    });
+
+    test('strict ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do', true);
+            assert.ok(testMoment.isValid(), 'strict ordinal parsing ' + i);
+        }
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -18072,7 +20100,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -18085,8 +20114,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -18104,8 +20133,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -18448,7 +20477,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -18461,8 +20491,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -18480,8 +20510,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -18841,7 +20871,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -18854,8 +20885,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -18873,8 +20904,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -19211,7 +21242,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -19224,8 +21256,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -19243,8 +21275,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -19582,7 +21614,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -19595,8 +21628,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -19614,8 +21647,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -19735,7 +21768,7 @@
 
     test('from', function (assert) {
         var start = moment([2007, 1, 28]);
-        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'सेकंद', '44 seconds = a few seconds');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'काही सेकंद', '44 seconds = a few seconds');
         assert.equal(start.from(moment([2007, 1, 28]).add({s: 45}), true),  'एक मिनिट',      '45 seconds = a minute');
         assert.equal(start.from(moment([2007, 1, 28]).add({s: 89}), true),  'एक मिनिट',      '89 seconds = a minute');
         assert.equal(start.from(moment([2007, 1, 28]).add({s: 90}), true),  '२ मिनिटे',     '90 seconds = 2 minutes');
@@ -19766,17 +21799,17 @@
     });
 
     test('suffix', function (assert) {
-        assert.equal(moment(30000).from(0), 'सेकंद नंतर', 'prefix');
-        assert.equal(moment(0).from(30000), 'सेकंद पूर्वी', 'suffix');
+        assert.equal(moment(30000).from(0), 'काही सेकंदांमध्ये', 'prefix');
+        assert.equal(moment(0).from(30000), 'काही सेकंदांपूर्वी', 'suffix');
     });
 
     test('now from now', function (assert) {
-        assert.equal(moment().fromNow(), 'सेकंद पूर्वी',  'now from now should display as in the past');
+        assert.equal(moment().fromNow(), 'काही सेकंदांपूर्वी',  'now from now should display as in the past');
     });
 
     test('fromNow', function (assert) {
-        assert.equal(moment().add({s: 30}).fromNow(), 'सेकंद नंतर', 'सेकंद नंतर');
-        assert.equal(moment().add({d: 5}).fromNow(), '५ दिवस नंतर', '५ दिवस नंतर');
+        assert.equal(moment().add({s: 30}).fromNow(), 'काही सेकंदांमध्ये', 'in a few seconds');
+        assert.equal(moment().add({d: 5}).fromNow(), '५ दिवसांमध्ये', 'in 5 days');
     });
 
     test('calendar day', function (assert) {
@@ -19965,7 +21998,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -19978,8 +22012,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -19997,8 +22031,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -20341,7 +22375,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -20354,8 +22389,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -20373,8 +22408,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -20717,7 +22752,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -20730,8 +22766,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -20749,8 +22785,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -21160,7 +23196,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -21173,8 +23210,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -21192,8 +23229,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -21211,7 +23248,7 @@
     localeModule('nb');
 
     test('parse', function (assert) {
-        var tests = 'januar jan_februar feb_mars mar_april apr_mai mai_juni jun_juli jul_august aug_september sep_oktober okt_november nov_desember des'.split('_'),
+        var tests = 'januar jan._februar feb._mars mars_april april_mai mai_juni juni_juli juli_august aug._september sep._oktober okt._november nov._desember des.'.split('_'),
             i;
         function equalTest(input, mmm, i) {
             assert.equal(moment(input, mmm).month(), i, input + ' should be month ' + (i + 1));
@@ -21232,11 +23269,11 @@
     test('format', function (assert) {
         var a = [
                 ['dddd, MMMM Do YYYY, h:mm:ss a',      'søndag, februar 14. 2010, 3:25:50 pm'],
-                ['ddd, hA',                            'søn, 3PM'],
-                ['M Mo MM MMMM MMM',                   '2 2. 02 februar feb'],
+                ['ddd, hA',                            'sø., 3PM'],
+                ['M Mo MM MMMM MMM',                   '2 2. 02 februar feb.'],
                 ['YYYY YY',                            '2010 10'],
                 ['D Do DD',                            '14 14. 14'],
-                ['d do dddd ddd dd',                   '0 0. søndag søn sø'],
+                ['d do dddd ddd dd',                   '0 0. søndag sø. sø'],
                 ['DDD DDDo DDDD',                      '45 45. 045'],
                 ['w wo ww',                            '6 6. 06'],
                 ['h hh',                               '3 03'],
@@ -21245,15 +23282,15 @@
                 ['s ss',                               '50 50'],
                 ['a A',                                'pm PM'],
                 ['[den] DDDo [dagen i året]',          'den 45. dagen i året'],
-                ['LTS',                                '15.25.50'],
+                ['LTS',                                '15:25:50'],
                 ['L',                                  '14.02.2010'],
                 ['LL',                                 '14. februar 2010'],
-                ['LLL',                                '14. februar 2010 kl. 15.25'],
-                ['LLLL',                               'søndag 14. februar 2010 kl. 15.25'],
+                ['LLL',                                '14. februar 2010 kl. 15:25'],
+                ['LLLL',                               'søndag 14. februar 2010 kl. 15:25'],
                 ['l',                                  '14.2.2010'],
-                ['ll',                                 '14. feb 2010'],
-                ['lll',                                '14. feb 2010 kl. 15.25'],
-                ['llll',                               'søn 14. feb 2010 kl. 15.25']
+                ['ll',                                 '14. feb. 2010'],
+                ['lll',                                '14. feb. 2010 kl. 15:25'],
+                ['llll',                               'sø. 14. feb. 2010 kl. 15:25']
             ],
             b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
             i;
@@ -21300,14 +23337,14 @@
     });
 
     test('format month', function (assert) {
-        var expected = 'januar jan_februar feb_mars mar_april apr_mai mai_juni jun_juli jul_august aug_september sep_oktober okt_november nov_desember des'.split('_'), i;
+        var expected = 'januar jan._februar feb._mars mars_april april_mai mai_juni juni_juli juli_august aug._september sep._oktober okt._november nov._desember des.'.split('_'), i;
         for (i = 0; i < expected.length; i++) {
             assert.equal(moment([2011, i, 1]).format('MMMM MMM'), expected[i], expected[i]);
         }
     });
 
     test('format week', function (assert) {
-        var expected = 'søndag søn sø_mandag man ma_tirsdag tirs ti_onsdag ons on_torsdag tors to_fredag fre fr_lørdag lør lø'.split('_'), i;
+        var expected = 'søndag sø. sø_mandag ma. ma_tirsdag ti. ti_onsdag on. on_torsdag to. to_fredag fr. fr_lørdag lø. lø'.split('_'), i;
         for (i = 0; i < expected.length; i++) {
             assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
         }
@@ -21362,12 +23399,12 @@
     test('calendar day', function (assert) {
         var a = moment().hours(2).minutes(0).seconds(0);
 
-        assert.equal(moment(a).calendar(),                     'i dag kl. 2.00',     'today at the same time');
-        assert.equal(moment(a).add({m: 25}).calendar(),      'i dag kl. 2.25',     'Now plus 25 min');
-        assert.equal(moment(a).add({h: 1}).calendar(),       'i dag kl. 3.00',     'Now plus 1 hour');
-        assert.equal(moment(a).add({d: 1}).calendar(),       'i morgen kl. 2.00',  'tomorrow at the same time');
-        assert.equal(moment(a).subtract({h: 1}).calendar(),  'i dag kl. 1.00',     'Now minus 1 hour');
-        assert.equal(moment(a).subtract({d: 1}).calendar(),  'i går kl. 2.00',     'yesterday at the same time');
+        assert.equal(moment(a).calendar(),                     'i dag kl. 02:00',     'today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(),      'i dag kl. 02:25',     'Now plus 25 min');
+        assert.equal(moment(a).add({h: 1}).calendar(),       'i dag kl. 03:00',     'Now plus 1 hour');
+        assert.equal(moment(a).add({d: 1}).calendar(),       'i morgen kl. 02:00',  'tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(),  'i dag kl. 01:00',     'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(),  'i går kl. 02:00',     'yesterday at the same time');
     });
 
     test('calendar next week', function (assert) {
@@ -21516,7 +23553,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -21529,8 +23567,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -21548,8 +23586,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -21586,28 +23624,28 @@
 
     test('format', function (assert) {
         var a = [
-                ['dddd, Do MMMM YYYY, aको h:mm:ss बजे',       'आइतबार, १४ फेब्रुवरी २०१०, बेलुकाको ३:२५:५० बजे'],
-                ['ddd, aको h बजे',                                                      'आइत., बेलुकाको ३ बजे'],
+                ['dddd, Do MMMM YYYY, aको h:mm:ss बजे',      'आइतबार, १४ फेब्रुवरी २०१०, दिउँसोको ३:२५:५० बजे'],
+                ['ddd, aको h बजे',                                                'आइत., दिउँसोको ३ बजे'],
                 ['M Mo MM MMMM MMM',                   '२ २ ०२ फेब्रुवरी फेब्रु.'],
                 ['YYYY YY',                            '२०१० १०'],
                 ['D Do DD',                            '१४ १४ १४'],
-                ['d do dddd ddd dd',                   '० ० आइतबार आइत. आइ.'],
+                ['d do dddd ddd dd',                   '० ० आइतबार आइत. आ.'],
                 ['DDD DDDo DDDD',                      '४५ ४५ ०४५'],
-                ['w wo ww',                            '७ ७ ०७'],
+                ['w wo ww',                            '८ ८ ०८'],
                 ['h hh',                               '३ ०३'],
                 ['H HH',                               '१५ १५'],
                 ['m mm',                               '२५ २५'],
                 ['s ss',                               '५० ५०'],
-                ['a A',                                'बेलुका बेलुका'],
-                ['LTS',                                'बेलुकाको ३:२५:५० बजे'],
+                ['a A',                                'दिउँसो दिउँसो'],
+                ['LTS',                                'दिउँसोको ३:२५:५० बजे'],
                 ['L',                                  '१४/०२/२०१०'],
                 ['LL',                                 '१४ फेब्रुवरी २०१०'],
-                ['LLL',                                '१४ फेब्रुवरी २०१०, बेलुकाको ३:२५ बजे'],
-                ['LLLL',                               'आइतबार, १४ फेब्रुवरी २०१०, बेलुकाको ३:२५ बजे'],
+                ['LLL',                                '१४ फेब्रुवरी २०१०, दिउँसोको ३:२५ बजे'],
+                ['LLLL',                               'आइतबार, १४ फेब्रुवरी २०१०, दिउँसोको ३:२५ बजे'],
                 ['l',                                  '१४/२/२०१०'],
                 ['ll',                                 '१४ फेब्रु. २०१०'],
-                ['lll',                                '१४ फेब्रु. २०१०, बेलुकाको ३:२५ बजे'],
-                ['llll',                               'आइत., १४ फेब्रु. २०१०, बेलुकाको ३:२५ बजे']
+                ['lll',                                '१४ फेब्रु. २०१०, दिउँसोको ३:२५ बजे'],
+                ['llll',                               'आइत., १४ फेब्रु. २०१०, दिउँसोको ३:२५ बजे']
             ],
             b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
             i;
@@ -21661,7 +23699,7 @@
     });
 
     test('format week', function (assert) {
-        var expected = 'आइतबार आइत. आइ._सोमबार सोम. सो._मङ्गलबार मङ्गल. मङ्_बुधबार बुध. बु._बिहिबार बिहि. बि._शुक्रबार शुक्र. शु._शनिबार शनि. श.'.split('_'), i;
+        var expected = 'आइतबार आइत. आ._सोमबार सोम. सो._मङ्गलबार मङ्गल. मं._बुधबार बुध. बु._बिहिबार बिहि. बि._शुक्रबार शुक्र. शु._शनिबार शनि. श.'.split('_'), i;
         for (i = 0; i < expected.length; i++) {
             assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
         }
@@ -21669,7 +23707,7 @@
 
     test('from', function (assert) {
         var start = moment([2007, 1, 28]);
-        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'केही समय', '44 seconds = a few seconds');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'केही क्षण', '44 seconds = a few seconds');
         assert.equal(start.from(moment([2007, 1, 28]).add({s: 45}), true),  'एक मिनेट',      '45 seconds = a minute');
         assert.equal(start.from(moment([2007, 1, 28]).add({s: 89}), true),  'एक मिनेट',      '89 seconds = a minute');
         assert.equal(start.from(moment([2007, 1, 28]).add({s: 90}), true),  '२ मिनेट',     '90 seconds = 2 minutes');
@@ -21700,28 +23738,28 @@
     });
 
     test('suffix', function (assert) {
-        assert.equal(moment(30000).from(0), 'केही समयमा',  'prefix');
-        assert.equal(moment(0).from(30000), 'केही समय अगाडी', 'suffix');
+        assert.equal(moment(30000).from(0), 'केही क्षणमा',  'prefix');
+        assert.equal(moment(0).from(30000), 'केही क्षण अगाडि', 'suffix');
     });
 
     test('now from now', function (assert) {
-        assert.equal(moment().fromNow(), 'केही समय अगाडी',  'now from now should display as in the past');
+        assert.equal(moment().fromNow(), 'केही क्षण अगाडि',  'now from now should display as in the past');
     });
 
     test('fromNow', function (assert) {
-        assert.equal(moment().add({s: 30}).fromNow(), 'केही समयमा', 'केही समयमा');
+        assert.equal(moment().add({s: 30}).fromNow(), 'केही क्षणमा', 'केही क्षणमा');
         assert.equal(moment().add({d: 5}).fromNow(), '५ दिनमा', '५ दिनमा');
     });
 
     test('calendar day', function (assert) {
         var a = moment().hours(2).minutes(0).seconds(0);
 
-        assert.equal(moment(a).calendar(),                     'आज रातीको २:०० बजे',     'today at the same time');
-        assert.equal(moment(a).add({m: 25}).calendar(),      'आज रातीको २:२५ बजे',     'Now plus 25 min');
+        assert.equal(moment(a).calendar(),                   'आज रातिको २:०० बजे',     'today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(),      'आज रातिको २:२५ बजे',     'Now plus 25 min');
         assert.equal(moment(a).add({h: 1}).calendar(),       'आज बिहानको ३:०० बजे',     'Now plus 1 hour');
-        assert.equal(moment(a).add({d: 1}).calendar(),       'भोली रातीको २:०० बजे',  'tomorrow at the same time');
-        assert.equal(moment(a).subtract({h: 1}).calendar(),  'आज रातीको १:०० बजे',     'Now minus 1 hour');
-        assert.equal(moment(a).subtract({d: 1}).calendar(),  'हिजो रातीको २:०० बजे', 'yesterday at the same time');
+        assert.equal(moment(a).add({d: 1}).calendar(),       'भोलि रातिको २:०० बजे',  'tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(),  'आज रातिको १:०० बजे',     'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(),  'हिजो रातिको २:०० बजे', 'yesterday at the same time');
     });
 
     test('calendar next week', function (assert) {
@@ -21763,88 +23801,89 @@
     });
 
     test('meridiem', function (assert) {
-        assert.equal(moment([2011, 2, 23,  2, 30]).format('a'), 'राती', 'before dawn');
+        assert.equal(moment([2011, 2, 23,  2, 30]).format('a'), 'राति', 'before dawn');
         assert.equal(moment([2011, 2, 23,  9, 30]).format('a'), 'बिहान', 'morning');
         assert.equal(moment([2011, 2, 23, 14, 30]).format('a'), 'दिउँसो', 'during day');
-        assert.equal(moment([2011, 2, 23, 17, 30]).format('a'), 'बेलुका', 'evening');
+        assert.equal(moment([2011, 2, 23, 17, 30]).format('a'), 'साँझ', 'evening');
         assert.equal(moment([2011, 2, 23, 19, 30]).format('a'), 'साँझ', 'late evening');
-        assert.equal(moment([2011, 2, 23, 21, 20]).format('a'), 'राती', 'night');
+        assert.equal(moment([2011, 2, 23, 21, 20]).format('a'), 'राति', 'night');
 
-        assert.equal(moment([2011, 2, 23,  2, 30]).format('A'), 'राती', 'before dawn');
+        assert.equal(moment([2011, 2, 23,  2, 30]).format('A'), 'राति', 'before dawn');
         assert.equal(moment([2011, 2, 23,  9, 30]).format('A'), 'बिहान', 'morning');
         assert.equal(moment([2011, 2, 23, 14, 30]).format('A'), 'दिउँसो', 'during day');
-        assert.equal(moment([2011, 2, 23, 17, 30]).format('A'), 'बेलुका', 'evening');
+        assert.equal(moment([2011, 2, 23, 17, 30]).format('A'), 'साँझ', 'evening');
         assert.equal(moment([2011, 2, 23, 19, 30]).format('A'), 'साँझ', 'late evening');
-        assert.equal(moment([2011, 2, 23, 21, 20]).format('A'), 'राती', 'night');
+        assert.equal(moment([2011, 2, 23, 21, 20]).format('A'), 'राति', 'night');
     });
 
     test('weeks year starting sunday', function (assert) {
-        assert.equal(moment([2011, 11, 26]).week(), 1, 'Dec 26 2011 should be week 1');
-        assert.equal(moment([2012,  0,  1]).week(), 1, 'Jan  1 2012 should be week 1');
-        assert.equal(moment([2012,  0,  2]).week(), 2, 'Jan  2 2012 should be week 2');
-        assert.equal(moment([2012,  0,  8]).week(), 2, 'Jan  8 2012 should be week 2');
-        assert.equal(moment([2012,  0,  9]).week(), 3, 'Jan  9 2012 should be week 3');
+        assert.equal(moment([2012, 0,  1]).week(), 1, 'Jan  1 2012 should be week 1');
+        assert.equal(moment([2012, 0,  7]).week(), 1, 'Jan  7 2012 should be week 1');
+        assert.equal(moment([2012, 0,  8]).week(), 2, 'Jan  8 2012 should be week 2');
+        assert.equal(moment([2012, 0, 14]).week(), 2, 'Jan 14 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).week(), 3, 'Jan 15 2012 should be week 3');
     });
 
     test('weeks year starting monday', function (assert) {
-        assert.equal(moment([2007, 0, 1]).week(),  1, 'Jan  1 2007 should be week 1');
-        assert.equal(moment([2007, 0, 7]).week(),  1, 'Jan  7 2007 should be week 1');
-        assert.equal(moment([2007, 0, 8]).week(),  2, 'Jan  8 2007 should be week 2');
-        assert.equal(moment([2007, 0, 14]).week(), 2, 'Jan 14 2007 should be week 2');
-        assert.equal(moment([2007, 0, 15]).week(), 3, 'Jan 15 2007 should be week 3');
+        assert.equal(moment([2006, 11, 31]).week(), 1, 'Dec 31 2006 should be week 1');
+        assert.equal(moment([2007,  0,  1]).week(), 1, 'Jan  1 2007 should be week 1');
+        assert.equal(moment([2007,  0,  6]).week(), 1, 'Jan  6 2007 should be week 1');
+        assert.equal(moment([2007,  0,  7]).week(), 2, 'Jan  7 2007 should be week 2');
+        assert.equal(moment([2007,  0, 13]).week(), 2, 'Jan 13 2007 should be week 2');
+        assert.equal(moment([2007,  0, 14]).week(), 3, 'Jan 14 2007 should be week 3');
     });
 
     test('weeks year starting tuesday', function (assert) {
-        assert.equal(moment([2007, 11, 31]).week(), 1, 'Dec 31 2007 should be week 1');
+        assert.equal(moment([2007, 11, 29]).week(), 52, 'Dec 29 2007 should be week 52');
         assert.equal(moment([2008,  0,  1]).week(), 1, 'Jan  1 2008 should be week 1');
-        assert.equal(moment([2008,  0,  6]).week(), 1, 'Jan  6 2008 should be week 1');
-        assert.equal(moment([2008,  0,  7]).week(), 2, 'Jan  7 2008 should be week 2');
-        assert.equal(moment([2008,  0, 13]).week(), 2, 'Jan 13 2008 should be week 2');
-        assert.equal(moment([2008,  0, 14]).week(), 3, 'Jan 14 2008 should be week 3');
+        assert.equal(moment([2008,  0,  5]).week(), 1, 'Jan  5 2008 should be week 1');
+        assert.equal(moment([2008,  0,  6]).week(), 2, 'Jan  6 2008 should be week 2');
+        assert.equal(moment([2008,  0, 12]).week(), 2, 'Jan 12 2008 should be week 2');
+        assert.equal(moment([2008,  0, 13]).week(), 3, 'Jan 13 2008 should be week 3');
     });
 
     test('weeks year starting wednesday', function (assert) {
-        assert.equal(moment([2002, 11, 30]).week(), 1, 'Dec 30 2002 should be week 1');
+        assert.equal(moment([2002, 11, 29]).week(), 1, 'Dec 29 2002 should be week 1');
         assert.equal(moment([2003,  0,  1]).week(), 1, 'Jan  1 2003 should be week 1');
-        assert.equal(moment([2003,  0,  5]).week(), 1, 'Jan  5 2003 should be week 1');
-        assert.equal(moment([2003,  0,  6]).week(), 2, 'Jan  6 2003 should be week 2');
-        assert.equal(moment([2003,  0, 12]).week(), 2, 'Jan 12 2003 should be week 2');
-        assert.equal(moment([2003,  0, 13]).week(), 3, 'Jan 13 2003 should be week 3');
+        assert.equal(moment([2003,  0,  4]).week(), 1, 'Jan  4 2003 should be week 1');
+        assert.equal(moment([2003,  0,  5]).week(), 2, 'Jan  5 2003 should be week 2');
+        assert.equal(moment([2003,  0, 11]).week(), 2, 'Jan 11 2003 should be week 2');
+        assert.equal(moment([2003,  0, 12]).week(), 3, 'Jan 12 2003 should be week 3');
     });
 
     test('weeks year starting thursday', function (assert) {
-        assert.equal(moment([2008, 11, 29]).week(), 1, 'Dec 29 2008 should be week 1');
+        assert.equal(moment([2008, 11, 28]).week(), 1, 'Dec 28 2008 should be week 1');
         assert.equal(moment([2009,  0,  1]).week(), 1, 'Jan  1 2009 should be week 1');
-        assert.equal(moment([2009,  0,  4]).week(), 1, 'Jan  4 2009 should be week 1');
-        assert.equal(moment([2009,  0,  5]).week(), 2, 'Jan  5 2009 should be week 2');
-        assert.equal(moment([2009,  0, 11]).week(), 2, 'Jan 11 2009 should be week 2');
-        assert.equal(moment([2009,  0, 12]).week(), 3, 'Jan 12 2009 should be week 3');
+        assert.equal(moment([2009,  0,  3]).week(), 1, 'Jan  3 2009 should be week 1');
+        assert.equal(moment([2009,  0,  4]).week(), 2, 'Jan  4 2009 should be week 2');
+        assert.equal(moment([2009,  0, 10]).week(), 2, 'Jan 10 2009 should be week 2');
+        assert.equal(moment([2009,  0, 11]).week(), 3, 'Jan 11 2009 should be week 3');
     });
 
     test('weeks year starting friday', function (assert) {
-        assert.equal(moment([2009, 11, 28]).week(), 1, 'Dec 28 2009 should be week 1');
+        assert.equal(moment([2009, 11, 27]).week(), 1, 'Dec 27 2009 should be week 1');
         assert.equal(moment([2010,  0,  1]).week(), 1, 'Jan  1 2010 should be week 1');
-        assert.equal(moment([2010,  0,  3]).week(), 1, 'Jan  3 2010 should be week 1');
-        assert.equal(moment([2010,  0,  4]).week(), 2, 'Jan  4 2010 should be week 2');
-        assert.equal(moment([2010,  0, 10]).week(), 2, 'Jan 10 2010 should be week 2');
-        assert.equal(moment([2010,  0, 11]).week(), 3, 'Jan 11 2010 should be week 3');
+        assert.equal(moment([2010,  0,  2]).week(), 1, 'Jan  2 2010 should be week 1');
+        assert.equal(moment([2010,  0,  3]).week(), 2, 'Jan  3 2010 should be week 2');
+        assert.equal(moment([2010,  0,  9]).week(), 2, 'Jan  9 2010 should be week 2');
+        assert.equal(moment([2010,  0, 10]).week(), 3, 'Jan 10 2010 should be week 3');
     });
 
     test('weeks year starting saturday', function (assert) {
-        assert.equal(moment([2010, 11, 27]).week(), 1, 'Dec 27 2010 should be week 1');
+        assert.equal(moment([2010, 11, 26]).week(), 1, 'Dec 26 2010 should be week 1');
         assert.equal(moment([2011,  0,  1]).week(), 1, 'Jan  1 2011 should be week 1');
-        assert.equal(moment([2011,  0,  2]).week(), 1, 'Jan  2 2011 should be week 1');
-        assert.equal(moment([2011,  0,  3]).week(), 2, 'Jan  3 2011 should be week 2');
-        assert.equal(moment([2011,  0,  9]).week(), 2, 'Jan  9 2011 should be week 2');
-        assert.equal(moment([2011,  0, 10]).week(), 3, 'Jan 10 2011 should be week 3');
+        assert.equal(moment([2011,  0,  2]).week(), 2, 'Jan  2 2011 should be week 2');
+        assert.equal(moment([2011,  0,  8]).week(), 2, 'Jan  8 2011 should be week 2');
+        assert.equal(moment([2011,  0,  9]).week(), 3, 'Jan  9 2011 should be week 3');
     });
 
+
     test('weeks year starting sunday formatted', function (assert) {
-        assert.equal(moment([2011, 11, 26]).format('w ww wo'), '१ ०१ १', 'Dec 26 2011 should be week 1');
+        assert.equal(moment([2011, 11, 26]).format('w ww wo'), '५३ ५३ ५३', 'Dec 26 2011 should be week 53');
         assert.equal(moment([2012,  0,  1]).format('w ww wo'), '१ ०१ १', 'Jan  1 2012 should be week 1');
-        assert.equal(moment([2012,  0,  2]).format('w ww wo'), '२ ०२ २', 'Jan  2 2012 should be week 2');
+        assert.equal(moment([2012,  0,  2]).format('w ww wo'), '१ ०१ १', 'Jan  2 2012 should be week 1');
         assert.equal(moment([2012,  0,  8]).format('w ww wo'), '२ ०२ २', 'Jan  8 2012 should be week 2');
-        assert.equal(moment([2012,  0,  9]).format('w ww wo'), '३ ०३ ३', 'Jan  9 2012 should be week 3');
+        assert.equal(moment([2012,  0,  9]).format('w ww wo'), '२ ०२ २', 'Jan  9 2012 should be week 2');
     });
 
     test('lenient ordinal parsing', function (assert) {
@@ -21898,7 +23937,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -21911,8 +23951,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -21930,8 +23970,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -22258,7 +24298,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -22271,8 +24312,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -22290,8 +24331,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -22613,7 +24654,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -22626,8 +24668,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -22645,8 +24687,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -22711,7 +24753,7 @@
                 ['M Mo MM MMMM MMM',                   '2 2. 02 luty lut'],
                 ['YYYY YY',                            '2010 10'],
                 ['D Do DD',                            '14 14. 14'],
-                ['d do dddd ddd dd',                   '0 0. niedziela nie N'],
+                ['d do dddd ddd dd',                   '0 0. niedziela nie Nd'],
                 ['DDD DDDo DDDD',                      '45 45. 045'],
                 ['w wo ww',                            '6 6. 06'],
                 ['h hh',                               '3 03'],
@@ -22782,7 +24824,7 @@
     });
 
     test('format week', function (assert) {
-        var expected = 'niedziela nie N_poniedziałek pon Pn_wtorek wt Wt_środa śr Śr_czwartek czw Cz_piątek pt Pt_sobota sb So'.split('_'), i;
+        var expected = 'niedziela nie Nd_poniedziałek pon Pn_wtorek wt Wt_środa śr Śr_czwartek czw Cz_piątek pt Pt_sobota sb So'.split('_'), i;
         for (i = 0; i < expected.length; i++) {
             assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
         }
@@ -23012,7 +25054,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -23025,8 +25068,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -23044,8 +25087,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -23365,7 +25408,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -23378,8 +25422,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -23397,8 +25441,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -23716,7 +25760,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -23729,8 +25774,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -23748,8 +25793,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -24079,7 +26124,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -24092,8 +26138,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -24111,8 +26157,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -24130,9 +26176,12 @@
     localeModule('ru');
 
     test('parse', function (assert) {
-        var tests = 'январь янв_февраль фев_март март_апрель апр_май май_июнь июнь_июль июль_август авг_сентябрь сен_октябрь окт_ноябрь ноя_декабрь дек'.split('_'), i;
+        var tests = 'Январь янв_Февраль фев_Март март_Апрель апр_Май май_Июнь июнь_Июль июль_Август авг_Сентябрь сен_Октябрь окт_Ноябрь ноя_Декабрь дек'.split('_'), i;
         function equalTest(input, mmm, i) {
             assert.equal(moment(input, mmm).month(), i, input + ' should be month ' + (i + 1));
+        }
+        function equalTestStrict(input, mmm, monthIndex) {
+            assert.equal(moment(input, mmm, true).month(), monthIndex, input + ' ' + mmm + ' should be strict month ' + (monthIndex + 1));
         }
         for (i = 0; i < 12; i++) {
             tests[i] = tests[i].split(' ');
@@ -24144,21 +26193,28 @@
             equalTest(tests[i][1].toLocaleLowerCase(), 'MMMM', i);
             equalTest(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
             equalTest(tests[i][1].toLocaleUpperCase(), 'MMMM', i);
+
+            equalTestStrict(tests[i][1], 'MMM', i);
+            equalTestStrict(tests[i][0], 'MMMM', i);
+            equalTestStrict(tests[i][1].toLocaleLowerCase(), 'MMM', i);
+            equalTestStrict(tests[i][1].toLocaleUpperCase(), 'MMM', i);
+            equalTestStrict(tests[i][0].toLocaleLowerCase(), 'MMMM', i);
+            equalTestStrict(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
         }
     });
 
     test('parse exceptional case', function (assert) {
-        assert.equal(moment('11 мая 1989', ['DD MMMM YYYY']).format('DD-MM-YYYY'), '11-05-1989');
+        assert.equal(moment('11 Мая 1989', ['DD MMMM YYYY']).format('DD-MM-YYYY'), '11-05-1989');
     });
 
     test('format', function (assert) {
         var a = [
-                ['dddd, Do MMMM YYYY, HH:mm:ss',       'воскресенье, 14-го февраля 2010, 15:25:50'],
-                ['ddd, h A',                           'вс, 3 дня'],
-                ['M Mo MM MMMM MMM',                   '2 2-й 02 февраль фев'],
+                ['dddd, Do MMMM YYYY, HH:mm:ss',       'Воскресенье, 14-го Февраля 2010, 15:25:50'],
+                ['ddd, h A',                           'Вс, 3 дня'],
+                ['M Mo MM MMMM MMM',                   '2 2-й 02 Февраль фев'],
                 ['YYYY YY',                            '2010 10'],
                 ['D Do DD',                            '14 14-го 14'],
-                ['d do dddd ddd dd',                   '0 0-й воскресенье вс вс'],
+                ['d do dddd ddd dd',                   '0 0-й Воскресенье Вс Вс'],
                 ['DDD DDDo DDDD',                      '45 45-й 045'],
                 ['w wo ww',                            '7 7-я 07'],
                 ['h hh',                               '3 03'],
@@ -24169,13 +26225,13 @@
                 ['DDDo [день года]',                   '45-й день года'],
                 ['LTS',                                '15:25:50'],
                 ['L',                                  '14.02.2010'],
-                ['LL',                                 '14 февраля 2010 г.'],
-                ['LLL',                                '14 февраля 2010 г., 15:25'],
-                ['LLLL',                               'воскресенье, 14 февраля 2010 г., 15:25'],
+                ['LL',                                 '14 Февраля 2010 г.'],
+                ['LLL',                                '14 Февраля 2010 г., 15:25'],
+                ['LLLL',                               'Воскресенье, 14 Февраля 2010 г., 15:25'],
                 ['l',                                  '14.2.2010'],
                 ['ll',                                 '14 фев 2010 г.'],
                 ['lll',                                '14 фев 2010 г., 15:25'],
-                ['llll',                               'вс, 14 фев 2010 г., 15:25']
+                ['llll',                               'Вс, 14 фев 2010 г., 15:25']
             ],
             b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
             i;
@@ -24233,7 +26289,7 @@
     });
 
     test('format month', function (assert) {
-        var expected = 'январь янв_февраль фев_март март_апрель апр_май май_июнь июнь_июль июль_август авг_сентябрь сен_октябрь окт_ноябрь ноя_декабрь дек'.split('_'), i;
+        var expected = 'Январь янв_Февраль фев_Март март_Апрель апр_Май май_Июнь июнь_Июль июль_Август авг_Сентябрь сен_Октябрь окт_Ноябрь ноя_Декабрь дек'.split('_'), i;
         for (i = 0; i < expected.length; i++) {
             assert.equal(moment([2011, i, 1]).format('MMMM MMM'), expected[i], expected[i]);
         }
@@ -24241,8 +26297,8 @@
 
     test('format month case', function (assert) {
         var months = {
-            'nominative': 'январь_февраль_март_апрель_май_июнь_июль_август_сентябрь_октябрь_ноябрь_декабрь'.split('_'),
-            'accusative': 'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split('_')
+            'nominative': 'Январь_Февраль_Март_Апрель_Май_Июнь_Июль_Август_Сентябрь_Октябрь_Ноябрь_Декабрь'.split('_'),
+            'accusative': 'Января_Февраля_Марта_Апреля_Мая_Июня_Июля_Августа_Сентября_Октября_Ноября_Декабря'.split('_')
         }, i;
         for (i = 0; i < 12; i++) {
             assert.equal(moment([2011, i, 1]).format('D MMMM'), '1 ' + months.accusative[i], '1 ' + months.accusative[i]);
@@ -24263,8 +26319,8 @@
 
     test('format month case with escaped symbols', function (assert) {
         var months = {
-            'nominative': 'январь_февраль_март_апрель_май_июнь_июль_август_сентябрь_октябрь_ноябрь_декабрь'.split('_'),
-            'accusative': 'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'.split('_')
+            'nominative': 'Январь_Февраль_Март_Апрель_Май_Июнь_Июль_Август_Сентябрь_Октябрь_Ноябрь_Декабрь'.split('_'),
+            'accusative': 'Января_Февраля_Марта_Апреля_Мая_Июня_Июля_Августа_Сентября_Октября_Ноября_Декабря'.split('_')
         }, i;
         for (i = 0; i < 12; i++) {
             assert.equal(moment([2013, i, 1]).format('D[] MMMM'), '1 ' + months.accusative[i], '1 ' + months.accusative[i]);
@@ -24288,7 +26344,7 @@
     });
 
     test('format week', function (assert) {
-        var expected = 'воскресенье вс вс_понедельник пн пн_вторник вт вт_среда ср ср_четверг чт чт_пятница пт пт_суббота сб сб'.split('_'), i;
+        var expected = 'Воскресенье Вс Вс_Понедельник Пн Пн_Вторник Вт Вт_Среда Ср Ср_Четверг Чт Чт_Пятница Пт Пт_Суббота Сб Сб'.split('_'), i;
         for (i = 0; i < expected.length; i++) {
             assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
         }
@@ -24353,18 +26409,50 @@
     });
 
     test('calendar next week', function (assert) {
-        var i, m;
-        function makeFormat(d) {
-            return d.day() === 2 ? '[Во] dddd [в] LT' : '[В] dddd [в] LT';
+        var i, m, now;
+
+        function makeFormatNext(d) {
+            switch (d.day()) {
+            case 0:
+                return '[В следующее] dddd [в] LT';
+            case 1:
+            case 2:
+            case 4:
+                return '[В следующий] dddd [в] LT';
+            case 3:
+            case 5:
+            case 6:
+                return '[В следующую] dddd [в] LT';
+            }
         }
 
+        function makeFormatThis(d) {
+            if (d.day() === 2) {
+                return '[Во] dddd [в] LT';
+            }
+            else {
+                return '[В] dddd [в] LT';
+            }
+        }
+
+        now = moment().startOf('week');
         for (i = 2; i < 7; i++) {
-            m = moment().add({d: i});
-            assert.equal(m.calendar(),       m.format(makeFormat(m)),  'Today + ' + i + ' days current time');
+            m = moment(now).add({d: i});
+            assert.equal(m.calendar(now),       m.format(makeFormatThis(m)),  'Today + ' + i + ' days current time');
             m.hours(0).minutes(0).seconds(0).milliseconds(0);
-            assert.equal(m.calendar(),       m.format(makeFormat(m)),  'Today + ' + i + ' days beginning of day');
+            assert.equal(m.calendar(now),       m.format(makeFormatThis(m)),  'Today + ' + i + ' days beginning of day');
             m.hours(23).minutes(59).seconds(59).milliseconds(999);
-            assert.equal(m.calendar(),       m.format(makeFormat(m)),  'Today + ' + i + ' days end of day');
+            assert.equal(m.calendar(now),       m.format(makeFormatThis(m)),  'Today + ' + i + ' days end of day');
+        }
+
+        now = moment().endOf('week');
+        for (i = 2; i < 7; i++) {
+            m = moment(now).add({d: i});
+            assert.equal(m.calendar(now),       m.format(makeFormatNext(m)),  'Today + ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(now),       m.format(makeFormatNext(m)),  'Today + ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(now),       m.format(makeFormatNext(m)),  'Today + ' + i + ' days end of day');
         }
     });
 
@@ -24387,15 +26475,10 @@
         }
 
         function makeFormatThis(d) {
-            switch (d.day()) {
-            case 2:
+            if (d.day() === 2) {
                 return '[Во] dddd [в] LT';
-            case 0:
-            case 1:
-            case 3:
-            case 4:
-            case 5:
-            case 6:
+            }
+            else {
                 return '[В] dddd [в] LT';
             }
         }
@@ -24543,7 +26626,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -24556,8 +26640,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -24575,8 +26659,375 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    localeModule('se');
+
+    test('parse', function (assert) {
+        var i,
+            tests = 'ođđajagemánnu ođđj_guovvamánnu guov_njukčamánnu njuk_cuoŋománnu cuo_miessemánnu mies_geassemánnu geas_suoidnemánnu suoi_borgemánnu borg_čakčamánnu čakč_golggotmánnu golg_skábmamánnu skáb_juovlamánnu juov'.split('_');
+
+        function equalTest(input, mmm, i) {
+            assert.equal(moment(input, mmm).month(), i, input + ' should be month ' + (i + 1));
+        }
+
+        for (i = 0; i < 12; i++) {
+            tests[i] = tests[i].split(' ');
+            equalTest(tests[i][0], 'MMM', i);
+            equalTest(tests[i][1], 'MMM', i);
+            equalTest(tests[i][0], 'MMMM', i);
+            equalTest(tests[i][1], 'MMMM', i);
+            equalTest(tests[i][0].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleUpperCase(), 'MMMM', i);
+        }
+    });
+
+    test('format', function (assert) {
+        var a = [
+                ['dddd, MMMM Do YYYY, h:mm:ss a',      'sotnabeaivi, guovvamánnu 14. 2010, 3:25:50 pm'],
+                ['ddd, hA',                            'sotn, 3PM'],
+                ['M Mo MM MMMM MMM',                   '2 2. 02 guovvamánnu guov'],
+                ['YYYY YY',                            '2010 10'],
+                ['D Do DD',                            '14 14. 14'],
+                ['d do dddd ddd dd',                   '0 0. sotnabeaivi sotn s'],
+                ['DDD DDDo DDDD',                      '45 45. 045'],
+                ['w wo ww',                            '6 6. 06'],
+                ['h hh',                               '3 03'],
+                ['H HH',                               '15 15'],
+                ['m mm',                               '25 25'],
+                ['s ss',                               '50 50'],
+                ['a A',                                'pm PM'],
+                ['[jagi] DDDo [beaivi]',               'jagi 45. beaivi'],
+                ['LTS',                                '15:25:50'],
+                ['L',                                  '14.02.2010'],
+                ['LL',                                 'guovvamánnu 14. b. 2010'],
+                ['LLL',                                'guovvamánnu 14. b. 2010 ti. 15:25'],
+                ['LLLL',                               'sotnabeaivi, guovvamánnu 14. b. 2010 ti. 15:25'],
+                ['l',                                  '14.2.2010'],
+                ['ll',                                 'guov 14. b. 2010'],
+                ['lll',                                'guov 14. b. 2010 ti. 15:25'],
+                ['llll',                               'sotn, guov 14. b. 2010 ti. 15:25']
+            ],
+            b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
+            i;
+
+        for (i = 0; i < a.length; i++) {
+            assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+        }
+    });
+
+    test('format ordinal', function (assert) {
+        assert.equal(moment([2011, 0, 1]).format('DDDo'), '1.', '1.');
+        assert.equal(moment([2011, 0, 2]).format('DDDo'), '2.', '2.');
+        assert.equal(moment([2011, 0, 3]).format('DDDo'), '3.', '3.');
+        assert.equal(moment([2011, 0, 4]).format('DDDo'), '4.', '4.');
+        assert.equal(moment([2011, 0, 5]).format('DDDo'), '5.', '5.');
+        assert.equal(moment([2011, 0, 6]).format('DDDo'), '6.', '6.');
+        assert.equal(moment([2011, 0, 7]).format('DDDo'), '7.', '7.');
+        assert.equal(moment([2011, 0, 8]).format('DDDo'), '8.', '8.');
+        assert.equal(moment([2011, 0, 9]).format('DDDo'), '9.', '9.');
+        assert.equal(moment([2011, 0, 10]).format('DDDo'), '10.', '10.');
+
+        assert.equal(moment([2011, 0, 11]).format('DDDo'), '11.', '11.');
+        assert.equal(moment([2011, 0, 12]).format('DDDo'), '12.', '12.');
+        assert.equal(moment([2011, 0, 13]).format('DDDo'), '13.', '13.');
+        assert.equal(moment([2011, 0, 14]).format('DDDo'), '14.', '14.');
+        assert.equal(moment([2011, 0, 15]).format('DDDo'), '15.', '15.');
+        assert.equal(moment([2011, 0, 16]).format('DDDo'), '16.', '16.');
+        assert.equal(moment([2011, 0, 17]).format('DDDo'), '17.', '17.');
+        assert.equal(moment([2011, 0, 18]).format('DDDo'), '18.', '18.');
+        assert.equal(moment([2011, 0, 19]).format('DDDo'), '19.', '19.');
+        assert.equal(moment([2011, 0, 20]).format('DDDo'), '20.', '20.');
+
+        assert.equal(moment([2011, 0, 21]).format('DDDo'), '21.', '21.');
+        assert.equal(moment([2011, 0, 22]).format('DDDo'), '22.', '22.');
+        assert.equal(moment([2011, 0, 23]).format('DDDo'), '23.', '23.');
+        assert.equal(moment([2011, 0, 24]).format('DDDo'), '24.', '24.');
+        assert.equal(moment([2011, 0, 25]).format('DDDo'), '25.', '25.');
+        assert.equal(moment([2011, 0, 26]).format('DDDo'), '26.', '26.');
+        assert.equal(moment([2011, 0, 27]).format('DDDo'), '27.', '27.');
+        assert.equal(moment([2011, 0, 28]).format('DDDo'), '28.', '28.');
+        assert.equal(moment([2011, 0, 29]).format('DDDo'), '29.', '29.');
+        assert.equal(moment([2011, 0, 30]).format('DDDo'), '30.', '30.');
+
+        assert.equal(moment([2011, 0, 31]).format('DDDo'), '31.', '31.');
+    });
+
+    test('format month', function (assert) {
+        var i,
+            expected = 'ođđajagemánnu ođđj_guovvamánnu guov_njukčamánnu njuk_cuoŋománnu cuo_miessemánnu mies_geassemánnu geas_suoidnemánnu suoi_borgemánnu borg_čakčamánnu čakč_golggotmánnu golg_skábmamánnu skáb_juovlamánnu juov'.split('_');
+
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, i, 1]).format('MMMM MMM'), expected[i], expected[i]);
+        }
+    });
+
+    test('format week', function (assert) {
+        var i,
+            expected = 'sotnabeaivi sotn s_vuossárga vuos v_maŋŋebárga maŋ m_gaskavahkku gask g_duorastat duor d_bearjadat bear b_lávvardat láv L'.split('_');
+
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
+        }
+    });
+
+    test('from', function (assert) {
+        var start = moment([2007, 1, 28]);
+
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'moadde sekunddat', '44 seconds = a few seconds');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 45}), true),  'okta minuhta',  '45 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 89}), true),  'okta minuhta',  '89 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 90}), true),  '2 minuhtat',    '90 seconds = 2 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 44}), true),  '44 minuhtat',   '44 minutes = 44 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 45}), true),  'okta diimmu',   '45 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 89}), true),  'okta diimmu',   '89 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 90}), true),  '2 diimmut',     '90 minutes = 2 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 5}), true),   '5 diimmut',     '5 hours = 5 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 21}), true),  '21 diimmut',    '21 hours = 21 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 22}), true),  'okta beaivi',   '22 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 35}), true),  'okta beaivi',   '35 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 36}), true),  '2 beaivvit',    '36 hours = 2 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 1}), true),   'okta beaivi',   '1 day = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 5}), true),   '5 beaivvit',    '5 days = 5 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 25}), true),  '25 beaivvit',   '25 days = 25 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 26}), true),  'okta mánnu',    '26 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 30}), true),  'okta mánnu',    '30 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 43}), true),  'okta mánnu',    '43 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 46}), true),  '2 mánut',       '46 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 74}), true),  '2 mánut',       '75 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 76}), true),  '3 mánut',       '76 days = 3 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 1}), true),   'okta mánnu',    '1 month = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 5}), true),   '5 mánut',       '5 months = 5 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 345}), true), 'okta jahki',    '345 days = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 548}), true), '2 jagit',       '548 days = 2 years');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 1}), true),   'okta jahki',    '1 year = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 5}), true),   '5 jagit',       '5 years = 5 years');
+    });
+
+    test('suffix', function (assert) {
+        assert.equal(moment(30000).from(0), 'moadde sekunddat geažes',  'prefix');
+        assert.equal(moment(0).from(30000), 'maŋit moadde sekunddat', 'suffix');
+    });
+
+    test('now from now', function (assert) {
+        assert.equal(moment().fromNow(), 'maŋit moadde sekunddat',  'now from now should display as in the past');
+    });
+
+    test('fromNow', function (assert) {
+        assert.equal(moment().add({s: 30}).fromNow(), 'moadde sekunddat geažes', 'in a few seconds');
+        assert.equal(moment().add({d: 5}).fromNow(), '5 beaivvit geažes', 'in 5 days');
+    });
+
+    test('calendar day', function (assert) {
+        var a = moment().hours(2).minutes(0).seconds(0);
+
+        assert.equal(moment(a).calendar(),                   'otne ti 02:00',     'Today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(),      'otne ti 02:25',     'Now plus 25 min');
+        assert.equal(moment(a).add({h: 1}).calendar(),       'otne ti 03:00',     'Now plus 1 hour');
+        assert.equal(moment(a).add({d: 1}).calendar(),       'ihttin ti 02:00',   'Tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(),  'otne ti 01:00',     'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(),  'ikte ti 02:00',     'yesterday at the same time');
+    });
+
+    test('calendar next week', function (assert) {
+        var i, m;
+
+        for (i = 2; i < 7; i++) {
+            m = moment().add({d: i});
+            assert.equal(m.calendar(),       m.format('dddd [ti] LT'),  'Today + ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('dddd [ti] LT'),  'Today + ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('dddd [ti] LT'),  'Today + ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar last week', function (assert) {
+        var i, m;
+
+        for (i = 2; i < 7; i++) {
+            m = moment().subtract({d: i});
+            assert.equal(m.calendar(),       m.format('[ovddit] dddd [ti] LT'),  'Today - ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('[ovddit] dddd [ti] LT'),  'Today - ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('[ovddit] dddd [ti] LT'),  'Today - ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar all else', function (assert) {
+        var weeksAgo = moment().subtract({w: 1}),
+            weeksFromNow = moment().add({w: 1});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '1 week ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 1 week');
+
+        weeksAgo = moment().subtract({w: 2});
+        weeksFromNow = moment().add({w: 2});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '2 weeks ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 2 weeks');
+    });
+
+    test('weeks year starting sunday', function (assert) {
+        assert.equal(moment([2012, 0, 1]).week(), 52, 'Jan  1 2012 should be week 52');
+        assert.equal(moment([2012, 0, 2]).week(),  1, 'Jan  2 2012 should be week 1');
+        assert.equal(moment([2012, 0, 8]).week(),  1, 'Jan  8 2012 should be week 1');
+        assert.equal(moment([2012, 0, 9]).week(),  2, 'Jan  9 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).week(), 2, 'Jan 15 2012 should be week 2');
+    });
+
+    test('weeks year starting monday', function (assert) {
+        assert.equal(moment([2007, 0, 1]).week(),  1, 'Jan  1 2007 should be week 1');
+        assert.equal(moment([2007, 0, 7]).week(),  1, 'Jan  7 2007 should be week 1');
+        assert.equal(moment([2007, 0, 8]).week(),  2, 'Jan  8 2007 should be week 2');
+        assert.equal(moment([2007, 0, 14]).week(), 2, 'Jan 14 2007 should be week 2');
+        assert.equal(moment([2007, 0, 15]).week(), 3, 'Jan 15 2007 should be week 3');
+    });
+
+    test('weeks year starting tuesday', function (assert) {
+        assert.equal(moment([2007, 11, 31]).week(), 1, 'Dec 31 2007 should be week 1');
+        assert.equal(moment([2008,  0,  1]).week(), 1, 'Jan  1 2008 should be week 1');
+        assert.equal(moment([2008,  0,  6]).week(), 1, 'Jan  6 2008 should be week 1');
+        assert.equal(moment([2008,  0,  7]).week(), 2, 'Jan  7 2008 should be week 2');
+        assert.equal(moment([2008,  0, 13]).week(), 2, 'Jan 13 2008 should be week 2');
+        assert.equal(moment([2008,  0, 14]).week(), 3, 'Jan 14 2008 should be week 3');
+    });
+
+    test('weeks year starting wednesday', function (assert) {
+        assert.equal(moment([2002, 11, 30]).week(), 1, 'Dec 30 2002 should be week 1');
+        assert.equal(moment([2003,  0,  1]).week(), 1, 'Jan  1 2003 should be week 1');
+        assert.equal(moment([2003,  0,  5]).week(), 1, 'Jan  5 2003 should be week 1');
+        assert.equal(moment([2003,  0,  6]).week(), 2, 'Jan  6 2003 should be week 2');
+        assert.equal(moment([2003,  0, 12]).week(), 2, 'Jan 12 2003 should be week 2');
+        assert.equal(moment([2003,  0, 13]).week(), 3, 'Jan 13 2003 should be week 3');
+    });
+
+    test('weeks year starting thursday', function (assert) {
+        assert.equal(moment([2008, 11, 29]).week(), 1, 'Dec 29 2008 should be week 1');
+        assert.equal(moment([2009,  0,  1]).week(), 1, 'Jan  1 2009 should be week 1');
+        assert.equal(moment([2009,  0,  4]).week(), 1, 'Jan  4 2009 should be week 1');
+        assert.equal(moment([2009,  0,  5]).week(), 2, 'Jan  5 2009 should be week 2');
+        assert.equal(moment([2009,  0, 11]).week(), 2, 'Jan 11 2009 should be week 2');
+        assert.equal(moment([2009,  0, 13]).week(), 3, 'Jan 12 2009 should be week 3');
+    });
+
+    test('weeks year starting friday', function (assert) {
+        assert.equal(moment([2009, 11, 28]).week(), 53, 'Dec 28 2009 should be week 53');
+        assert.equal(moment([2010,  0,  1]).week(), 53, 'Jan  1 2010 should be week 53');
+        assert.equal(moment([2010,  0,  3]).week(), 53, 'Jan  3 2010 should be week 53');
+        assert.equal(moment([2010,  0,  4]).week(),  1, 'Jan  4 2010 should be week 1');
+        assert.equal(moment([2010,  0, 10]).week(),  1, 'Jan 10 2010 should be week 1');
+        assert.equal(moment([2010,  0, 11]).week(),  2, 'Jan 11 2010 should be week 2');
+    });
+
+    test('weeks year starting saturday', function (assert) {
+        assert.equal(moment([2010, 11, 27]).week(), 52, 'Dec 27 2010 should be week 52');
+        assert.equal(moment([2011,  0,  1]).week(), 52, 'Jan  1 2011 should be week 52');
+        assert.equal(moment([2011,  0,  2]).week(), 52, 'Jan  2 2011 should be week 52');
+        assert.equal(moment([2011,  0,  3]).week(),  1, 'Jan  3 2011 should be week 1');
+        assert.equal(moment([2011,  0,  9]).week(),  1, 'Jan  9 2011 should be week 1');
+        assert.equal(moment([2011,  0, 10]).week(),  2, 'Jan 10 2011 should be week 2');
+    });
+
+    test('weeks year starting sunday formatted', function (assert) {
+        assert.equal(moment([2012, 0,  1]).format('w ww wo'), '52 52 52.', 'Jan  1 2012 should be week 52');
+        assert.equal(moment([2012, 0,  2]).format('w ww wo'),  '1 01 1.', 'Jan  2 2012 should be week 1');
+        assert.equal(moment([2012, 0,  8]).format('w ww wo'),  '1 01 1.', 'Jan  8 2012 should be week 1');
+        assert.equal(moment([2012, 0,  9]).format('w ww wo'),  '2 02 2.', 'Jan  9 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).format('w ww wo'),  '2 02 2.', 'Jan 15 2012 should be week 2');
+    });
+
+    test('lenient ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing ' + i + ' date check');
+        }
+    });
+
+    test('lenient ordinal parsing of number', function (assert) {
+        var i, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            testMoment = moment('2014 01 ' + i, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing of number ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing of number ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing of number ' + i + ' date check');
+        }
+    });
+
+    test('strict ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do', true);
+            assert.ok(testMoment.isValid(), 'strict ordinal parsing ' + i);
+        }
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -24832,7 +27283,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -24845,8 +27297,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -24864,8 +27316,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -25275,7 +27727,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -25288,8 +27741,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -25307,8 +27760,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -25754,7 +28207,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -25767,8 +28221,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -25786,8 +28240,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -26125,7 +28579,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -26138,8 +28593,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -26157,8 +28612,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -26515,7 +28970,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -26528,8 +28984,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -26547,8 +29003,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -26905,7 +29361,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -26918,8 +29375,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -26937,8 +29394,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -27260,7 +29717,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -27273,8 +29731,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -27292,8 +29750,364 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    localeModule('sw');
+
+    test('parse', function (assert) {
+        var tests = 'Januari Jan_Februari Feb_Machi Mac_Aprili Apr_Mei Mei_Juni Jun_Julai Jul_Agosti Ago_Septemba Sep_Oktoba Okt_Novemba Nov_Desemba Des'.split('_'), i;
+        function equalTest(input, mmm, i) {
+            assert.equal(moment(input, mmm).month(), i, input + ' should be month ' + (i + 1));
+        }
+        for (i = 0; i < 12; i++) {
+            tests[i] = tests[i].split(' ');
+            equalTest(tests[i][0], 'MMM', i);
+            equalTest(tests[i][1], 'MMM', i);
+            equalTest(tests[i][0], 'MMMM', i);
+            equalTest(tests[i][1], 'MMMM', i);
+            equalTest(tests[i][0].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleUpperCase(), 'MMMM', i);
+        }
+    });
+
+    test('format', function (assert) {
+        var a = [
+                ['dddd, MMMM Do YYYY, h:mm:ss a',      'Jumapili, Februari 14 2010, 3:25:50 pm'],
+                ['ddd, hA',                            'Jpl, 3PM'],
+                ['M Mo MM MMMM MMM',                   '2 2 02 Februari Feb'],
+                ['YYYY YY',                            '2010 10'],
+                ['D Do DD',                            '14 14 14'],
+                ['d do dddd ddd dd',                   '0 0 Jumapili Jpl J2'],
+                ['DDD DDDo DDDD',                      '45 45 045'],
+                ['w wo ww',                            '7 7 07'],
+                ['h hh',                               '3 03'],
+                ['H HH',                               '15 15'],
+                ['m mm',                               '25 25'],
+                ['s ss',                               '50 50'],
+                ['a A',                                'pm PM'],
+                ['[siku] DDDo [ya mwaka]',             'siku 45 ya mwaka'],
+                ['LTS',                                '15:25:50'],
+                ['L',                                  '14.02.2010'],
+                ['LL',                                 '14 Februari 2010'],
+                ['LLL',                                '14 Februari 2010 15:25'],
+                ['LLLL',                               'Jumapili, 14 Februari 2010 15:25'],
+                ['l',                                  '14.2.2010'],
+                ['ll',                                 '14 Feb 2010'],
+                ['lll',                                '14 Feb 2010 15:25'],
+                ['llll',                               'Jpl, 14 Feb 2010 15:25']
+            ],
+            b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
+            i;
+        for (i = 0; i < a.length; i++) {
+            assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+        }
+    });
+
+    test('format ordinal', function (assert) {
+        assert.equal(moment([2011, 0, 1]).format('DDDo'), '1', '1');
+        assert.equal(moment([2011, 0, 2]).format('DDDo'), '2', '2');
+        assert.equal(moment([2011, 0, 3]).format('DDDo'), '3', '3');
+        assert.equal(moment([2011, 0, 4]).format('DDDo'), '4', '4');
+        assert.equal(moment([2011, 0, 5]).format('DDDo'), '5', '5');
+        assert.equal(moment([2011, 0, 6]).format('DDDo'), '6', '6');
+        assert.equal(moment([2011, 0, 7]).format('DDDo'), '7', '7');
+        assert.equal(moment([2011, 0, 8]).format('DDDo'), '8', '8');
+        assert.equal(moment([2011, 0, 9]).format('DDDo'), '9', '9');
+        assert.equal(moment([2011, 0, 10]).format('DDDo'), '10', '10');
+
+        assert.equal(moment([2011, 0, 11]).format('DDDo'), '11', '11');
+        assert.equal(moment([2011, 0, 12]).format('DDDo'), '12', '12');
+        assert.equal(moment([2011, 0, 13]).format('DDDo'), '13', '13');
+        assert.equal(moment([2011, 0, 14]).format('DDDo'), '14', '14');
+        assert.equal(moment([2011, 0, 15]).format('DDDo'), '15', '15');
+        assert.equal(moment([2011, 0, 16]).format('DDDo'), '16', '16');
+        assert.equal(moment([2011, 0, 17]).format('DDDo'), '17', '17');
+        assert.equal(moment([2011, 0, 18]).format('DDDo'), '18', '18');
+        assert.equal(moment([2011, 0, 19]).format('DDDo'), '19', '19');
+        assert.equal(moment([2011, 0, 20]).format('DDDo'), '20', '20');
+
+        assert.equal(moment([2011, 0, 21]).format('DDDo'), '21', '21');
+        assert.equal(moment([2011, 0, 22]).format('DDDo'), '22', '22');
+        assert.equal(moment([2011, 0, 23]).format('DDDo'), '23', '23');
+        assert.equal(moment([2011, 0, 24]).format('DDDo'), '24', '24');
+        assert.equal(moment([2011, 0, 25]).format('DDDo'), '25', '25');
+        assert.equal(moment([2011, 0, 26]).format('DDDo'), '26', '26');
+        assert.equal(moment([2011, 0, 27]).format('DDDo'), '27', '27');
+        assert.equal(moment([2011, 0, 28]).format('DDDo'), '28', '28');
+        assert.equal(moment([2011, 0, 29]).format('DDDo'), '29', '29');
+        assert.equal(moment([2011, 0, 30]).format('DDDo'), '30', '30');
+
+        assert.equal(moment([2011, 0, 31]).format('DDDo'), '31', '31');
+    });
+
+    test('format month', function (assert) {
+        var expected = 'Januari Jan_Februari Feb_Machi Mac_Aprili Apr_Mei Mei_Juni Jun_Julai Jul_Agosti Ago_Septemba Sep_Oktoba Okt_Novemba Nov_Desemba Des'.split('_'), i;
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, i, 1]).format('MMMM MMM'), expected[i], expected[i]);
+        }
+    });
+
+    test('format week', function (assert) {
+        var expected = 'Jumapili Jpl J2_Jumatatu Jtat J3_Jumanne Jnne J4_Jumatano Jtan J5_Alhamisi Alh Al_Ijumaa Ijm Ij_Jumamosi Jmos J1'.split('_'), i;
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
+        }
+    });
+
+    test('from', function (assert) {
+        var start = moment([2007, 1, 28]);
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'hivi punde',   '44 seconds = a few seconds');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 45}), true),  'dakika moja',  '45 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 89}), true),  'dakika moja',  '89 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 90}), true),  'dakika 2',     '90 seconds = 2 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 44}), true),  'dakika 44',    '44 minutes = 44 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 45}), true),  'saa limoja',   '45 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 89}), true),  'saa limoja',   '89 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 90}), true),  'masaa 2',      '90 minutes = 2 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 5}), true),   'masaa 5',      '5 hours = 5 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 21}), true),  'masaa 21',     '21 hours = 21 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 22}), true),  'siku moja',    '22 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 35}), true),  'siku moja',    '35 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 36}), true),  'masiku 2',     '36 hours = 2 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 1}), true),   'siku moja',    '1 day = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 5}), true),   'masiku 5',     '5 days = 5 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 25}), true),  'masiku 25',    '25 days = 25 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 26}), true),  'mwezi mmoja',  '26 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 30}), true),  'mwezi mmoja',  '30 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 43}), true),  'mwezi mmoja',  '43 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 46}), true),  'miezi 2',      '46 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 74}), true),  'miezi 2',      '75 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 76}), true),  'miezi 3',      '76 days = 3 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 1}), true),   'mwezi mmoja',  '1 month = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 5}), true),   'miezi 5',      '5 months = 5 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 345}), true), 'mwaka mmoja',  '345 days = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 548}), true), 'miaka 2',      '548 days = 2 years');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 1}), true),   'mwaka mmoja',  '1 year = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 5}), true),   'miaka 5',      '5 years = 5 years');
+    });
+
+    test('suffix', function (assert) {
+        assert.equal(moment(30000).from(0), 'hivi punde baadaye',  'prefix');
+        assert.equal(moment(0).from(30000), 'tokea hivi punde', 'suffix');
+    });
+
+    test('now from now', function (assert) {
+        assert.equal(moment().fromNow(), 'tokea hivi punde',  'now from now should display as in the past');
+    });
+
+    test('fromNow', function (assert) {
+        assert.equal(moment().add({s: 30}).fromNow(), 'hivi punde baadaye', 'in a few seconds');
+        assert.equal(moment().add({d: 5}).fromNow(), 'masiku 5 baadaye', 'in 5 days');
+    });
+
+    test('calendar day', function (assert) {
+        var a = moment().hours(2).minutes(0).seconds(0);
+        assert.equal(moment(a).calendar(),                   'leo saa 02:00',      'today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(),      'leo saa 02:25',      'Now plus 25 min');
+        assert.equal(moment(a).add({h: 1}).calendar(),       'leo saa 03:00',      'Now plus 1 hour');
+        assert.equal(moment(a).add({d: 1}).calendar(),       'kesho saa 02:00',    'tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(),  'leo saa 01:00',      'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(),  'jana 02:00',         'yesterday at the same time');
+    });
+
+    test('calendar next week', function (assert) {
+        var i, m;
+        for (i = 2; i < 7; i++) {
+            m = moment().add({d: i});
+            assert.equal(m.calendar(),       m.format('[wiki ijayo] dddd [saat] LT'),  'Today + ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('[wiki ijayo] dddd [saat] LT'),  'Today + ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('[wiki ijayo] dddd [saat] LT'),  'Today + ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar last week', function (assert) {
+        var i, m;
+
+        for (i = 2; i < 7; i++) {
+            m = moment().subtract({d: i});
+            assert.equal(m.calendar(),       m.format('[wiki iliyopita] dddd [saat] LT'),  'Today - ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('[wiki iliyopita] dddd [saat] LT'),  'Today - ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('[wiki iliyopita] dddd [saat] LT'),  'Today - ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar all else', function (assert) {
+        var weeksAgo = moment().subtract({w: 1}),
+            weeksFromNow = moment().add({w: 1});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),      '1 week ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 1 week');
+
+        weeksAgo = moment().subtract({w: 2});
+        weeksFromNow = moment().add({w: 2});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '2 weeks ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 2 weeks');
+    });
+
+    test('weeks year starting sunday', function (assert) {
+        assert.equal(moment([2011, 11, 26]).week(), 1, 'Dec 26 2011 should be week 1');
+        assert.equal(moment([2012,  0,  1]).week(), 1, 'Jan  1 2012 should be week 1');
+        assert.equal(moment([2012,  0,  2]).week(), 2, 'Jan  2 2012 should be week 2');
+        assert.equal(moment([2012,  0,  8]).week(), 2, 'Jan  8 2012 should be week 2');
+        assert.equal(moment([2012,  0,  9]).week(), 3, 'Jan  9 2012 should be week 3');
+    });
+
+    test('weeks year starting monday', function (assert) {
+        assert.equal(moment([2007, 0, 1]).week(),  1, 'Jan  1 2007 should be week 1');
+        assert.equal(moment([2007, 0, 7]).week(),  1, 'Jan  7 2007 should be week 1');
+        assert.equal(moment([2007, 0, 8]).week(),  2, 'Jan  8 2007 should be week 2');
+        assert.equal(moment([2007, 0, 14]).week(), 2, 'Jan 14 2007 should be week 2');
+        assert.equal(moment([2007, 0, 15]).week(), 3, 'Jan 15 2007 should be week 3');
+    });
+
+    test('weeks year starting tuesday', function (assert) {
+        assert.equal(moment([2007, 11, 31]).week(), 1, 'Dec 31 2007 should be week 1');
+        assert.equal(moment([2008,  0,  1]).week(), 1, 'Jan  1 2008 should be week 1');
+        assert.equal(moment([2008,  0,  6]).week(), 1, 'Jan  6 2008 should be week 1');
+        assert.equal(moment([2008,  0,  7]).week(), 2, 'Jan  7 2008 should be week 2');
+        assert.equal(moment([2008,  0, 13]).week(), 2, 'Jan 13 2008 should be week 2');
+        assert.equal(moment([2008,  0, 14]).week(), 3, 'Jan 14 2008 should be week 3');
+    });
+
+    test('weeks year starting wednesday', function (assert) {
+        assert.equal(moment([2002, 11, 30]).week(), 1, 'Dec 30 2002 should be week 1');
+        assert.equal(moment([2003,  0,  1]).week(), 1, 'Jan  1 2003 should be week 1');
+        assert.equal(moment([2003,  0,  5]).week(), 1, 'Jan  5 2003 should be week 1');
+        assert.equal(moment([2003,  0,  6]).week(), 2, 'Jan  6 2003 should be week 2');
+        assert.equal(moment([2003,  0, 12]).week(), 2, 'Jan 12 2003 should be week 2');
+        assert.equal(moment([2003,  0, 13]).week(), 3, 'Jan 13 2003 should be week 3');
+    });
+
+    test('weeks year starting thursday', function (assert) {
+        assert.equal(moment([2008, 11, 29]).week(), 1, 'Dec 29 2008 should be week 1');
+        assert.equal(moment([2009,  0,  1]).week(), 1, 'Jan  1 2009 should be week 1');
+        assert.equal(moment([2009,  0,  4]).week(), 1, 'Jan  4 2009 should be week 1');
+        assert.equal(moment([2009,  0,  5]).week(), 2, 'Jan  5 2009 should be week 2');
+        assert.equal(moment([2009,  0, 11]).week(), 2, 'Jan 11 2009 should be week 2');
+        assert.equal(moment([2009,  0, 12]).week(), 3, 'Jan 12 2009 should be week 3');
+    });
+
+    test('weeks year starting friday', function (assert) {
+        assert.equal(moment([2009, 11, 28]).week(), 1, 'Dec 28 2009 should be week 1');
+        assert.equal(moment([2010,  0,  1]).week(), 1, 'Jan  1 2010 should be week 1');
+        assert.equal(moment([2010,  0,  3]).week(), 1, 'Jan  3 2010 should be week 1');
+        assert.equal(moment([2010,  0,  4]).week(), 2, 'Jan  4 2010 should be week 2');
+        assert.equal(moment([2010,  0, 10]).week(), 2, 'Jan 10 2010 should be week 2');
+        assert.equal(moment([2010,  0, 11]).week(), 3, 'Jan 11 2010 should be week 3');
+    });
+
+    test('weeks year starting saturday', function (assert) {
+        assert.equal(moment([2010, 11, 27]).week(), 1, 'Dec 27 2010 should be week 1');
+        assert.equal(moment([2011,  0,  1]).week(), 1, 'Jan  1 2011 should be week 1');
+        assert.equal(moment([2011,  0,  2]).week(), 1, 'Jan  2 2011 should be week 1');
+        assert.equal(moment([2011,  0,  3]).week(), 2, 'Jan  3 2011 should be week 2');
+        assert.equal(moment([2011,  0,  9]).week(), 2, 'Jan  9 2011 should be week 2');
+        assert.equal(moment([2011,  0, 10]).week(), 3, 'Jan 10 2011 should be week 3');
+    });
+
+    test('weeks year starting sunday format', function (assert) {
+        assert.equal(moment([2011, 11, 26]).format('w ww wo'), '1 01 1', 'Dec 26 2011 should be week 1');
+        assert.equal(moment([2012,  0,  1]).format('w ww wo'), '1 01 1', 'Jan  1 2012 should be week 1');
+        assert.equal(moment([2012,  0,  2]).format('w ww wo'), '2 02 2', 'Jan  2 2012 should be week 2');
+        assert.equal(moment([2012,  0,  8]).format('w ww wo'), '2 02 2', 'Jan  8 2012 should be week 2');
+        assert.equal(moment([2012,  0,  9]).format('w ww wo'), '3 03 3', 'Jan  9 2012 should be week 3');
+    });
+
+    test('lenient ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing ' + i + ' date check');
+        }
+    });
+
+    test('lenient ordinal parsing of number', function (assert) {
+        var i, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            testMoment = moment('2014 01 ' + i, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing of number ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing of number ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing of number ' + i + ' date check');
+        }
+    });
+
+    test('strict ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do', true);
+            assert.ok(testMoment.isValid(), 'strict ordinal parsing ' + i);
+        }
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -27630,7 +30444,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -27643,8 +30458,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -27662,8 +30477,392 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    localeModule('te');
+
+    test('parse', function (assert) {
+        var tests = 'జనవరి జన._ఫిబ్రవరి ఫిబ్ర._మార్చి మార్చి_ఏప్రిల్ ఏప్రి._మే మే_జూన్ జూన్_జూలై జూలై_ఆగస్టు ఆగ._సెప్టెంబర్ సెప్._అక్టోబర్ అక్టో._నవంబర్ నవ._డిసెంబర్ డిసె.'.split('_'), i;
+        function equalTest(input, mmm, i) {
+            assert.equal(moment(input, mmm).month(), i, input + ' should be month ' + (i + 1));
+        }
+        for (i = 0; i < 12; i++) {
+            tests[i] = tests[i].split(' ');
+            equalTest(tests[i][0], 'MMM', i);
+            equalTest(tests[i][1], 'MMM', i);
+            equalTest(tests[i][0], 'MMMM', i);
+            equalTest(tests[i][1], 'MMMM', i);
+            equalTest(tests[i][0].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleLowerCase(), 'MMMM', i);
+            equalTest(tests[i][0].toLocaleUpperCase(), 'MMMM', i);
+            equalTest(tests[i][1].toLocaleUpperCase(), 'MMMM', i);
+        }
+    });
+
+    test('format', function (assert) {
+        var a = [
+                ['dddd, Do తేదీ MMMM YYYY, a h:mm:ss',  'ఆదివారం, 14వ తేదీ ఫిబ్రవరి 2010, మధ్యాహ్నం 3:25:50'],
+                ['ddd, a h గంటలు',                 'ఆది, మధ్యాహ్నం 3 గంటలు'],
+                ['M Mo నెల MM MMMM MMM',                   '2 2వ నెల 02 ఫిబ్రవరి ఫిబ్ర.'],
+                ['YYYY YY',                            '2010 10'],
+                ['D Do DD',                            '14 14వ 14'],
+                ['d do dddd ddd dd',                   '0 0వ ఆదివారం ఆది ఆ'],
+                ['DDD DDDo DDDD',                      '45 45వ 045'],
+                ['w wo ww',                            '8 8వ 08'],
+                ['h hh',                               '3 03'],
+                ['H HH',                               '15 15'],
+                ['m mm',                               '25 25'],
+                ['s ss',                               '50 50'],
+                ['a A',                                'మధ్యాహ్నం మధ్యాహ్నం'],
+                ['LTS',                                'మధ్యాహ్నం 3:25:50'],
+                ['L',                                  '14/02/2010'],
+                ['LL',                                 '14 ఫిబ్రవరి 2010'],
+                ['LLL',                                '14 ఫిబ్రవరి 2010, మధ్యాహ్నం 3:25'],
+                ['LLLL',                               'ఆదివారం, 14 ఫిబ్రవరి 2010, మధ్యాహ్నం 3:25'],
+                ['l',                                  '14/2/2010'],
+                ['ll',                                 '14 ఫిబ్ర. 2010'],
+                ['lll',                                '14 ఫిబ్ర. 2010, మధ్యాహ్నం 3:25'],
+                ['llll',                               'ఆది, 14 ఫిబ్ర. 2010, మధ్యాహ్నం 3:25']
+            ],
+            b = moment(new Date(2010, 1, 14, 15, 25, 50, 125)),
+            i;
+        for (i = 0; i < a.length; i++) {
+            assert.equal(b.format(a[i][0]), a[i][1], a[i][0] + ' ---> ' + a[i][1]);
+        }
+    });
+
+    test('format ordinal', function (assert) {
+        assert.equal(moment([2011, 0, 1]).format('DDDo'), '1వ', '1వ');
+        assert.equal(moment([2011, 0, 2]).format('DDDo'), '2వ', '2వ');
+        assert.equal(moment([2011, 0, 3]).format('DDDo'), '3వ', '3వ');
+        assert.equal(moment([2011, 0, 4]).format('DDDo'), '4వ', '4వ');
+        assert.equal(moment([2011, 0, 5]).format('DDDo'), '5వ', '5వ');
+        assert.equal(moment([2011, 0, 6]).format('DDDo'), '6వ', '6వ');
+        assert.equal(moment([2011, 0, 7]).format('DDDo'), '7వ', '7వ');
+        assert.equal(moment([2011, 0, 8]).format('DDDo'), '8వ', '8వ');
+        assert.equal(moment([2011, 0, 9]).format('DDDo'), '9వ', '9వ');
+        assert.equal(moment([2011, 0, 10]).format('DDDo'), '10వ', '10వ');
+
+        assert.equal(moment([2011, 0, 11]).format('DDDo'), '11వ', '11వ');
+        assert.equal(moment([2011, 0, 12]).format('DDDo'), '12వ', '12వ');
+        assert.equal(moment([2011, 0, 13]).format('DDDo'), '13వ', '13వ');
+        assert.equal(moment([2011, 0, 14]).format('DDDo'), '14వ', '14వ');
+        assert.equal(moment([2011, 0, 15]).format('DDDo'), '15వ', '15వ');
+        assert.equal(moment([2011, 0, 16]).format('DDDo'), '16వ', '16వ');
+        assert.equal(moment([2011, 0, 17]).format('DDDo'), '17వ', '17వ');
+        assert.equal(moment([2011, 0, 18]).format('DDDo'), '18వ', '18వ');
+        assert.equal(moment([2011, 0, 19]).format('DDDo'), '19వ', '19వ');
+        assert.equal(moment([2011, 0, 20]).format('DDDo'), '20వ', '20వ');
+
+        assert.equal(moment([2011, 0, 21]).format('DDDo'), '21వ', '21వ');
+        assert.equal(moment([2011, 0, 22]).format('DDDo'), '22వ', '22వ');
+        assert.equal(moment([2011, 0, 23]).format('DDDo'), '23వ', '23వ');
+        assert.equal(moment([2011, 0, 24]).format('DDDo'), '24వ', '24వ');
+        assert.equal(moment([2011, 0, 25]).format('DDDo'), '25వ', '25వ');
+        assert.equal(moment([2011, 0, 26]).format('DDDo'), '26వ', '26వ');
+        assert.equal(moment([2011, 0, 27]).format('DDDo'), '27వ', '27వ');
+        assert.equal(moment([2011, 0, 28]).format('DDDo'), '28వ', '28వ');
+        assert.equal(moment([2011, 0, 29]).format('DDDo'), '29వ', '29వ');
+        assert.equal(moment([2011, 0, 30]).format('DDDo'), '30వ', '30వ');
+
+        assert.equal(moment([2011, 0, 31]).format('DDDo'), '31వ', '31వ');
+    });
+
+    test('format month', function (assert) {
+        var expected = 'జనవరి జన._ఫిబ్రవరి ఫిబ్ర._మార్చి మార్చి_ఏప్రిల్ ఏప్రి._మే మే_జూన్ జూన్_జూలై జూలై_ఆగస్టు ఆగ._సెప్టెంబర్ సెప్._అక్టోబర్ అక్టో._నవంబర్ నవ._డిసెంబర్ డిసె.'.split('_'), i;
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, i, 1]).format('MMMM MMM'), expected[i], expected[i]);
+        }
+    });
+
+    test('format week', function (assert) {
+        var expected = 'ఆదివారం ఆది ఆ_సోమవారం సోమ సో_మంగళవారం మంగళ మం_బుధవారం బుధ బు_గురువారం గురు గు_శుక్రవారం శుక్ర శు_శనివారం శని శ'.split('_'), i;
+        for (i = 0; i < expected.length; i++) {
+            assert.equal(moment([2011, 0, 2 + i]).format('dddd ddd dd'), expected[i], expected[i]);
+        }
+    });
+
+    test('from', function (assert) {
+        var start = moment([2007, 1, 28]);
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 44}), true),  'కొన్ని క్షణాలు', '44 seconds = a few seconds');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 45}), true),  'ఒక నిమిషం',      '45 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 89}), true),  'ఒక నిమిషం',      '89 seconds = a minute');
+        assert.equal(start.from(moment([2007, 1, 28]).add({s: 90}), true),  '2 నిమిషాలు',     '90 seconds = 2 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 44}), true),  '44 నిమిషాలు',    '44 minutes = 44 minutes');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 45}), true),  'ఒక గంట',       '45 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 89}), true),  'ఒక గంట',       '89 minutes = an hour');
+        assert.equal(start.from(moment([2007, 1, 28]).add({m: 90}), true),  '2 గంటలు',       '90 minutes = 2 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 5}), true),   '5 గంటలు',       '5 hours = 5 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 21}), true),  '21 గంటలు',      '21 hours = 21 hours');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 22}), true),  'ఒక రోజు',         '22 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 35}), true),  'ఒక రోజు',         '35 hours = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({h: 36}), true),  '2 రోజులు',        '36 hours = 2 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 1}), true),   'ఒక రోజు',         '1 day = a day');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 5}), true),   '5 రోజులు',        '5 days = 5 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 25}), true),  '25 రోజులు',       '25 days = 25 days');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 26}), true),  'ఒక నెల',       '26 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 30}), true),  'ఒక నెల',       '30 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 43}), true),  'ఒక నెల',       '43 days = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 46}), true),  '2 నెలలు',      '46 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 74}), true),  '2 నెలలు',      '75 days = 2 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 76}), true),  '3 నెలలు',      '76 days = 3 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 1}), true),   'ఒక నెల',       '1 month = a month');
+        assert.equal(start.from(moment([2007, 1, 28]).add({M: 5}), true),   '5 నెలలు',      '5 months = 5 months');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 345}), true), 'ఒక సంవత్సరం',        '345 days = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({d: 548}), true), '2 సంవత్సరాలు',       '548 days = 2 years');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 1}), true),   'ఒక సంవత్సరం',        '1 year = a year');
+        assert.equal(start.from(moment([2007, 1, 28]).add({y: 5}), true),   '5 సంవత్సరాలు',       '5 years = 5 years');
+    });
+
+    test('suffix', function (assert) {
+        assert.equal(moment(30000).from(0), 'కొన్ని క్షణాలు లో',  'prefix');
+        assert.equal(moment(0).from(30000), 'కొన్ని క్షణాలు క్రితం', 'suffix');
+    });
+
+    test('now from now', function (assert) {
+        assert.equal(moment().fromNow(), 'కొన్ని క్షణాలు క్రితం',  'now from now should display as in the past');
+    });
+
+    test('fromNow', function (assert) {
+        assert.equal(moment().add({s: 30}).fromNow(), 'కొన్ని క్షణాలు లో', 'కొన్ని క్షణాలు లో');
+        assert.equal(moment().add({d: 5}).fromNow(), '5 రోజులు లో', '5 రోజులు లో');
+    });
+
+    test('calendar day', function (assert) {
+        var a = moment().hours(2).minutes(0).seconds(0);
+
+        assert.equal(moment(a).calendar(),                     'నేడు రాత్రి 2:00',     'today at the same time');
+        assert.equal(moment(a).add({m: 25}).calendar(),      'నేడు రాత్రి 2:25',     'Now plus 25 min');
+        assert.equal(moment(a).add({h: 3}).calendar(),       'నేడు ఉదయం 5:00',     'Now plus 3 hour');
+        assert.equal(moment(a).add({d: 1}).calendar(),       'రేపు రాత్రి 2:00',  'tomorrow at the same time');
+        assert.equal(moment(a).subtract({h: 1}).calendar(),  'నేడు రాత్రి 1:00',     'Now minus 1 hour');
+        assert.equal(moment(a).subtract({d: 1}).calendar(),  'నిన్న రాత్రి 2:00', 'yesterday at the same time');
+    });
+
+    test('calendar next week', function (assert) {
+        var i, m;
+        for (i = 2; i < 7; i++) {
+            m = moment().add({d: i});
+            assert.equal(m.calendar(),       m.format('dddd[,] LT'),  'Today + ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('dddd[,] LT'),  'Today + ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('dddd[,] LT'),  'Today + ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar last week', function (assert) {
+        var i, m;
+
+        for (i = 2; i < 7; i++) {
+            m = moment().subtract({d: i});
+            assert.equal(m.calendar(),       m.format('[గత] dddd[,] LT'),  'Today - ' + i + ' days current time');
+            m.hours(0).minutes(0).seconds(0).milliseconds(0);
+            assert.equal(m.calendar(),       m.format('[గత] dddd[,] LT'),  'Today - ' + i + ' days beginning of day');
+            m.hours(23).minutes(59).seconds(59).milliseconds(999);
+            assert.equal(m.calendar(),       m.format('[గత] dddd[,] LT'),  'Today - ' + i + ' days end of day');
+        }
+    });
+
+    test('calendar all else', function (assert) {
+        var weeksAgo = moment().subtract({w: 1}),
+            weeksFromNow = moment().add({w: 1});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '1 week ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 1 week');
+
+        weeksAgo = moment().subtract({w: 2});
+        weeksFromNow = moment().add({w: 2});
+
+        assert.equal(weeksAgo.calendar(),       weeksAgo.format('L'),  '2 weeks ago');
+        assert.equal(weeksFromNow.calendar(),   weeksFromNow.format('L'),  'in 2 weeks');
+    });
+
+    test('meridiem invariant', function (assert) {
+        assert.equal(moment([2011, 2, 23,  2, 30]).format('a'), 'రాత్రి', 'before dawn');
+        assert.equal(moment([2011, 2, 23,  9, 30]).format('a'), 'ఉదయం', 'morning');
+        assert.equal(moment([2011, 2, 23, 14, 30]).format('a'), 'మధ్యాహ్నం', 'during day');
+        assert.equal(moment([2011, 2, 23, 17, 30]).format('a'), 'సాయంత్రం', 'evening');
+        assert.equal(moment([2011, 2, 23, 19, 30]).format('a'), 'సాయంత్రం', 'late evening');
+        assert.equal(moment([2011, 2, 23, 21, 20]).format('a'), 'రాత్రి', 'night');
+
+        assert.equal(moment([2011, 2, 23,  2, 30]).format('A'), 'రాత్రి', 'before dawn');
+        assert.equal(moment([2011, 2, 23,  9, 30]).format('A'), 'ఉదయం', 'morning');
+        assert.equal(moment([2011, 2, 23, 14, 30]).format('A'), 'మధ్యాహ్నం', ' during day');
+        assert.equal(moment([2011, 2, 23, 17, 30]).format('A'), 'సాయంత్రం', 'evening');
+        assert.equal(moment([2011, 2, 23, 19, 30]).format('A'), 'సాయంత్రం', 'late evening');
+        assert.equal(moment([2011, 2, 23, 21, 20]).format('A'), 'రాత్రి', 'night');
+    });
+
+    test('weeks year starting sunday', function (assert) {
+        assert.equal(moment([2012, 0,  1]).week(), 1, 'Jan  1 2012 should be week 1');
+        assert.equal(moment([2012, 0,  7]).week(), 1, 'Jan  7 2012 should be week 1');
+        assert.equal(moment([2012, 0,  8]).week(), 2, 'Jan  8 2012 should be week 2');
+        assert.equal(moment([2012, 0, 14]).week(), 2, 'Jan 14 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).week(), 3, 'Jan 15 2012 should be week 3');
+    });
+
+    test('weeks year starting monday', function (assert) {
+        assert.equal(moment([2006, 11, 31]).week(), 1, 'Dec 31 2006 should be week 1');
+        assert.equal(moment([2007,  0,  1]).week(), 1, 'Jan  1 2007 should be week 1');
+        assert.equal(moment([2007,  0,  6]).week(), 1, 'Jan  6 2007 should be week 1');
+        assert.equal(moment([2007,  0,  7]).week(), 2, 'Jan  7 2007 should be week 2');
+        assert.equal(moment([2007,  0, 13]).week(), 2, 'Jan 13 2007 should be week 2');
+        assert.equal(moment([2007,  0, 14]).week(), 3, 'Jan 14 2007 should be week 3');
+    });
+
+    test('weeks year starting tuesday', function (assert) {
+        assert.equal(moment([2007, 11, 29]).week(), 52, 'Dec 29 2007 should be week 52');
+        assert.equal(moment([2008,  0,  1]).week(), 1, 'Jan  1 2008 should be week 1');
+        assert.equal(moment([2008,  0,  5]).week(), 1, 'Jan  5 2008 should be week 1');
+        assert.equal(moment([2008,  0,  6]).week(), 2, 'Jan  6 2008 should be week 2');
+        assert.equal(moment([2008,  0, 12]).week(), 2, 'Jan 12 2008 should be week 2');
+        assert.equal(moment([2008,  0, 13]).week(), 3, 'Jan 13 2008 should be week 3');
+    });
+
+    test('weeks year starting wednesday', function (assert) {
+        assert.equal(moment([2002, 11, 29]).week(), 1, 'Dec 29 2002 should be week 1');
+        assert.equal(moment([2003,  0,  1]).week(), 1, 'Jan  1 2003 should be week 1');
+        assert.equal(moment([2003,  0,  4]).week(), 1, 'Jan  4 2003 should be week 1');
+        assert.equal(moment([2003,  0,  5]).week(), 2, 'Jan  5 2003 should be week 2');
+        assert.equal(moment([2003,  0, 11]).week(), 2, 'Jan 11 2003 should be week 2');
+        assert.equal(moment([2003,  0, 12]).week(), 3, 'Jan 12 2003 should be week 3');
+    });
+
+    test('weeks year starting thursday', function (assert) {
+        assert.equal(moment([2008, 11, 28]).week(), 1, 'Dec 28 2008 should be week 1');
+        assert.equal(moment([2009,  0,  1]).week(), 1, 'Jan  1 2009 should be week 1');
+        assert.equal(moment([2009,  0,  3]).week(), 1, 'Jan  3 2009 should be week 1');
+        assert.equal(moment([2009,  0,  4]).week(), 2, 'Jan  4 2009 should be week 2');
+        assert.equal(moment([2009,  0, 10]).week(), 2, 'Jan 10 2009 should be week 2');
+        assert.equal(moment([2009,  0, 11]).week(), 3, 'Jan 11 2009 should be week 3');
+    });
+
+    test('weeks year starting friday', function (assert) {
+        assert.equal(moment([2009, 11, 27]).week(), 1, 'Dec 27 2009 should be week 1');
+        assert.equal(moment([2010,  0,  1]).week(), 1, 'Jan  1 2010 should be week 1');
+        assert.equal(moment([2010,  0,  2]).week(), 1, 'Jan  2 2010 should be week 1');
+        assert.equal(moment([2010,  0,  3]).week(), 2, 'Jan  3 2010 should be week 2');
+        assert.equal(moment([2010,  0,  9]).week(), 2, 'Jan  9 2010 should be week 2');
+        assert.equal(moment([2010,  0, 10]).week(), 3, 'Jan 10 2010 should be week 3');
+    });
+
+    test('weeks year starting saturday', function (assert) {
+        assert.equal(moment([2010, 11, 26]).week(), 1, 'Dec 26 2010 should be week 1');
+        assert.equal(moment([2011,  0,  1]).week(), 1, 'Jan  1 2011 should be week 1');
+        assert.equal(moment([2011,  0,  2]).week(), 2, 'Jan  2 2011 should be week 2');
+        assert.equal(moment([2011,  0,  8]).week(), 2, 'Jan  8 2011 should be week 2');
+        assert.equal(moment([2011,  0,  9]).week(), 3, 'Jan  9 2011 should be week 3');
+    });
+
+    test('weeks year starting sunday formatted', function (assert) {
+        assert.equal(moment([2012, 0,  1]).format('w ww wo'), '1 01 1వ', 'Jan  1 2012 should be week 1');
+        assert.equal(moment([2012, 0,  7]).format('w ww wo'), '1 01 1వ', 'Jan  7 2012 should be week 1');
+        assert.equal(moment([2012, 0,  8]).format('w ww wo'), '2 02 2వ', 'Jan  8 2012 should be week 2');
+        assert.equal(moment([2012, 0, 14]).format('w ww wo'), '2 02 2వ', 'Jan 14 2012 should be week 2');
+        assert.equal(moment([2012, 0, 15]).format('w ww wo'), '3 03 3వ', 'Jan 15 2012 should be week 3');
+    });
+
+    test('lenient ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing ' + i + ' date check');
+        }
+    });
+
+    test('lenient ordinal parsing of number', function (assert) {
+        var i, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            testMoment = moment('2014 01 ' + i, 'YYYY MM Do');
+            assert.equal(testMoment.year(), 2014,
+                    'lenient ordinal parsing of number ' + i + ' year check');
+            assert.equal(testMoment.month(), 0,
+                    'lenient ordinal parsing of number ' + i + ' month check');
+            assert.equal(testMoment.date(), i,
+                    'lenient ordinal parsing of number ' + i + ' date check');
+        }
+    });
+
+    test('meridiem', function (assert) {
+        var h, m, t1, t2;
+        for (h = 0; h < 24; ++h) {
+            for (m = 0; m < 60; m += 15) {
+                t1 = moment.utc([2000, 0, 1, h, m]);
+                t2 = moment(t1.format('A h:mm'), 'A h:mm');
+                assert.equal(t2.format('HH:mm'), t1.format('HH:mm'),
+                        'meridiem at ' + t1.format('HH:mm'));
+            }
+        }
+    });
+
+    test('strict ordinal parsing', function (assert) {
+        var i, ordinalStr, testMoment;
+        for (i = 1; i <= 31; ++i) {
+            ordinalStr = moment([2014, 0, i]).format('YYYY MM Do');
+            testMoment = moment(ordinalStr, 'YYYY MM Do', true);
+            assert.ok(testMoment.isValid(), 'strict ordinal parsing ' + i);
+        }
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -27948,7 +31147,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -27961,8 +31161,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -27980,8 +31180,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -28302,7 +31502,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -28315,8 +31516,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -28334,8 +31535,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -28668,7 +31869,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -28681,8 +31883,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -28700,8 +31902,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -29027,7 +32229,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -29040,8 +32243,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -29059,8 +32262,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -29380,7 +32583,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -29393,8 +32597,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -29412,8 +32616,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -29733,7 +32937,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -29746,8 +32951,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -29765,8 +32970,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -30121,7 +33326,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -30134,8 +33340,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -30153,8 +33359,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -30172,7 +33378,7 @@
     localeModule('uz');
 
     test('parse', function (assert) {
-        var tests = 'январь янв_февраль фев_март мар_апрель апр_май май_июнь июнь_июль июль_август авг_сентябрь сен_октябрь окт_ноябрь ноя_декабрь дек'.split('_'), i;
+        var tests = 'январ янв_феврал фев_март мар_апрел апр_май май_июн июн_июл июл_август авг_сентябр сен_октябр окт_ноябр ноя_декабр дек'.split('_'), i;
         function equalTest(input, mmm, i) {
             assert.equal(moment(input, mmm).month(), i, input + ' should be month ' + (i + 1));
         }
@@ -30191,9 +33397,9 @@
 
     test('format', function (assert) {
         var a = [
-                ['dddd, Do-MMMM YYYY, h:mm:ss',        'Якшанба, 14-февраль 2010, 3:25:50'],
+                ['dddd, Do-MMMM YYYY, h:mm:ss',        'Якшанба, 14-феврал 2010, 3:25:50'],
                 ['ddd, h:mm',                          'Якш, 3:25'],
-                ['M Mo MM MMMM MMM',                   '2 2 02 февраль фев'],
+                ['M Mo MM MMMM MMM',                   '2 2 02 феврал фев'],
                 ['YYYY YY',                            '2010 10'],
                 ['D Do DD',                            '14 14 14'],
                 ['d do dddd ddd dd',                   '0 0 Якшанба Якш Як'],
@@ -30207,9 +33413,9 @@
                 ['[йилнинг] DDDo-[куни]',             'йилнинг 45-куни'],
                 ['LTS',                                '15:25:50'],
                 ['L',                                  '14/02/2010'],
-                ['LL',                                 '14 февраль 2010'],
-                ['LLL',                                '14 февраль 2010 15:25'],
-                ['LLLL',                               '14 февраль 2010, Якшанба 15:25'],
+                ['LL',                                 '14 феврал 2010'],
+                ['LLL',                                '14 феврал 2010 15:25'],
+                ['LLLL',                               '14 феврал 2010, Якшанба 15:25'],
                 ['l',                                  '14/2/2010'],
                 ['ll',                                 '14 фев 2010'],
                 ['lll',                                '14 фев 2010 15:25'],
@@ -30260,7 +33466,7 @@
     });
 
     test('format month', function (assert) {
-        var expected = 'январь янв_февраль фев_март мар_апрель апр_май май_июнь июн_июль июл_август авг_сентябрь сен_октябрь окт_ноябрь ноя_декабрь дек'.split('_'), i;
+        var expected = 'январ янв_феврал фев_март мар_апрел апр_май май_июн июн_июл июл_август авг_сентябр сен_октябр окт_ноябр ноя_декабр дек'.split('_'), i;
         for (i = 0; i < expected.length; i++) {
             assert.equal(moment([2011, i, 1]).format('MMMM MMM'), expected[i], expected[i]);
         }
@@ -30322,7 +33528,7 @@
     test('calendar day', function (assert) {
         var a = moment().hours(2).minutes(0).seconds(0);
 
-        assert.equal(moment(a).calendar(),                     'Бугун соат 02:00 да',      'today at the same time');
+        assert.equal(moment(a).calendar(),                   'Бугун соат 02:00 да',      'today at the same time');
         assert.equal(moment(a).add({m: 25}).calendar(),      'Бугун соат 02:25 да',      'Now plus 25 min');
         assert.equal(moment(a).add({h: 1}).calendar(),       'Бугун соат 03:00 да',      'Now plus 1 hour');
         assert.equal(moment(a).add({d: 1}).calendar(),       'Эртага 02:00 да',   'tomorrow at the same time');
@@ -30477,7 +33683,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -30490,8 +33697,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -30509,8 +33716,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -30843,7 +34050,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -30856,8 +34064,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -30875,8 +34083,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -31197,7 +34405,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -31210,8 +34419,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -31229,8 +34438,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -31544,7 +34753,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -31557,8 +34767,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -31576,8 +34786,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -31918,7 +35128,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -31931,8 +35142,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -31950,8 +35161,73 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    // These tests are for locale independent features
+    // locale dependent tests would be in locale test folder
+    module('calendar');
+
+    test('passing a function', function (assert) {
+        var a  = moment().hours(2).minutes(0).seconds(0);
+        assert.equal(moment(a).calendar(null, {
+            'sameDay': function () {
+                return 'h:mmA';
+            }
+        }), '2:00AM', 'should equate');
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -31977,6 +35253,11 @@
         assert.ok(moment([2010, 1, 12, 1, 1, 1]).toDate() instanceof Date, '[2010, 1, 12, 1, 1, 1]');
         assert.ok(moment([2010, 1, 12, 1, 1, 1, 1]).toDate() instanceof Date, '[2010, 1, 12, 1, 1, 1, 1]');
         assert.equal(+moment(new Date(2010, 1, 14, 15, 25, 50, 125)), +moment([2010, 1, 14, 15, 25, 50, 125]), 'constructing with array === constructing with new Date()');
+    });
+
+    test('array with invalid arguments', function (assert) {
+        assert.ok(!moment([2010, null, null]).isValid(), '[2010, null, null]');
+        assert.ok(!moment([1945, null, null]).isValid(), '[1945, null, null] (pre-1970)');
     });
 
     test('array copying', function (assert) {
@@ -32389,6 +35670,7 @@
         tz2 = tz.replace(':', ''),
         tz3 = tz2.slice(0, 3),
         formats = [
+            ['2011-10',                       '2011-10-01T00:00:00.000' + tz],
             ['2011-10-08',                    '2011-10-08T00:00:00.000' + tz],
             ['2011-10-08T18',                 '2011-10-08T18:00:00.000' + tz],
             ['2011-10-08T18:04',              '2011-10-08T18:04:00.000' + tz],
@@ -32464,11 +35746,100 @@
             ['2011-281 18:04:20' + tz3,       '2011-10-08T18:04:20.000' + tz],
             ['2011-281 18:04:20.1' + tz2,     '2011-10-08T18:04:20.100' + tz],
             ['2011-281 18:04:20.11' + tz2,    '2011-10-08T18:04:20.110' + tz],
-            ['2011-281 18:04:20.111' + tz2,   '2011-10-08T18:04:20.111' + tz]
+            ['2011-281 18:04:20.111' + tz2,   '2011-10-08T18:04:20.111' + tz],
+            ['20111008T18',                   '2011-10-08T18:00:00.000' + tz],
+            ['20111008T1804',                 '2011-10-08T18:04:00.000' + tz],
+            ['20111008T180420',               '2011-10-08T18:04:20.000' + tz],
+            ['20111008T1804' + tz,            '2011-10-08T18:04:00.000' + tz],
+            ['20111008T180420' + tz,          '2011-10-08T18:04:20.000' + tz],
+            ['20111008T1804' + tz2,           '2011-10-08T18:04:00.000' + tz],
+            ['20111008T180420' + tz2,         '2011-10-08T18:04:20.000' + tz],
+            ['20111008T1804' + tz3,           '2011-10-08T18:04:00.000' + tz],
+            ['20111008T180420' + tz3,         '2011-10-08T18:04:20.000' + tz],
+            ['20111008T180420,1' + tz2,       '2011-10-08T18:04:20.100' + tz],
+            ['20111008T180420,11' + tz2,      '2011-10-08T18:04:20.110' + tz],
+            ['20111008T180420,111' + tz2,     '2011-10-08T18:04:20.111' + tz],
+            ['20111008 18',                   '2011-10-08T18:00:00.000' + tz],
+            ['20111008 1804',                 '2011-10-08T18:04:00.000' + tz],
+            ['20111008 180420',               '2011-10-08T18:04:20.000' + tz],
+            ['20111008 1804' + tz,            '2011-10-08T18:04:00.000' + tz],
+            ['20111008 180420' + tz,          '2011-10-08T18:04:20.000' + tz],
+            ['20111008 1804' + tz2,           '2011-10-08T18:04:00.000' + tz],
+            ['20111008 180420' + tz2,         '2011-10-08T18:04:20.000' + tz],
+            ['20111008 1804' + tz3,           '2011-10-08T18:04:00.000' + tz],
+            ['20111008 180420' + tz3,         '2011-10-08T18:04:20.000' + tz],
+            ['20111008 180420,1' + tz2,       '2011-10-08T18:04:20.100' + tz],
+            ['20111008 180420,11' + tz2,      '2011-10-08T18:04:20.110' + tz],
+            ['20111008 180420,111' + tz2,     '2011-10-08T18:04:20.111' + tz],
+            ['2011W40',                       '2011-10-03T00:00:00.000' + tz],
+            ['2011W406',                      '2011-10-08T00:00:00.000' + tz],
+            ['2011W406T18',                   '2011-10-08T18:00:00.000' + tz],
+            ['2011W406T1804',                 '2011-10-08T18:04:00.000' + tz],
+            ['2011W406T180420',               '2011-10-08T18:04:20.000' + tz],
+            ['2011W406 1804' + tz2,           '2011-10-08T18:04:00.000' + tz],
+            ['2011W406T1804' + tz,            '2011-10-08T18:04:00.000' + tz],
+            ['2011W406T180420' + tz,          '2011-10-08T18:04:20.000' + tz],
+            ['2011W406T1804' + tz2,           '2011-10-08T18:04:00.000' + tz],
+            ['2011W406T180420' + tz2,         '2011-10-08T18:04:20.000' + tz],
+            ['2011W406T1804' + tz3,           '2011-10-08T18:04:00.000' + tz],
+            ['2011W406T180420' + tz3,         '2011-10-08T18:04:20.000' + tz],
+            ['2011W406T180420,1' + tz2,       '2011-10-08T18:04:20.100' + tz],
+            ['2011W406T180420,11' + tz2,      '2011-10-08T18:04:20.110' + tz],
+            ['2011W406T180420,111' + tz2,     '2011-10-08T18:04:20.111' + tz],
+            ['2011W406 18',                   '2011-10-08T18:00:00.000' + tz],
+            ['2011W406 1804',                 '2011-10-08T18:04:00.000' + tz],
+            ['2011W406 180420',               '2011-10-08T18:04:20.000' + tz],
+            ['2011W406 1804' + tz,            '2011-10-08T18:04:00.000' + tz],
+            ['2011W406 180420' + tz,          '2011-10-08T18:04:20.000' + tz],
+            ['2011W406 180420' + tz2,         '2011-10-08T18:04:20.000' + tz],
+            ['2011W406 1804' + tz3,           '2011-10-08T18:04:00.000' + tz],
+            ['2011W406 180420' + tz3,         '2011-10-08T18:04:20.000' + tz],
+            ['2011W406 180420,1' + tz2,       '2011-10-08T18:04:20.100' + tz],
+            ['2011W406 180420,11' + tz2,      '2011-10-08T18:04:20.110' + tz],
+            ['2011W406 180420,111' + tz2,     '2011-10-08T18:04:20.111' + tz],
+            ['2011281',                       '2011-10-08T00:00:00.000' + tz],
+            ['2011281T18',                    '2011-10-08T18:00:00.000' + tz],
+            ['2011281T1804',                  '2011-10-08T18:04:00.000' + tz],
+            ['2011281T180420',                '2011-10-08T18:04:20.000' + tz],
+            ['2011281T1804' + tz,             '2011-10-08T18:04:00.000' + tz],
+            ['2011281T180420' + tz,           '2011-10-08T18:04:20.000' + tz],
+            ['2011281T1804' + tz2,            '2011-10-08T18:04:00.000' + tz],
+            ['2011281T180420' + tz2,          '2011-10-08T18:04:20.000' + tz],
+            ['2011281T1804' + tz3,            '2011-10-08T18:04:00.000' + tz],
+            ['2011281T180420' + tz3,          '2011-10-08T18:04:20.000' + tz],
+            ['2011281T180420,1' + tz2,        '2011-10-08T18:04:20.100' + tz],
+            ['2011281T180420,11' + tz2,       '2011-10-08T18:04:20.110' + tz],
+            ['2011281T180420,111' + tz2,      '2011-10-08T18:04:20.111' + tz],
+            ['2011281 18',                    '2011-10-08T18:00:00.000' + tz],
+            ['2011281 1804',                  '2011-10-08T18:04:00.000' + tz],
+            ['2011281 180420',                '2011-10-08T18:04:20.000' + tz],
+            ['2011281 1804' + tz,             '2011-10-08T18:04:00.000' + tz],
+            ['2011281 180420' + tz,           '2011-10-08T18:04:20.000' + tz],
+            ['2011281 1804' + tz2,            '2011-10-08T18:04:00.000' + tz],
+            ['2011281 180420' + tz2,          '2011-10-08T18:04:20.000' + tz],
+            ['2011281 1804' + tz3,            '2011-10-08T18:04:00.000' + tz],
+            ['2011281 180420' + tz3,          '2011-10-08T18:04:20.000' + tz],
+            ['2011281 180420,1' + tz2,        '2011-10-08T18:04:20.100' + tz],
+            ['2011281 180420,11' + tz2,       '2011-10-08T18:04:20.110' + tz],
+            ['2011281 180420,111' + tz2,      '2011-10-08T18:04:20.111' + tz]
         ], i;
         for (i = 0; i < formats.length; i++) {
-            assert.equal(moment(formats[i][0]).format('YYYY-MM-DDTHH:mm:ss.SSSZ'), formats[i][1], 'moment should be able to parse ISO ' + formats[i][0]);
+            assert.equal(moment(formats[i][0]).format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
+                    formats[i][1], 'moment should be able to parse ISO ' + formats[i][0]);
+            assert.equal(moment(formats[i][0], moment.ISO_8601).format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
+                    formats[i][1], 'moment should be able to parse specified ISO ' + formats[i][0]);
+            assert.equal(moment(formats[i][0], moment.ISO_8601, true).format('YYYY-MM-DDTHH:mm:ss.SSSZ'),
+                    formats[i][1], 'moment should be able to parse specified strict ISO ' + formats[i][0]);
         }
+    });
+
+    test('non iso 8601 strings', function (assert) {
+        assert.ok(!moment('2015-10T10:15', moment.ISO_8601, true).isValid(), 'incomplete date with time');
+        assert.ok(!moment('2015-W10T10:15', moment.ISO_8601, true).isValid(), 'incomplete week date with time');
+        assert.ok(!moment('201510', moment.ISO_8601, true).isValid(), 'basic YYYYMM is not allowed');
+        assert.ok(!moment('2015W10T1015', moment.ISO_8601, true).isValid(), 'incomplete week date with time (basic)');
+        assert.ok(!moment('2015-10-08T1015', moment.ISO_8601, true).isValid(), 'mixing extended and basic format');
+        assert.ok(!moment('20151008T10:15', moment.ISO_8601, true).isValid(), 'mixing basic and extended format');
     });
 
     test('parsing iso week year/week/weekday', function (assert) {
@@ -32876,10 +36247,36 @@
         assert.equal(moment('123456789', 'SSSSSSSSS').millisecond(), 123);
     });
 
+    test('hmm', function (assert) {
+        assert.equal(moment('123', 'hmm', true).format('HH:mm:ss'), '01:23:00', '123 with hmm');
+        assert.equal(moment('123a', 'hmmA', true).format('HH:mm:ss'), '01:23:00', '123a with hmmA');
+        assert.equal(moment('123p', 'hmmA', true).format('HH:mm:ss'), '13:23:00', '123p with hmmA');
+
+        assert.equal(moment('1234', 'hmm', true).format('HH:mm:ss'), '12:34:00', '1234 with hmm');
+        assert.equal(moment('1234a', 'hmmA', true).format('HH:mm:ss'), '00:34:00', '1234a with hmmA');
+        assert.equal(moment('1234p', 'hmmA', true).format('HH:mm:ss'), '12:34:00', '1234p with hmmA');
+
+        assert.equal(moment('12345', 'hmmss', true).format('HH:mm:ss'), '01:23:45', '12345 with hmmss');
+        assert.equal(moment('12345a', 'hmmssA', true).format('HH:mm:ss'), '01:23:45', '12345a with hmmssA');
+        assert.equal(moment('12345p', 'hmmssA', true).format('HH:mm:ss'), '13:23:45', '12345p with hmmssA');
+        assert.equal(moment('112345', 'hmmss', true).format('HH:mm:ss'), '11:23:45', '112345 with hmmss');
+        assert.equal(moment('112345a', 'hmmssA', true).format('HH:mm:ss'), '11:23:45', '112345a with hmmssA');
+        assert.equal(moment('112345p', 'hmmssA', true).format('HH:mm:ss'), '23:23:45', '112345p with hmmssA');
+
+        assert.equal(moment('023', 'Hmm', true).format('HH:mm:ss'), '00:23:00', '023 with Hmm');
+        assert.equal(moment('123', 'Hmm', true).format('HH:mm:ss'), '01:23:00', '123 with Hmm');
+        assert.equal(moment('1234', 'Hmm', true).format('HH:mm:ss'), '12:34:00', '1234 with Hmm');
+        assert.equal(moment('1534', 'Hmm', true).format('HH:mm:ss'), '15:34:00', '1234 with Hmm');
+        assert.equal(moment('12345', 'Hmmss', true).format('HH:mm:ss'), '01:23:45', '12345 with Hmmss');
+        assert.equal(moment('112345', 'Hmmss', true).format('HH:mm:ss'), '11:23:45', '112345 with Hmmss');
+        assert.equal(moment('172345', 'Hmmss', true).format('HH:mm:ss'), '17:23:45', '112345 with Hmmss');
+    });
+
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -32892,8 +36289,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -32911,8 +36308,87 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    module('creation data');
+
+    test('valid date', function (assert) {
+        var dat = moment('1992-10-22');
+        var orig = dat.creationData();
+
+        assert.equal(dat.isValid(), true, '1992-10-22 is valid');
+        assert.equal(orig.input, '1992-10-22', 'original input is not correct.');
+        assert.equal(orig.format, 'YYYY-MM-DD', 'original format is defined.');
+        assert.equal(orig.locale._abbr, 'en', 'default locale is en');
+        assert.equal(orig.isUTC, false, 'not a UTC date');
+    });
+
+    test('valid date at fr locale', function (assert) {
+        var dat = moment('1992-10-22', 'YYYY-MM-DD', 'fr');
+        var orig = dat.creationData();
+
+        assert.equal(orig.locale._abbr, 'fr', 'locale is fr');
+    });
+
+    test('valid date with formats', function (assert) {
+        var dat = moment('29-06-1995', ['MM-DD-YYYY', 'DD-MM', 'DD-MM-YYYY']);
+        var orig = dat.creationData();
+
+        assert.equal(orig.format, 'DD-MM-YYYY', 'DD-MM-YYYY format is defined.');
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -32955,7 +36431,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -32968,8 +36445,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -32987,8 +36464,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -33238,7 +36715,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -33251,8 +36729,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -33270,8 +36748,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -33910,7 +37388,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -33923,8 +37402,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -33942,8 +37421,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -34004,7 +37483,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -34017,8 +37497,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -34036,8 +37516,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -34382,6 +37862,16 @@
         assert.equal(moment([2000, 0,  2]).format('[Q]Q-YYYY'), 'Q1-2000', 'Jan  2 2000 is Q1');
     });
 
+    test('quarter ordinal formats', function (assert) {
+        assert.equal(moment([1985, 1, 4]).format('Qo'), '1st', 'Feb 4 1985 is 1st quarter');
+        assert.equal(moment([2029, 8, 18]).format('Qo'), '3rd', 'Sep 18 2029 is 3rd quarter');
+        assert.equal(moment([2013, 3, 24]).format('Qo'), '2nd', 'Apr 24 2013 is 2nd quarter');
+        assert.equal(moment([2015, 2,  5]).format('Qo'), '1st', 'Mar  5 2015 is 1st quarter');
+        assert.equal(moment([1970, 0,  2]).format('Qo'), '1st', 'Jan  2 1970 is 1st quarter');
+        assert.equal(moment([2001, 11, 12]).format('Qo'), '4th', 'Dec 12 2001 is 4th quarter');
+        assert.equal(moment([2000, 0,  2]).format('Qo [quarter] YYYY'), '1st quarter 2000', 'Jan  2 2000 is 1st quarter');
+    });
+
     test('full expanded format is returned from abbreviated formats', function (assert) {
         var locales = '';
 
@@ -34423,10 +37913,32 @@
         assert.equal(m.format('SSSSSSSSS'), '123000000');
     });
 
+    test('hmm and hmmss', function (assert) {
+        assert.equal(moment('12:34:56', 'HH:mm:ss').format('hmm'), '1234');
+        assert.equal(moment('01:34:56', 'HH:mm:ss').format('hmm'), '134');
+        assert.equal(moment('13:34:56', 'HH:mm:ss').format('hmm'), '134');
+
+        assert.equal(moment('12:34:56', 'HH:mm:ss').format('hmmss'), '123456');
+        assert.equal(moment('01:34:56', 'HH:mm:ss').format('hmmss'), '13456');
+        assert.equal(moment('13:34:56', 'HH:mm:ss').format('hmmss'), '13456');
+    });
+
+    test('Hmm and Hmmss', function (assert) {
+        assert.equal(moment('12:34:56', 'HH:mm:ss').format('Hmm'), '1234');
+        assert.equal(moment('01:34:56', 'HH:mm:ss').format('Hmm'), '134');
+        assert.equal(moment('13:34:56', 'HH:mm:ss').format('Hmm'), '1334');
+
+        assert.equal(moment('12:34:56', 'HH:mm:ss').format('Hmmss'), '123456');
+        assert.equal(moment('01:34:56', 'HH:mm:ss').format('Hmmss'), '13456');
+        assert.equal(moment('08:34:56', 'HH:mm:ss').format('Hmmss'), '83456');
+        assert.equal(moment('18:34:56', 'HH:mm:ss').format('Hmmss'), '183456');
+    });
+
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -34439,8 +37951,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -34458,8 +37970,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -34527,7 +38039,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -34540,8 +38053,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -34559,8 +38072,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -34814,7 +38327,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -34827,8 +38341,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -34846,8 +38360,86 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    module('instanceof');
+
+    test('instanceof', function (assert) {
+        var mm = moment([2010, 0, 1]);
+
+        var extend = function (a, b) {
+            var i;
+            for (i in b) {
+                a[i] = b[i];
+            }
+            return a;
+        };
+
+        assert.equal(moment() instanceof moment, true, 'simple moment object');
+        assert.equal(extend({}, moment()) instanceof moment, false, 'extended moment object');
+        assert.equal(moment(null) instanceof moment, true, 'invalid moment object');
+
+        assert.equal(new Date() instanceof moment, false, 'date object is not moment object');
+        assert.equal(Object instanceof moment, false, 'Object is not moment object');
+        assert.equal('foo' instanceof moment, false, 'string is not moment object');
+        assert.equal(1 instanceof moment, false, 'number is not moment object');
+        assert.equal(NaN instanceof moment, false, 'NaN is not moment object');
+        assert.equal(null instanceof moment, false, 'null is not moment object');
+        assert.equal(undefined instanceof moment, false, 'undefined is not moment object');
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -34887,10 +38479,163 @@
         assert.ok(isNaN(m.valueOf()));
     });
 
+    test('invalid operations', function (assert) {
+        var invalids = [
+                moment.invalid(),
+                moment('xyz', 'l'),
+                moment('2015-01-35', 'YYYY-MM-DD'),
+                moment('2015-01-25 a', 'YYYY-MM-DD', true)
+            ],
+            i,
+            invalid,
+            valid = moment();
+
+        for (i = 0; i < invalids.length; ++i) {
+            invalid = invalids[i];
+
+            assert.ok(!invalid.clone().add(5, 'hours').isValid(), 'invalid.add is invalid');
+            assert.equal(invalid.calendar(), 'Invalid date', 'invalid.calendar is \'Invalid date\'');
+            assert.ok(!invalid.clone().isValid(), 'invalid.clone is invalid');
+            assert.ok(isNaN(invalid.diff(valid)), 'invalid.diff(valid) is NaN');
+            assert.ok(isNaN(valid.diff(invalid)), 'valid.diff(invalid) is NaN');
+            assert.ok(isNaN(invalid.diff(invalid)), 'invalid.diff(invalid) is NaN');
+            assert.ok(!invalid.clone().endOf('month').isValid(), 'invalid.endOf is invalid');
+            assert.equal(invalid.format(), 'Invalid date', 'invalid.format is \'Invalid date\'');
+            assert.equal(invalid.from(), 'Invalid date');
+            assert.equal(invalid.from(valid), 'Invalid date');
+            assert.equal(valid.from(invalid), 'Invalid date');
+            assert.equal(invalid.fromNow(), 'Invalid date');
+            assert.equal(invalid.to(), 'Invalid date');
+            assert.equal(invalid.to(valid), 'Invalid date');
+            assert.equal(valid.to(invalid), 'Invalid date');
+            assert.equal(invalid.toNow(), 'Invalid date');
+            assert.ok(isNaN(invalid.get('year')), 'invalid.get is NaN');
+            // TODO invalidAt
+            assert.ok(!invalid.isAfter(valid));
+            assert.ok(!valid.isAfter(invalid));
+            assert.ok(!invalid.isAfter(invalid));
+            assert.ok(!invalid.isBefore(valid));
+            assert.ok(!valid.isBefore(invalid));
+            assert.ok(!invalid.isBefore(invalid));
+            assert.ok(!invalid.isBetween(valid, valid));
+            assert.ok(!valid.isBetween(invalid, valid));
+            assert.ok(!valid.isBetween(valid, invalid));
+            assert.ok(!invalid.isSame(invalid));
+            assert.ok(!invalid.isSame(valid));
+            assert.ok(!valid.isSame(invalid));
+            assert.ok(!invalid.isValid());
+            assert.equal(invalid.locale(), 'en');
+            assert.equal(invalid.localeData()._abbr, 'en');
+            assert.ok(!invalid.clone().max(valid).isValid());
+            assert.ok(!valid.clone().max(invalid).isValid());
+            assert.ok(!invalid.clone().max(invalid).isValid());
+            assert.ok(!invalid.clone().min(valid).isValid());
+            assert.ok(!valid.clone().min(invalid).isValid());
+            assert.ok(!invalid.clone().min(invalid).isValid());
+            assert.ok(!moment.min(invalid, valid).isValid());
+            assert.ok(!moment.min(valid, invalid).isValid());
+            assert.ok(!moment.max(invalid, valid).isValid());
+            assert.ok(!moment.max(valid, invalid).isValid());
+            assert.ok(!invalid.clone().set('year', 2005).isValid());
+            assert.ok(!invalid.clone().startOf('month').isValid());
+
+            assert.ok(!invalid.clone().subtract(5, 'days').isValid());
+            assert.deepEqual(invalid.toArray(), [NaN, NaN, NaN, NaN, NaN, NaN, NaN]);
+            assert.deepEqual(invalid.toObject(), {
+                years: NaN,
+                months: NaN,
+                date: NaN,
+                hours: NaN,
+                minutes: NaN,
+                seconds: NaN,
+                milliseconds: NaN
+            });
+            assert.ok(moment.isDate(invalid.toDate()));
+            assert.ok(isNaN(invalid.toDate().valueOf()));
+            assert.equal(invalid.toJSON(), 'null');
+            assert.equal(invalid.toString(), 'Invalid date');
+            assert.ok(isNaN(invalid.unix()));
+            assert.ok(isNaN(invalid.valueOf()));
+
+            assert.ok(isNaN(invalid.year()));
+            assert.ok(isNaN(invalid.weekYear()));
+            assert.ok(isNaN(invalid.isoWeekYear()));
+            assert.ok(isNaN(invalid.quarter()));
+            assert.ok(isNaN(invalid.quarters()));
+            assert.ok(isNaN(invalid.month()));
+            assert.ok(isNaN(invalid.daysInMonth()));
+            assert.ok(isNaN(invalid.week()));
+            assert.ok(isNaN(invalid.weeks()));
+            assert.ok(isNaN(invalid.isoWeek()));
+            assert.ok(isNaN(invalid.isoWeeks()));
+            assert.ok(isNaN(invalid.weeksInYear()));
+            assert.ok(isNaN(invalid.isoWeeksInYear()));
+            assert.ok(isNaN(invalid.date()));
+            assert.ok(isNaN(invalid.day()));
+            assert.ok(isNaN(invalid.days()));
+            assert.ok(isNaN(invalid.weekday()));
+            assert.ok(isNaN(invalid.isoWeekday()));
+            assert.ok(isNaN(invalid.dayOfYear()));
+            assert.ok(isNaN(invalid.hour()));
+            assert.ok(isNaN(invalid.hours()));
+            assert.ok(isNaN(invalid.minute()));
+            assert.ok(isNaN(invalid.minutes()));
+            assert.ok(isNaN(invalid.second()));
+            assert.ok(isNaN(invalid.seconds()));
+            assert.ok(isNaN(invalid.millisecond()));
+            assert.ok(isNaN(invalid.milliseconds()));
+            assert.ok(isNaN(invalid.utcOffset()));
+
+            assert.ok(!invalid.clone().year(2001).isValid());
+            assert.ok(!invalid.clone().weekYear(2001).isValid());
+            assert.ok(!invalid.clone().isoWeekYear(2001).isValid());
+            assert.ok(!invalid.clone().quarter(1).isValid());
+            assert.ok(!invalid.clone().quarters(1).isValid());
+            assert.ok(!invalid.clone().month(1).isValid());
+            assert.ok(!invalid.clone().week(1).isValid());
+            assert.ok(!invalid.clone().weeks(1).isValid());
+            assert.ok(!invalid.clone().isoWeek(1).isValid());
+            assert.ok(!invalid.clone().isoWeeks(1).isValid());
+            assert.ok(!invalid.clone().date(1).isValid());
+            assert.ok(!invalid.clone().day(1).isValid());
+            assert.ok(!invalid.clone().days(1).isValid());
+            assert.ok(!invalid.clone().weekday(1).isValid());
+            assert.ok(!invalid.clone().isoWeekday(1).isValid());
+            assert.ok(!invalid.clone().dayOfYear(1).isValid());
+            assert.ok(!invalid.clone().hour(1).isValid());
+            assert.ok(!invalid.clone().hours(1).isValid());
+            assert.ok(!invalid.clone().minute(1).isValid());
+            assert.ok(!invalid.clone().minutes(1).isValid());
+            assert.ok(!invalid.clone().second(1).isValid());
+            assert.ok(!invalid.clone().seconds(1).isValid());
+            assert.ok(!invalid.clone().millisecond(1).isValid());
+            assert.ok(!invalid.clone().milliseconds(1).isValid());
+            assert.ok(!invalid.clone().utcOffset(1).isValid());
+
+            assert.ok(!invalid.clone().utc().isValid());
+            assert.ok(!invalid.clone().local().isValid());
+            assert.ok(!invalid.clone().parseZone('05:30').isValid());
+            assert.ok(!invalid.hasAlignedHourOffset());
+            assert.ok(!invalid.isDST());
+            assert.ok(!invalid.isDSTShifted());
+            assert.ok(!invalid.isLocal());
+            assert.ok(!invalid.isUtcOffset());
+            assert.ok(!invalid.isUtc());
+            assert.ok(!invalid.isUTC());
+
+            assert.ok(!invalid.isLeapYear());
+
+            assert.equal(moment.duration({from: invalid, to: valid}).asMilliseconds(), 0);
+            assert.equal(moment.duration({from: valid, to: invalid}).asMilliseconds(), 0);
+            assert.equal(moment.duration({from: invalid, to: invalid}).asMilliseconds(), 0);
+        }
+    });
+
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -34903,8 +38648,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -34922,8 +38667,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -35116,7 +38861,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -35129,8 +38875,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -35148,8 +38894,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -35342,7 +39088,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -35355,8 +39102,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -35374,8 +39121,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -35611,7 +39358,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -35624,8 +39372,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -35643,8 +39391,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -35684,7 +39432,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -35697,8 +39446,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -35716,8 +39465,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -35776,7 +39525,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -35789,8 +39539,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -35808,8 +39558,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -35976,7 +39726,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -35989,8 +39740,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -36008,8 +39759,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -36113,8 +39864,8 @@
         ], i;
 
         for (i = 0; i < tests.length; i++) {
-            assert.equal(moment(tests[i]).isValid(), false, tests[i] + ' should be invalid');
-            assert.equal(moment.utc(tests[i]).isValid(), false, tests[i] + ' should be invalid');
+            assert.equal(moment(tests[i], moment.ISO_8601).isValid(), false, tests[i] + ' should be invalid');
+            assert.equal(moment.utc(tests[i], moment.ISO_8601).isValid(), false, tests[i] + ' should be invalid');
         }
     });
 
@@ -36126,12 +39877,33 @@
             '2010-01-40T24:01+00:00',
             '2010-01-40T23:60+00:00',
             '2010-01-40T23:59:60+00:00',
-            '2010-01-40T23:59:59.9999+00:00'
+            '2010-01-40T23:59:59.9999+00:00',
+            '2010-01-40T23:59:59,9999+00:00'
         ], i;
 
         for (i = 0; i < tests.length; i++) {
-            assert.equal(moment(tests[i]).isValid(), false, tests[i] + ' should be invalid');
-            assert.equal(moment.utc(tests[i]).isValid(), false, tests[i] + ' should be invalid');
+            assert.equal(moment(tests[i], moment.ISO_8601).isValid(), false, tests[i] + ' should be invalid');
+            assert.equal(moment.utc(tests[i], moment.ISO_8601).isValid(), false, tests[i] + ' should be invalid');
+        }
+    });
+
+    test('valid string iso 8601 - not strict', function (assert) {
+        var tests = [
+            '2010-01-30 00:00:00,000Z',
+            '20100101',
+            '20100130',
+            '20100130T23+00:00',
+            '20100130T2359+0000',
+            '20100130T235959+0000',
+            '20100130T235959,999+0000',
+            '20100130T235959,999-0700',
+            '20100130T000000,000+0700',
+            '20100130 000000,000Z'
+        ];
+
+        for (var i = 0; i < tests.length; i++) {
+            assert.equal(moment(tests[i]).isValid(), true, tests[i] + ' should be valid in normal');
+            assert.equal(moment.utc(tests[i]).isValid(), true, tests[i] + ' should be valid in normal');
         }
     });
 
@@ -36279,7 +40051,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -36292,8 +40065,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -36311,8 +40084,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -36339,7 +40112,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -36352,8 +40126,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -36371,8 +40145,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -36468,7 +40242,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -36481,8 +40256,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -36500,8 +40275,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -36656,7 +40431,7 @@
 
         assert.equal(moment.localeData().months(jan), 'January', 'no arguments returns global');
         assert.equal(moment.localeData('zh-cn').months(jan), '一月', 'a string returns the locale based on key');
-        assert.equal(moment.localeData(moment().locale('es')).months(jan), 'Enero', 'if you pass in a moment it uses the moment\'s locale');
+        assert.equal(moment.localeData(moment().locale('es')).months(jan), 'enero', 'if you pass in a moment it uses the moment\'s locale');
     });
 
     test('library deprecations', function (assert) {
@@ -36690,7 +40465,7 @@
         moment.locale('en');
 
         assert.equal(moment([2012, 5, 6]).format('MMMM'), 'June', 'Normally default to global');
-        assert.equal(moment([2012, 5, 6]).locale('es').format('MMMM'), 'Junio', 'Use the instance specific locale');
+        assert.equal(moment([2012, 5, 6]).locale('es').format('MMMM'), 'junio', 'Use the instance specific locale');
         assert.equal(moment([2012, 5, 6]).format('MMMM'), 'June', 'Using an instance specific locale does not affect other moments');
     });
 
@@ -36714,9 +40489,9 @@
     test('instance locale persists with manipulation', function (assert) {
         moment.locale('en');
 
-        assert.equal(moment([2012, 5, 6]).locale('es').add({days: 1}).format('MMMM'), 'Junio', 'With addition');
-        assert.equal(moment([2012, 5, 6]).locale('es').day(0).format('MMMM'), 'Junio', 'With day getter');
-        assert.equal(moment([2012, 5, 6]).locale('es').endOf('day').format('MMMM'), 'Junio', 'With endOf');
+        assert.equal(moment([2012, 5, 6]).locale('es').add({days: 1}).format('MMMM'), 'junio', 'With addition');
+        assert.equal(moment([2012, 5, 6]).locale('es').day(0).format('MMMM'), 'junio', 'With day getter');
+        assert.equal(moment([2012, 5, 6]).locale('es').endOf('day').format('MMMM'), 'junio', 'With endOf');
     });
 
     test('instance locale persists with cloning', function (assert) {
@@ -36726,8 +40501,8 @@
             b = a.clone(),
             c = moment(a);
 
-        assert.equal(b.format('MMMM'), 'Junio', 'using moment.fn.clone()');
-        assert.equal(b.format('MMMM'), 'Junio', 'using moment()');
+        assert.equal(b.format('MMMM'), 'junio', 'using moment.fn.clone()');
+        assert.equal(b.format('MMMM'), 'junio', 'using moment()');
     });
 
     test('duration locale method', function (assert) {
@@ -36969,7 +40744,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -36982,8 +40758,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37001,8 +40777,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37066,7 +40842,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -37079,8 +40856,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37098,8 +40875,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37141,7 +40918,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -37154,8 +40932,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37173,8 +40951,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37221,7 +40999,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -37234,8 +41013,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37253,8 +41032,89 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                moment.locale('en');
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    module('now');
+
+    test('now', function (assert) {
+        var startOfTest = new Date().valueOf(),
+            momentNowTime = moment.now(),
+            afterMomentCreationTime = new Date().valueOf();
+
+        assert.ok(startOfTest <= momentNowTime, 'moment now() time should be now, not in the past');
+        assert.ok(momentNowTime <= afterMomentCreationTime, 'moment now() time should be now, not in the future');
+    });
+
+    test('now - custom value', function (assert) {
+        var CUSTOM_DATE = '2015-01-01T01:30:00.000Z';
+
+        var oldFn = moment.fn.now;
+
+        moment.fn.now = function () {
+            return new Date(CUSTOM_DATE).valueOf();
+        };
+
+        try {
+            assert.ok(moment().toISOString() === CUSTOM_DATE, 'moment() constructor should use the function defined by moment.now, but it did not');
+            assert.ok(moment([]).toISOString() === '2014-12-31T07:00:00.000Z', 'moment() constructor should fall back to the date defined by moment.now when an empty array is given, but it did not');
+            assert.ok(moment.utc([]).toISOString() === '2015-01-01T00:00:00.000Z', 'moment() constructor should fall back to the date defined by moment.now when an empty array is given, but it did not');
+        } finally {
+            moment.fn.now = oldFn;
+        }
+    });
+
+}));
+
+(function (global, factory) {
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
+   typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
+   factory(global.moment)
+}(this, function (moment) { 'use strict';
+
+    /*global QUnit:false*/
+
+    var test = QUnit.test;
+
+    function module (name, lifecycle) {
+        QUnit.module(name, {
+            setup : function () {
+                moment.locale('en');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
+                };
+                if (lifecycle && lifecycle.setup) {
+                    lifecycle.setup();
+                }
+            },
+            teardown : function () {
+                if (lifecycle && lifecycle.teardown) {
+                    lifecycle.teardown();
+                }
+            }
+        });
+    }
+
+    function localeModule (name, lifecycle) {
+        QUnit.module('locale:' + name, {
+            setup : function () {
+                moment.locale(name);
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37438,7 +41298,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -37451,8 +41312,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37470,8 +41331,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37557,7 +41418,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -37570,8 +41432,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37589,8 +41451,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37707,7 +41569,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -37720,8 +41583,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37739,8 +41602,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37834,10 +41697,21 @@
     });
 
     test('custom thresholds', function (assert) {
+        var a;
+
+        // Seconds to minute threshold, under 30
+        moment.relativeTimeThreshold('s', 25);
+
+        a = moment();
+        a.subtract(24, 'seconds');
+        assert.equal(a.fromNow(), 'a few seconds ago', 'Below custom seconds to minute threshold, s < 30');
+        a.subtract(1, 'seconds');
+        assert.equal(a.fromNow(), 'a minute ago', 'Above custom seconds to minute threshold, s < 30');
+
         // Seconds to minutes threshold
         moment.relativeTimeThreshold('s', 55);
 
-        var a = moment();
+        a = moment();
         a.subtract(54, 'seconds');
         assert.equal(a.fromNow(), 'a few seconds ago', 'Below custom seconds to minutes threshold');
         a.subtract(1, 'seconds');
@@ -37892,7 +41766,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -37905,8 +41780,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -37924,8 +41799,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -38299,7 +42174,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -38312,8 +42188,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -38331,8 +42207,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -38364,7 +42240,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -38377,8 +42254,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -38396,8 +42273,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -38435,7 +42312,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -38448,8 +42326,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -38467,8 +42345,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -38562,7 +42440,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -38575,8 +42454,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -38594,8 +42473,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -39176,7 +43055,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -39189,8 +43069,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -39208,8 +43088,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -39315,10 +43195,45 @@
         assert.equal(52, moment().weeksInYear(2012)); // 52
     });
 
+    test('week year overflows', function (assert) {
+        assert.equal('2005-01-01', moment.utc('2004-W53-6', moment.ISO_8601, true).format('YYYY-MM-DD'), '2004-W53-6 is 1st Jan 2005');
+        assert.equal('2007-12-31', moment.utc('2008-W01-1', moment.ISO_8601, true).format('YYYY-MM-DD'), '2008-W01-1 is 31st Dec 2007');
+    });
+
+    test('weeks overflow', function (assert) {
+        assert.equal(7, moment.utc('2004-W54-1', moment.ISO_8601, true).parsingFlags().overflow, '2004 has only 53 weeks');
+        assert.equal(7, moment.utc('2004-W00-1', moment.ISO_8601, true).parsingFlags().overflow, 'there is no 0th week');
+    });
+
+    test('weekday overflow', function (assert) {
+        assert.equal(8, moment.utc('2004-W30-0', moment.ISO_8601, true).parsingFlags().overflow, 'there is no 0 iso weekday');
+        assert.equal(8, moment.utc('2004-W30-8', moment.ISO_8601, true).parsingFlags().overflow, 'there is no 8 iso weekday');
+        assert.equal(8, moment.utc('2004-w30-7', 'gggg-[w]ww-e', true).parsingFlags().overflow, 'there is no 7 \'e\' weekday');
+        assert.equal(8, moment.utc('2004-w30-7', 'gggg-[w]ww-d', true).parsingFlags().overflow, 'there is no 7 \'d\' weekday');
+    });
+
+    test('week year setter works', function (assert) {
+        for (var year = 2000; year <= 2020; year += 1) {
+            assert.equal(moment.utc('2012-12-31T00:00:00.000Z').isoWeekYear(year).isoWeekYear(), year, 'setting iso-week-year to ' + year);
+            assert.equal(moment.utc('2012-12-31T00:00:00.000Z').weekYear(year).weekYear(), year, 'setting week-year to ' + year);
+        }
+
+        assert.equal(moment.utc('2004-W53-1', moment.ISO_8601, true).isoWeekYear(2013).format('GGGG-[W]WW-E'), '2013-W52-1', '2004-W53-1 to 2013');
+        assert.equal(moment.utc('2004-W53-1', moment.ISO_8601, true).isoWeekYear(2020).format('GGGG-[W]WW-E'), '2020-W53-1', '2004-W53-1 to 2020');
+        assert.equal(moment.utc('2005-W52-1', moment.ISO_8601, true).isoWeekYear(2004).format('GGGG-[W]WW-E'), '2004-W52-1', '2005-W52-1 to 2004');
+        assert.equal(moment.utc('2013-W30-4', moment.ISO_8601, true).isoWeekYear(2015).format('GGGG-[W]WW-E'), '2015-W30-4', '2013-W30-4 to 2015');
+
+        assert.equal(moment.utc('2005-w53-0', 'gggg-[w]ww-e', true).weekYear(2013).format('gggg-[w]ww-e'), '2013-w52-0', '2005-w53-0 to 2013');
+        assert.equal(moment.utc('2005-w53-0', 'gggg-[w]ww-e', true).weekYear(2016).format('gggg-[w]ww-e'), '2016-w53-0', '2005-w53-0 to 2016');
+        assert.equal(moment.utc('2004-w52-0', 'gggg-[w]ww-e', true).weekYear(2005).format('gggg-[w]ww-e'), '2005-w52-0', '2004-w52-0 to 2005');
+        assert.equal(moment.utc('2013-w30-4', 'gggg-[w]ww-e', true).weekYear(2015).format('gggg-[w]ww-e'), '2015-w30-4', '2013-w30-4 to 2015');
+    });
+
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -39331,8 +43246,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -39350,8 +43265,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -39499,7 +43414,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -39512,8 +43428,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -39531,8 +43447,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -39772,7 +43688,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -39785,8 +43702,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -39804,8 +43721,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -39908,7 +43825,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -39921,8 +43839,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -39940,8 +43858,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -40048,7 +43966,8 @@
 }));
 
 (function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined' ? factory(require('../../moment')) :
+   typeof exports === 'object' && typeof module !== 'undefined' 
+       && typeof require === 'function' ? factory(require('../../moment')) :
    typeof define === 'function' && define.amd ? define(['../../moment'], factory) :
    factory(global.moment)
 }(this, function (moment) { 'use strict';
@@ -40061,8 +43980,8 @@
         QUnit.module(name, {
             setup : function () {
                 moment.locale('en');
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();
@@ -40080,8 +43999,8 @@
         QUnit.module('locale:' + name, {
             setup : function () {
                 moment.locale(name);
-                moment.createFromInputFallback = function () {
-                    throw new Error('input not handled by moment');
+                moment.createFromInputFallback = function (config) {
+                    throw new Error('input not handled by moment: ' + config._i);
                 };
                 if (lifecycle && lifecycle.setup) {
                     lifecycle.setup();

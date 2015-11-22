@@ -1,6 +1,6 @@
 //! moment.js locale configuration
-//! locale : canadian french (fr-ca)
-//! author : Jonathan Abourbih : https://github.com/jonbca
+//! locale : swiss french (fr)
+//! author : Gaspard Bucher : https://github.com/gaspard
 
 (function (global, factory) {
    typeof exports === 'object' && typeof module !== 'undefined' 
@@ -10,7 +10,7 @@
 }(this, function (moment) { 'use strict';
 
 
-    var fr_ca = moment.defineLocale('fr-ca', {
+    var fr_ch = moment.defineLocale('fr-ch', {
         months : 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split('_'),
         monthsShort : 'janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.'.split('_'),
         weekdays : 'dimanche_lundi_mardi_mercredi_jeudi_vendredi_samedi'.split('_'),
@@ -19,7 +19,7 @@
         longDateFormat : {
             LT : 'HH:mm',
             LTS : 'HH:mm:ss',
-            L : 'YYYY-MM-DD',
+            L : 'DD.MM.YYYY',
             LL : 'D MMMM YYYY',
             LLL : 'D MMMM YYYY HH:mm',
             LLLL : 'dddd D MMMM YYYY HH:mm'
@@ -50,9 +50,13 @@
         ordinalParse: /\d{1,2}(er|e)/,
         ordinal : function (number) {
             return number + (number === 1 ? 'er' : 'e');
+        },
+        week : {
+            dow : 1, // Monday is the first day of the week.
+            doy : 4  // The week that contains Jan 4th is the first week of the year.
         }
     });
 
-    return fr_ca;
+    return fr_ch;
 
 }));

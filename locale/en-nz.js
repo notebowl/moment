@@ -1,6 +1,5 @@
 //! moment.js locale configuration
-//! locale : canadian english (en-ca)
-//! author : Jonathan Abourbih : https://github.com/jonbca
+//! locale : New Zealand english (en-nz)
 
 (function (global, factory) {
    typeof exports === 'object' && typeof module !== 'undefined' 
@@ -10,7 +9,7 @@
 }(this, function (moment) { 'use strict';
 
 
-    var en_ca = moment.defineLocale('en-ca', {
+    var en_nz = moment.defineLocale('en-nz', {
         months : 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
         monthsShort : 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sep_Oct_Nov_Dec'.split('_'),
         weekdays : 'Sunday_Monday_Tuesday_Wednesday_Thursday_Friday_Saturday'.split('_'),
@@ -19,10 +18,10 @@
         longDateFormat : {
             LT : 'h:mm A',
             LTS : 'h:mm:ss A',
-            L : 'YYYY-MM-DD',
-            LL : 'D MMMM, YYYY',
-            LLL : 'D MMMM, YYYY h:mm A',
-            LLLL : 'dddd, D MMMM, YYYY h:mm A'
+            L : 'DD/MM/YYYY',
+            LL : 'D MMMM YYYY',
+            LLL : 'D MMMM YYYY h:mm A',
+            LLLL : 'dddd, D MMMM YYYY h:mm A'
         },
         calendar : {
             sameDay : '[Today at] LT',
@@ -55,9 +54,13 @@
                 (b === 2) ? 'nd' :
                 (b === 3) ? 'rd' : 'th';
             return number + output;
+        },
+        week : {
+            dow : 1, // Monday is the first day of the week.
+            doy : 4  // The week that contains Jan 4th is the first week of the year.
         }
     });
 
-    return en_ca;
+    return en_nz;
 
 }));
